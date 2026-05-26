@@ -1,0 +1,917 @@
+﻿<!DOCTYPE html><html lang='tr'><head><meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width,initial-scale=1,maximum-scale=1'>
+<title>Arac Takip</title>
+<meta name='apple-mobile-web-app-capable' content='yes'>
+<meta name='theme-color' content='#0F2047'>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}body{font-family:'Segoe UI',system-ui,sans-serif;background:#f5f7fa;color:#1a1a1a;-webkit-text-size-adjust:100%}
+.hd{background:#0F2047;color:#fff;padding:12px 16px;position:sticky;top:0;z-index:10}
+.hd h1{font-size:15px}.hd p{font-size:10px;opacity:.7;margin-top:1px}
+.dt{background:#1a3a6c;color:#ccc;text-align:center;padding:4px;font-size:11px}
+.tb{display:flex;background:#fff;border-bottom:1px solid #e0e0e0;position:sticky;top:42px;z-index:9;overflow-x:auto}
+.t{flex:1;min-width:55px;padding:7px 2px;text-align:center;font-size:9px;color:#888;cursor:pointer;border-bottom:2px solid transparent}
+.t.a{color:#0F2047;border-bottom-color:#4A90E2;font-weight:700}
+.ct{padding:10px;max-width:500px;margin:0 auto}
+.pg{display:none}.pg.a{display:block}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:8px}
+.s{background:#fff;border-radius:8px;padding:10px;border:1px solid #eee;cursor:pointer}
+.s:active{background:#f0f0f0}
+.sl{font-size:10px;color:#888}.sv{font-size:20px;font-weight:700;margin-top:1px}
+.st{font-size:12px;font-weight:700;color:#888;margin:10px 0 6px;padding-left:4px}
+.c{background:#fff;border-radius:8px;padding:9px 11px;margin-bottom:6px;border:1px solid #eee}
+.cr{display:flex;justify-content:space-between;align-items:center}
+.cn{font-size:12px;font-weight:700}.cs{font-size:10px;color:#888;margin-top:1px}
+.b{font-size:9px;padding:2px 7px;border-radius:6px;font-weight:700}
+.bg{background:#C8E6C9;color:#1B5E20}.br{background:#FFCDD2;color:#B71C1C}
+.bb{background:#BBDEFB;color:#0D47A1}.bo{background:#FFE0B2;color:#E65100}
+.sr{width:100%;padding:7px 10px;border-radius:8px;border:1px solid #ddd;font-size:11px;margin-bottom:8px}
+.ft{text-align:center;padding:12px;font-size:9px;color:#aaa}
+.vr{color:#B71C1C}.vg{color:#1B5E20}.vb{color:#0D47A1}.vo{color:#E65100}
+.fh{background:#1a3a5c;color:#fff;padding:6px 10px;border-radius:8px 8px 0 0;font-size:11px;font-weight:700;margin-top:8px}
+.fr{background:#fff;padding:6px 10px;border:1px solid #eee;font-size:11px}
+.fr:last-child{border-radius:0 0 8px 8px}
+.bk{display:inline-block;padding:6px 14px;background:#0F2047;color:#fff;border-radius:8px;font-size:11px;cursor:pointer;margin-bottom:10px}
+.fbtn{display:inline-block;padding:8px 16px;margin:4px;border-radius:8px;font-size:11px;font-weight:700;cursor:pointer;color:#fff}
+.fbtn:active{opacity:.8}
+</style></head><body>
+<div class='hd'><h1>Arac Takip Sistemi</h1>
+<p>TUPRAS Kirikkale | 26.05.2026 21:42</p></div>
+<div class='dt'>26.05.2026 Sali</div>
+<div class='tb'>
+<div class='t a' onclick='sp("home")'><b>Ana Sayfa</b></div>
+<div class='t' onclick='sp("arac")'><b>Araclar</b></div>
+<div class='t' onclick='sp("kayit")'><b>Kayitlar</b></div>
+<div class='t' onclick='sp("mazot")'><b>Mazot</b></div>
+<div class='t' onclick='sp("rapor")'><b>Raporlar</b></div>
+</div><div class='ct'>
+<div class='pg a' id='p-home'>
+<div class='g2'>
+<div class='s' onclick='sp("cal_kam")'><div class='sl'>Calisan Kamyon</div><div class='sv vg'>0</div></div>
+<div class='s' onclick='sp("bos_kam")'><div class='sl'>Bosta Kamyon</div><div class='sv vr'>36</div></div>
+</div><div class='g2'>
+<div class='s' onclick='sp("cal_mak")'><div class='sl'>Calisan Makine</div><div class='sv vg'>0</div></div>
+<div class='s' onclick='sp("bos_mak")'><div class='sl'>Bosta Makine</div><div class='sv vr'>15</div></div>
+</div><div class='g2'>
+<div class='s' onclick='sp("cal_sof")'><div class='sl'>Calisan Sofor</div><div class='sv vb'>0</div></div>
+<div class='s' onclick='sp("cal_opr")'><div class='sl'>Calisan Operator</div><div class='sv vb'>0</div></div>
+</div>
+<div class='fh' onclick='sp("sefer")' style='cursor:pointer'>IRMAKCILAR (tiklayiniz detay icin)</div>
+<div class='fr'>Gunduz: 0 sefer | 0 km</div>
+<div class='fr'>Gece: 0 sefer | 0 km</div>
+<div class='fh' onclick='sp("sefer")' style='cursor:pointer'>CINARSAN (tiklayiniz detay icin)</div>
+<div class='fr'>Gunduz: 0 sefer | 0 km</div>
+<div class='fr'>Gece: 0 sefer | 0 km</div>
+<div class='g2' style='margin-top:8px'>
+<div class='s' onclick='sp("mazot")'><div class='sl'>Mazot Stok</div><div class='sv vo'>5673 Lt</div></div>
+<div class='s' onclick='sp("acik")'><div class='sl'>Acik Kayit</div><div class='sv vr'>0</div></div>
+</div></div>
+<div class='pg' id='p-cal_sof'>
+<div class='bk' onclick='sp("home")'>&lt; Geri</div>
+<div class='st'>Calisan Soforler (0)</div>
+</div>
+<div class='pg' id='p-cal_opr'>
+<div class='bk' onclick='sp("home")'>&lt; Geri</div>
+<div class='st'>Calisan Operatorler (0)</div>
+</div>
+<div class='pg' id='p-sefer'>
+<div class='bk' onclick='sp("home")'>&lt; Geri</div>
+<div class='st'>Bugunun Sefer Detayi (0 arac)</div>
+</div>
+<div class='pg' id='p-acik'>
+<div class='bk' onclick='sp("home")'>&lt; Geri</div>
+<div class='st'>Acik Kayitlar (0)</div>
+</div>
+<div class='pg' id='p-cal_kam'>
+<div class='bk' onclick='sp("home")'>&lt; Geri</div>
+<div class='st'>Calisan Kamyonlar</div>
+</div>
+<div class='pg' id='p-bos_kam'>
+<div class='bk' onclick='sp("home")'>&lt; Geri</div>
+<div class='st'>Bosta Kamyonlar</div>
+<div class='c'><div class='cr'><span class='cn'>06 FCK 120</span><span class='b br'>Bosta</span></div>
+<div class='cs'>KAMYON | IRMAKÇILAR | Enes BOZTEPE</div></div>
+<div class='c'><div class='cr'><span class='cn'>06 FVM 048</span><span class='b br'>Bosta</span></div>
+<div class='cs'>KAMYON | IRMAKÇILAR | İsmail UYGURTAŞ</div></div>
+<div class='c'><div class='cr'><span class='cn'>06 FMU 858</span><span class='b br'>Bosta</span></div>
+<div class='cs'>KAMYON | IRMAKÇILAR | Altan GÜLMEZ</div></div>
+<div class='c'><div class='cr'><span class='cn'>06 FTN 487</span><span class='b br'>Bosta</span></div>
+<div class='cs'>KAMYON | IRMAKÇILAR | Müslüm ALTINTAŞ</div></div>
+<div class='c'><div class='cr'><span class='cn'>06 FBM 211</span><span class='b br'>Bosta</span></div>
+<div class='cs'>KAMYON | IRMAKÇILAR | Ahmet DOĞAN</div></div>
+<div class='c'><div class='cr'><span class='cn'>06 FTN 324</span><span class='b br'>Bosta</span></div>
+<div class='cs'>KAMYON | IRMAKÇILAR | </div></div>
+<div class='c'><div class='cr'><span class='cn'>06 FBM 106</span><span class='b br'>Bosta</span></div>
+<div class='cs'>KAMYON | IRMAKÇILAR | </div></div>
+<div class='c'><div class='cr'><span class='cn'>06 FBM 180</span><span class='b br'>Bosta</span></div>
+<div class='cs'>KAMYON | IRMAKÇILAR | </div></div>
+<div class='c'><div class='cr'><span class='cn'>06 FMU 817</span><span class='b br'>Bosta</span></div>
+<div class='cs'>KAMYON | IRMAKÇILAR | Kamil SAĞIR</div></div>
+<div class='c'><div class='cr'><span class='cn'>06 FTN 281</span><span class='b br'>Bosta</span></div>
+<div class='cs'>KAMYON | IRMAKÇILAR | Murat GÜLŞEN</div></div>
+<div class='c'><div class='cr'><span class='cn'>06 FTN 579</span><span class='b br'>Bosta</span></div>
+<div class='cs'>KAMYON | IRMAKÇILAR | Satılmış IŞIK</div></div>
+<div class='c'><div class='cr'><span class='cn'>06 FTN 195</span><span class='b br'>Bosta</span></div>
+<div class='cs'>KAMYON | IRMAKÇILAR | H. Dede ÇELİK</div></div>
+<div class='c'><div class='cr'><span class='cn'>06 FTN 431</span><span class='b br'>Bosta</span></div>
+<div class='cs'>KAMYON | IRMAKÇILAR | Yusuf DOĞAN</div></div>
+<div class='c'><div class='cr'><span class='cn'>06 FTN 454</span><span class='b br'>Bosta</span></div>
+<div class='cs'>KAMYON | IRMAKÇILAR | Burhan Kaan ALTIN</div></div>
+<div class='c'><div class='cr'><span class='cn'>06 FMZ 726</span><span class='b br'>Bosta</span></div>
+<div class='cs'>KAMYON | IRMAKÇILAR | Kemal SEZER</div></div>
+<div class='c'><div class='cr'><span class='cn'>06 FTN 253</span><span class='b br'>Bosta</span></div>
+<div class='cs'>KAMYON | IRMAKÇILAR | Hasan GÜNEY</div></div>
+<div class='c'><div class='cr'><span class='cn'>06 FER 920</span><span class='b br'>Bosta</span></div>
+<div class='cs'>KAMYON | IRMAKÇILAR | Mehmet ARGALI</div></div>
+<div class='c'><div class='cr'><span class='cn'>06 FTN 355</span><span class='b br'>Bosta</span></div>
+<div class='cs'>KAMYON | IRMAKÇILAR | Ziya AYHAN</div></div>
+<div class='c'><div class='cr'><span class='cn'>06 FMZ 699</span><span class='b br'>Bosta</span></div>
+<div class='cs'>KAMYON | IRMAKÇILAR | Özgür ERTAŞ</div></div>
+<div class='c'><div class='cr'><span class='cn'>06 TKP 429</span><span class='b br'>Bosta</span></div>
+<div class='cs'>KAMYON | IRMAKÇILAR | Mustafa ATAY</div></div>
+<div class='c'><div class='cr'><span class='cn'>06 FKP 159</span><span class='b br'>Bosta</span></div>
+<div class='cs'>KAMYON | IRMAKÇILAR | Arif ÖZBEK</div></div>
+<div class='c'><div class='cr'><span class='cn'>06 FC 7627</span><span class='b br'>Bosta</span></div>
+<div class='cs'>KAMYON | ÇINARSAN | ABDULLAH ÇINAR</div></div>
+<div class='c'><div class='cr'><span class='cn'>06 FSU 564</span><span class='b br'>Bosta</span></div>
+<div class='cs'>KAMYON | ÇINARSAN | MURAT ÇELİK</div></div>
+<div class='c'><div class='cr'><span class='cn'>06 BC 2431</span><span class='b br'>Bosta</span></div>
+<div class='cs'>KAMYON | ÇINARSAN | U.TEKİN TUNÇ</div></div>
+<div class='c'><div class='cr'><span class='cn'>06 EEU 386</span><span class='b br'>Bosta</span></div>
+<div class='cs'>KAMYON | ÇINARSAN | FİKRİ TUNÇ</div></div>
+<div class='c'><div class='cr'><span class='cn'>06 EHE 609</span><span class='b br'>Bosta</span></div>
+<div class='cs'>KAMYON | ÇINARSAN | HASAN ÇELİK</div></div>
+<div class='c'><div class='cr'><span class='cn'>06 FSF 855</span><span class='b br'>Bosta</span></div>
+<div class='cs'>KAMYON | ÇINARSAN | KADİR BEKTAŞ</div></div>
+<div class='c'><div class='cr'><span class='cn'>06 BC 9266</span><span class='b br'>Bosta</span></div>
+<div class='cs'>KAMYON | ÇINARSAN | </div></div>
+<div class='c'><div class='cr'><span class='cn'>06 FB 1135</span><span class='b br'>Bosta</span></div>
+<div class='cs'>KAMYON | ÇINARSAN | </div></div>
+<div class='c'><div class='cr'><span class='cn'>06 BC 7235</span><span class='b br'>Bosta</span></div>
+<div class='cs'>KAMYON | ÇINARSAN | BÜNYAMİN ÇINAR</div></div>
+<div class='c'><div class='cr'><span class='cn'>06 FZJ 729</span><span class='b br'>Bosta</span></div>
+<div class='cs'>KAMYON | ÇINARSAN | </div></div>
+<div class='c'><div class='cr'><span class='cn'>06 FKP 232</span><span class='b br'>Bosta</span></div>
+<div class='cs'>KAMYON | IRMAKÇILAR | Kürşat MARAŞLIOĞLU</div></div>
+<div class='c'><div class='cr'><span class='cn'>06 FKF 383</span><span class='b br'>Bosta</span></div>
+<div class='cs'>KAMYON | IRMAKÇILAR | Necati ALTAN</div></div>
+<div class='c'><div class='cr'><span class='cn'>06 BF 5241</span><span class='b br'>Bosta</span></div>
+<div class='cs'>KAMYON | ÇINARSAN | </div></div>
+<div class='c'><div class='cr'><span class='cn'>06 FPB 142</span><span class='b br'>Bosta</span></div>
+<div class='cs'>KAMYON | ÇINARSAN | </div></div>
+<div class='c'><div class='cr'><span class='cn'>06 FME 393</span><span class='b br'>Bosta</span></div>
+<div class='cs'>KAMYON | IRMAKÇILAR | Y. Tahir ERDURAN</div></div>
+</div>
+<div class='pg' id='p-cal_mak'>
+<div class='bk' onclick='sp("home")'>&lt; Geri</div>
+<div class='st'>Calisan Makineler</div>
+</div>
+<div class='pg' id='p-bos_mak'>
+<div class='bk' onclick='sp("home")'>&lt; Geri</div>
+<div class='st'>Bosta Makineler</div>
+<div class='c'><div class='cr'><span class='cn'>06 00 25 6199</span><span class='b br'>Bosta</span></div>
+<div class='cs'>EKSKAVATÖR (690) | IRMAKÇILAR | Enis TOPUZ</div></div>
+<div class='c'><div class='cr'><span class='cn'>34 00 231 3626</span><span class='b br'>Bosta</span></div>
+<div class='cs'>EKSKAVATÖR (690) | IRMAKÇILAR | Gökhan AYHAN</div></div>
+<div class='c'><div class='cr'><span class='cn'>06 00 23 1810</span><span class='b br'>Bosta</span></div>
+<div class='cs'>EKSKAVATÖR (490) | IRMAKÇILAR | Ceyhun ÇEKİRGE</div></div>
+<div class='c'><div class='cr'><span class='cn'>06 00 16 5515</span><span class='b br'>Bosta</span></div>
+<div class='cs'>EKSKAVATÖR (490) | IRMAKÇILAR | Hasan YABA</div></div>
+<div class='c'><div class='cr'><span class='cn'>34 00 162 3298</span><span class='b br'>Bosta</span></div>
+<div class='cs'>14M Cat Greyder | IRMAKÇILAR | Taner KULAKSIZ</div></div>
+<div class='c'><div class='cr'><span class='cn'>34 00 251 7252</span><span class='b br'>Bosta</span></div>
+<div class='cs'>EKSKAVATÖR (490) | IRMAKÇILAR | Uğur YÜCEL</div></div>
+<div class='c'><div class='cr'><span class='cn'>06 00 26 1243</span><span class='b br'>Bosta</span></div>
+<div class='cs'>LOADER | IRMAKÇILAR | Mustafa ÜNLÜ</div></div>
+<div class='c'><div class='cr'><span class='cn'>34 00 11 8065</span><span class='b br'>Bosta</span></div>
+<div class='cs'>DOZER D8 | IRMAKÇILAR | Ese GÜNGÖR</div></div>
+<div class='c'><div class='cr'><span class='cn'>34 00 25 6043</span><span class='b br'>Bosta</span></div>
+<div class='cs'>LOADER | IRMAKÇILAR | Sercan DOĞAN</div></div>
+<div class='c'><div class='cr'><span class='cn'>3400 191 03 11</span><span class='b br'>Bosta</span></div>
+<div class='cs'>EKSKAVATÖR (690) | IRMAKÇILAR | Batuhan BAKIRCI</div></div>
+<div class='c'><div class='cr'><span class='cn'>06 00 23 50 09</span><span class='b br'>Bosta</span></div>
+<div class='cs'>HİDROMEK | ÇINARSAN | FURKAN ÇINAR</div></div>
+<div class='c'><div class='cr'><span class='cn'>34 00 22 75 78</span><span class='b br'>Bosta</span></div>
+<div class='cs'>VOLVO | ÇINARSAN | FURKAN ÇINAR</div></div>
+<div class='c'><div class='cr'><span class='cn'>06 00 26 02 31</span><span class='b br'>Bosta</span></div>
+<div class='cs'>HİTACHİ | ÇINARSAN | EROL AKÇELİK</div></div>
+<div class='c'><div class='cr'><span class='cn'>06 FTK 969</span><span class='b br'>Bosta</span></div>
+<div class='cs'>JENERATÖR | IRMAKÇILAR | Mesut AKKOÇ</div></div>
+<div class='c'><div class='cr'><span class='cn'>08 87</span><span class='b br'>Bosta</span></div>
+<div class='cs'>SİLİNDİR | IRMAKÇILAR | Niyazi GÜNDOĞDU</div></div>
+</div>
+<div class='pg' id='p-arac'>
+<input class='sr' placeholder='Plaka veya marka ara...' oninput='fa(this.value)'>
+<div class='fh'>IRMAKCILAR</div>
+<div style='padding:8px;background:#fff;border:1px solid #eee;border-radius:0 0 8px 8px'>
+<span class='fbtn' style='background:#1565C0' onclick='goster("irm_kam")'>Kamyonlar</span>
+<span class='fbtn' style='background:#00695C' onclick='goster("irm_mak")'>Is Makineleri</span></div>
+<div class='fh'>CINARSAN</div>
+<div style='padding:8px;background:#fff;border:1px solid #eee;border-radius:0 0 8px 8px'>
+<span class='fbtn' style='background:#1565C0' onclick='goster("cnr_kam")'>Kamyonlar</span>
+<span class='fbtn' style='background:#00695C' onclick='goster("cnr_mak")'>Is Makineleri</span></div>
+<div id='d-irm_kam' style='display:none'>
+<div class='st'>IRMAKCILAR - Kamyonlar</div>
+<div class='c ac' data-t='06 fck 120 kamyon'>
+<div class='cr'><span class='cn'>06 FCK 120</span><span class='b br'>Bosta</span></div>
+<div class='cs'>KAMYON | Enes BOZTEPE</div></div>
+<div class='c ac' data-t='06 fvm 048 kamyon'>
+<div class='cr'><span class='cn'>06 FVM 048</span><span class='b br'>Bosta</span></div>
+<div class='cs'>KAMYON | İsmail UYGURTAŞ</div></div>
+<div class='c ac' data-t='06 fmu 858 kamyon'>
+<div class='cr'><span class='cn'>06 FMU 858</span><span class='b br'>Bosta</span></div>
+<div class='cs'>KAMYON | Altan GÜLMEZ</div></div>
+<div class='c ac' data-t='06 ftn 487 kamyon'>
+<div class='cr'><span class='cn'>06 FTN 487</span><span class='b br'>Bosta</span></div>
+<div class='cs'>KAMYON | Müslüm ALTINTAŞ</div></div>
+<div class='c ac' data-t='06 fbm 211 kamyon'>
+<div class='cr'><span class='cn'>06 FBM 211</span><span class='b br'>Bosta</span></div>
+<div class='cs'>KAMYON | Ahmet DOĞAN</div></div>
+<div class='c ac' data-t='06 ftn 324 kamyon'>
+<div class='cr'><span class='cn'>06 FTN 324</span><span class='b br'>Bosta</span></div>
+<div class='cs'>KAMYON | </div></div>
+<div class='c ac' data-t='06 fbm 106 kamyon'>
+<div class='cr'><span class='cn'>06 FBM 106</span><span class='b br'>Bosta</span></div>
+<div class='cs'>KAMYON | </div></div>
+<div class='c ac' data-t='06 fbm 180 kamyon'>
+<div class='cr'><span class='cn'>06 FBM 180</span><span class='b br'>Bosta</span></div>
+<div class='cs'>KAMYON | </div></div>
+<div class='c ac' data-t='06 fmu 817 kamyon'>
+<div class='cr'><span class='cn'>06 FMU 817</span><span class='b br'>Bosta</span></div>
+<div class='cs'>KAMYON | Kamil SAĞIR</div></div>
+<div class='c ac' data-t='06 ftn 281 kamyon'>
+<div class='cr'><span class='cn'>06 FTN 281</span><span class='b br'>Bosta</span></div>
+<div class='cs'>KAMYON | Murat GÜLŞEN</div></div>
+<div class='c ac' data-t='06 ftn 579 kamyon'>
+<div class='cr'><span class='cn'>06 FTN 579</span><span class='b br'>Bosta</span></div>
+<div class='cs'>KAMYON | Satılmış IŞIK</div></div>
+<div class='c ac' data-t='06 ftn 195 kamyon'>
+<div class='cr'><span class='cn'>06 FTN 195</span><span class='b br'>Bosta</span></div>
+<div class='cs'>KAMYON | H. Dede ÇELİK</div></div>
+<div class='c ac' data-t='06 ftn 431 kamyon'>
+<div class='cr'><span class='cn'>06 FTN 431</span><span class='b br'>Bosta</span></div>
+<div class='cs'>KAMYON | Yusuf DOĞAN</div></div>
+<div class='c ac' data-t='06 ftn 454 kamyon'>
+<div class='cr'><span class='cn'>06 FTN 454</span><span class='b br'>Bosta</span></div>
+<div class='cs'>KAMYON | Burhan Kaan ALTIN</div></div>
+<div class='c ac' data-t='06 fmz 726 kamyon'>
+<div class='cr'><span class='cn'>06 FMZ 726</span><span class='b br'>Bosta</span></div>
+<div class='cs'>KAMYON | Kemal SEZER</div></div>
+<div class='c ac' data-t='06 ftn 253 kamyon'>
+<div class='cr'><span class='cn'>06 FTN 253</span><span class='b br'>Bosta</span></div>
+<div class='cs'>KAMYON | Hasan GÜNEY</div></div>
+<div class='c ac' data-t='06 fer 920 kamyon'>
+<div class='cr'><span class='cn'>06 FER 920</span><span class='b br'>Bosta</span></div>
+<div class='cs'>KAMYON | Mehmet ARGALI</div></div>
+<div class='c ac' data-t='06 ftn 355 kamyon'>
+<div class='cr'><span class='cn'>06 FTN 355</span><span class='b br'>Bosta</span></div>
+<div class='cs'>KAMYON | Ziya AYHAN</div></div>
+<div class='c ac' data-t='06 fmz 699 kamyon'>
+<div class='cr'><span class='cn'>06 FMZ 699</span><span class='b br'>Bosta</span></div>
+<div class='cs'>KAMYON | Özgür ERTAŞ</div></div>
+<div class='c ac' data-t='06 tkp 429 kamyon'>
+<div class='cr'><span class='cn'>06 TKP 429</span><span class='b br'>Bosta</span></div>
+<div class='cs'>KAMYON | Mustafa ATAY</div></div>
+<div class='c ac' data-t='06 fkp 159 kamyon'>
+<div class='cr'><span class='cn'>06 FKP 159</span><span class='b br'>Bosta</span></div>
+<div class='cs'>KAMYON | Arif ÖZBEK</div></div>
+<div class='c ac' data-t='06 fkp 232 kamyon'>
+<div class='cr'><span class='cn'>06 FKP 232</span><span class='b br'>Bosta</span></div>
+<div class='cs'>KAMYON | Kürşat MARAŞLIOĞLU</div></div>
+<div class='c ac' data-t='06 fkf 383 kamyon'>
+<div class='cr'><span class='cn'>06 FKF 383</span><span class='b br'>Bosta</span></div>
+<div class='cs'>KAMYON | Necati ALTAN</div></div>
+<div class='c ac' data-t='06 fme 393 kamyon'>
+<div class='cr'><span class='cn'>06 FME 393</span><span class='b br'>Bosta</span></div>
+<div class='cs'>KAMYON | Y. Tahir ERDURAN</div></div>
+</div>
+<div id='d-irm_mak' style='display:none'>
+<div class='st'>IRMAKCILAR - Is Makineleri</div>
+<div class='c ac' data-t='06 00 25 6199 ekskavatör (690)'>
+<div class='cr'><span class='cn'>06 00 25 6199</span><span class='b br'>Bosta</span></div>
+<div class='cs'>EKSKAVATÖR (690) | Enis TOPUZ</div></div>
+<div class='c ac' data-t='34 00 231 3626 ekskavatör (690)'>
+<div class='cr'><span class='cn'>34 00 231 3626</span><span class='b br'>Bosta</span></div>
+<div class='cs'>EKSKAVATÖR (690) | Gökhan AYHAN</div></div>
+<div class='c ac' data-t='06 00 23 1810 ekskavatör (490)'>
+<div class='cr'><span class='cn'>06 00 23 1810</span><span class='b br'>Bosta</span></div>
+<div class='cs'>EKSKAVATÖR (490) | Ceyhun ÇEKİRGE</div></div>
+<div class='c ac' data-t='06 00 16 5515 ekskavatör (490)'>
+<div class='cr'><span class='cn'>06 00 16 5515</span><span class='b br'>Bosta</span></div>
+<div class='cs'>EKSKAVATÖR (490) | Hasan YABA</div></div>
+<div class='c ac' data-t='34 00 162 3298 14m cat greyder'>
+<div class='cr'><span class='cn'>34 00 162 3298</span><span class='b br'>Bosta</span></div>
+<div class='cs'>14M Cat Greyder | Taner KULAKSIZ</div></div>
+<div class='c ac' data-t='34 00 251 7252 ekskavatör (490)'>
+<div class='cr'><span class='cn'>34 00 251 7252</span><span class='b br'>Bosta</span></div>
+<div class='cs'>EKSKAVATÖR (490) | Uğur YÜCEL</div></div>
+<div class='c ac' data-t='06 00 26 1243 loader'>
+<div class='cr'><span class='cn'>06 00 26 1243</span><span class='b br'>Bosta</span></div>
+<div class='cs'>LOADER | Mustafa ÜNLÜ</div></div>
+<div class='c ac' data-t='34 00 11 8065 dozer d8'>
+<div class='cr'><span class='cn'>34 00 11 8065</span><span class='b br'>Bosta</span></div>
+<div class='cs'>DOZER D8 | Ese GÜNGÖR</div></div>
+<div class='c ac' data-t='34 00 25 6043 loader'>
+<div class='cr'><span class='cn'>34 00 25 6043</span><span class='b br'>Bosta</span></div>
+<div class='cs'>LOADER | Sercan DOĞAN</div></div>
+<div class='c ac' data-t='3400 191 03 11 ekskavatör (690)'>
+<div class='cr'><span class='cn'>3400 191 03 11</span><span class='b br'>Bosta</span></div>
+<div class='cs'>EKSKAVATÖR (690) | Batuhan BAKIRCI</div></div>
+<div class='c ac' data-t='06 ftk 969 jeneratör'>
+<div class='cr'><span class='cn'>06 FTK 969</span><span class='b br'>Bosta</span></div>
+<div class='cs'>JENERATÖR | Mesut AKKOÇ</div></div>
+<div class='c ac' data-t='08 87 sİlİndİr'>
+<div class='cr'><span class='cn'>08 87</span><span class='b br'>Bosta</span></div>
+<div class='cs'>SİLİNDİR | Niyazi GÜNDOĞDU</div></div>
+</div>
+<div id='d-cnr_kam' style='display:none'>
+<div class='st'>CINARSAN - Kamyonlar</div>
+</div>
+<div id='d-cnr_mak' style='display:none'>
+<div class='st'>CINARSAN - Is Makineleri</div>
+</div>
+</div>
+<div class='pg' id='p-kayit'>
+<input class='sr' placeholder='Plaka veya sofor ara...' oninput='fky(this.value)'>
+<div class='st'>Son Kayitlar</div>
+<div class='c kc' data-t='34 00 22 75 78 abdullah çinar'>
+<div class='cr'><span class='cn'>34 00 22 75 78</span><span class='b bg'>TAMAMLANDI</span></div>
+<div class='cs'>ABDULLAH ÇINAR | GÜNDÜZ | ÇINARSAN</div>
+<div class='cs'>25.05.2026 | 6453,2-6459,3 | Fark:6,10000000000036</div></div>
+<div class='c kc' data-t='06 00 26 02 31 erol akçelİk'>
+<div class='cr'><span class='cn'>06 00 26 02 31</span><span class='b bg'>TAMAMLANDI</span></div>
+<div class='cs'>EROL AKÇELİK | GÜNDÜZ | ÇINARSAN</div>
+<div class='cs'>25.05.2026 | 407,1-413,4 | Fark:6,29999999999995</div></div>
+<div class='c kc' data-t='06 bc 9266 abdullah çinar'>
+<div class='cr'><span class='cn'>06 BC 9266</span><span class='b bg'>TAMAMLANDI</span></div>
+<div class='cs'>ABDULLAH ÇINAR | GÜNDÜZ | ÇINARSAN</div>
+<div class='cs'>25.05.2026 | 290502-290542 | Fark:40 | Sef:32</div></div>
+<div class='c kc' data-t='06 eeu 386 yusuf kaya'>
+<div class='cr'><span class='cn'>06 EEU 386</span><span class='b bg'>TAMAMLANDI</span></div>
+<div class='cs'>YUSUF KAYA | GÜNDÜZ | ÇINARSAN</div>
+<div class='cs'>25.05.2026 | 62704-62744 | Fark:40 | Sef:31</div></div>
+<div class='c kc' data-t='06 bc 2431 fİkrİ tunç'>
+<div class='cr'><span class='cn'>06 BC 2431</span><span class='b bg'>TAMAMLANDI</span></div>
+<div class='cs'>FİKRİ TUNÇ | GÜNDÜZ | ÇINARSAN</div>
+<div class='cs'>25.05.2026 | 48868-48911 | Fark:43 | Sef:33</div></div>
+<div class='c kc' data-t='06 00 23 50 09 furkan çinar'>
+<div class='cr'><span class='cn'>06 00 23 50 09</span><span class='b bg'>TAMAMLANDI</span></div>
+<div class='cs'>FURKAN ÇINAR | GÜNDÜZ | ÇINARSAN</div>
+<div class='cs'>25.05.2026 | 4930-4936 | Fark:6</div></div>
+<div class='c kc' data-t='06 bc 7235 bünyamİn çinar'>
+<div class='cr'><span class='cn'>06 BC 7235</span><span class='b bg'>TAMAMLANDI</span></div>
+<div class='cs'>BÜNYAMİN ÇINAR | GÜNDÜZ | ÇINARSAN</div>
+<div class='cs'>25.05.2026 | 181644-181680 | Fark:36 | Sef:28</div></div>
+<div class='c kc' data-t='06 fb 1135 u.tekİn tunç'>
+<div class='cr'><span class='cn'>06 FB 1135</span><span class='b bg'>TAMAMLANDI</span></div>
+<div class='cs'>U.TEKİN TUNÇ | GÜNDÜZ | ÇINARSAN</div>
+<div class='cs'>25.05.2026 | 56831-56869 | Fark:38 | Sef:29</div></div>
+<div class='c kc' data-t='06 ehe 609 hasan çelİk'>
+<div class='cr'><span class='cn'>06 EHE 609</span><span class='b bg'>TAMAMLANDI</span></div>
+<div class='cs'>HASAN ÇELİK | GÜNDÜZ | ÇINARSAN</div>
+<div class='cs'>25.05.2026 | 17976-18016 | Fark:40 | Sef:30</div></div>
+<div class='c kc' data-t='06 fsu 564 murat çelİk'>
+<div class='cr'><span class='cn'>06 FSU 564</span><span class='b bg'>TAMAMLANDI</span></div>
+<div class='cs'>MURAT ÇELİK | GÜNDÜZ | ÇINARSAN</div>
+<div class='cs'>25.05.2026 | 3566-3610 | Fark:44 | Sef:34</div></div>
+<div class='c kc' data-t='06 00 16 5515 erol uçan'>
+<div class='cr'><span class='cn'>06 00 16 5515</span><span class='b bg'>TAMAMLANDI</span></div>
+<div class='cs'>Erol UÇAN | GÜNDÜZ | IRMAKÇILAR</div>
+<div class='cs'>25.05.2026 | 17027-17032,5 | Fark:5,5</div></div>
+<div class='c kc' data-t='34 00 251 7252 erhan düzen'>
+<div class='cr'><span class='cn'>34 00 251 7252</span><span class='b bg'>TAMAMLANDI</span></div>
+<div class='cs'>Erhan DÜZEN | GÜNDÜZ | IRMAKÇILAR</div>
+<div class='cs'>25.05.2026 | 2530,2-2535,5 | Fark:5,30000000000018</div></div>
+<div class='c kc' data-t='06 00 26 1243 tahir duran'>
+<div class='cr'><span class='cn'>06 00 26 1243</span><span class='b bg'>TAMAMLANDI</span></div>
+<div class='cs'>Tahir DURAN | GÜNDÜZ | IRMAKÇILAR</div>
+<div class='cs'>25.05.2026 | 227,5-233,5 | Fark:6</div></div>
+<div class='c kc' data-t='34 00 162 3298 taner kulaksiz'>
+<div class='cr'><span class='cn'>34 00 162 3298</span><span class='b bg'>TAMAMLANDI</span></div>
+<div class='cs'>Taner KULAKSIZ | GÜNDÜZ | IRMAKÇILAR</div>
+<div class='cs'>25.05.2026 | 14525,4-14530,6 | Fark:5,20000000000073</div></div>
+<div class='c kc' data-t='06 fmu 817 özgür ertaş'>
+<div class='cr'><span class='cn'>06 FMU 817</span><span class='b bg'>TAMAMLANDI</span></div>
+<div class='cs'>Özgür ERTAŞ | GÜNDÜZ | IRMAKÇILAR</div>
+<div class='cs'>25.05.2026 | 8042-8077 | Fark:35 | Sef:23</div></div>
+<div class='c kc' data-t='06 ftn 454 burhan kaan altin'>
+<div class='cr'><span class='cn'>06 FTN 454</span><span class='b bg'>TAMAMLANDI</span></div>
+<div class='cs'>Burhan Kaan ALTIN | GÜNDÜZ | IRMAKÇILAR</div>
+<div class='cs'>25.05.2026 | 1566-1613 | Fark:47 | Sef:27</div></div>
+<div class='c kc' data-t='06 ftn 253 fatİh demİrsoy'>
+<div class='cr'><span class='cn'>06 FTN 253</span><span class='b bg'>TAMAMLANDI</span></div>
+<div class='cs'>FATİH DEMİRSOY | GÜNDÜZ | IRMAKÇILAR</div>
+<div class='cs'>25.05.2026 | 1351-1395 | Fark:44 | Sef:22</div></div>
+<div class='c kc' data-t='06 fme 393 y. tahir erduran'>
+<div class='cr'><span class='cn'>06 FME 393</span><span class='b bg'>TAMAMLANDI</span></div>
+<div class='cs'>Y. Tahir ERDURAN | GÜNDÜZ | IRMAKÇILAR</div>
+<div class='cs'>25.05.2026 | 24843-24889 | Fark:46 | Sef:27</div></div>
+<div class='c kc' data-t='06 fvm 048 İsmail uygurtaş'>
+<div class='cr'><span class='cn'>06 FVM 048</span><span class='b bg'>TAMAMLANDI</span></div>
+<div class='cs'>İsmail UYGURTAŞ | GÜNDÜZ | IRMAKÇILAR</div>
+<div class='cs'>25.05.2026 | 9178-9221 | Fark:43 | Sef:22</div></div>
+<div class='c kc' data-t='06 ftn 355 ziya ayhan'>
+<div class='cr'><span class='cn'>06 FTN 355</span><span class='b bg'>TAMAMLANDI</span></div>
+<div class='cs'>Ziya AYHAN | GÜNDÜZ | IRMAKÇILAR</div>
+<div class='cs'>25.05.2026 | 1314-1353 | Fark:39 | Sef:21</div></div>
+<div class='c kc' data-t='06 ftn 579 satılmış işik'>
+<div class='cr'><span class='cn'>06 FTN 579</span><span class='b bg'>TAMAMLANDI</span></div>
+<div class='cs'>Satılmış IŞIK | GÜNDÜZ | IRMAKÇILAR</div>
+<div class='cs'>25.05.2026 | 1586-1635 | Fark:49 | Sef:29</div></div>
+<div class='c kc' data-t='06 ftn 195 özkan güner'>
+<div class='cr'><span class='cn'>06 FTN 195</span><span class='b bg'>TAMAMLANDI</span></div>
+<div class='cs'>Özkan GÜNER | GÜNDÜZ | IRMAKÇILAR</div>
+<div class='cs'>25.05.2026 | 1708-1751 | Fark:43 | Sef:21</div></div>
+<div class='c kc' data-t='06 ftn 281 murat gülşen'>
+<div class='cr'><span class='cn'>06 FTN 281</span><span class='b bg'>TAMAMLANDI</span></div>
+<div class='cs'>Murat GÜLŞEN | GÜNDÜZ | IRMAKÇILAR</div>
+<div class='cs'>25.05.2026 | 1119-1160 | Fark:41 | Sef:18</div></div>
+<div class='c kc' data-t='34 00 11 8065 ese güngör'>
+<div class='cr'><span class='cn'>34 00 11 8065</span><span class='b bg'>TAMAMLANDI</span></div>
+<div class='cs'>Ese GÜNGÖR | GÜNDÜZ | IRMAKÇILAR</div>
+<div class='cs'>25.05.2026 | 16391,4-16397,4 | Fark:6</div></div>
+<div class='c kc' data-t='06 fmz 726 kemal sezer'>
+<div class='cr'><span class='cn'>06 FMZ 726</span><span class='b bg'>TAMAMLANDI</span></div>
+<div class='cs'>Kemal SEZER | GÜNDÜZ | IRMAKÇILAR</div>
+<div class='cs'>25.05.2026 | 9978-10020 | Fark:42 | Sef:20</div></div>
+<div class='c kc' data-t='34 00 25 6043 sercan doğan'>
+<div class='cr'><span class='cn'>34 00 25 6043</span><span class='b bg'>TAMAMLANDI</span></div>
+<div class='cs'>Sercan DOĞAN | GÜNDÜZ | IRMAKÇILAR</div>
+<div class='cs'>25.05.2026 | 3376,5-3381,4 | Fark:4,90000000000009</div></div>
+<div class='c kc' data-t='06 fkp 159 arif özbek'>
+<div class='cr'><span class='cn'>06 FKP 159</span><span class='b bg'>TAMAMLANDI</span></div>
+<div class='cs'>Arif ÖZBEK | GÜNDÜZ | IRMAKÇILAR</div>
+<div class='cs'>25.05.2026 | 28701-28747 | Fark:46 | Sef:23</div></div>
+<div class='c kc' data-t='06 ftn 324 h.dede çelİk'>
+<div class='cr'><span class='cn'>06 FTN 324</span><span class='b bg'>TAMAMLANDI</span></div>
+<div class='cs'>H.Dede ÇELİK | GÜNDÜZ | IRMAKÇILAR</div>
+<div class='cs'>25.05.2026 | 1468-1507 | Fark:39 | Sef:23</div></div>
+<div class='c kc' data-t='06 ftn 487 müslüm altintaş'>
+<div class='cr'><span class='cn'>06 FTN 487</span><span class='b bg'>TAMAMLANDI</span></div>
+<div class='cs'>Müslüm ALTINTAŞ | GÜNDÜZ | IRMAKÇILAR</div>
+<div class='cs'>25.05.2026 | 1495-1530 | Fark:35 | Sef:20</div></div>
+<div class='c kc' data-t='06 fmz 699 halil uçakan'>
+<div class='cr'><span class='cn'>06 FMZ 699</span><span class='b bg'>TAMAMLANDI</span></div>
+<div class='cs'>Halil UÇAKAN | GÜNDÜZ | IRMAKÇILAR</div>
+<div class='cs'>25.05.2026 | 9402-9444 | Fark:42 | Sef:23</div></div>
+<div class='c kc' data-t='06 fkp 232 kürşat maraşlioğlu'>
+<div class='cr'><span class='cn'>06 FKP 232</span><span class='b bg'>TAMAMLANDI</span></div>
+<div class='cs'>Kürşat MARAŞLIOĞLU | GÜNDÜZ | IRMAKÇILAR</div>
+<div class='cs'>25.05.2026 | 28345-28395 | Fark:50 | Sef:23</div></div>
+<div class='c kc' data-t='34 00 231 3626 gökhan ayhan'>
+<div class='cr'><span class='cn'>34 00 231 3626</span><span class='b bg'>TAMAMLANDI</span></div>
+<div class='cs'>Gökhan AYHAN | GÜNDÜZ | IRMAKÇILAR</div>
+<div class='cs'>25.05.2026 | 3875,7-3881,7 | Fark:6</div></div>
+<div class='c kc' data-t='06 00 23 1810 ceyhun çekİrge'>
+<div class='cr'><span class='cn'>06 00 23 1810</span><span class='b bg'>TAMAMLANDI</span></div>
+<div class='cs'>Ceyhun ÇEKİRGE | GÜNDÜZ | IRMAKÇILAR</div>
+<div class='cs'>25.05.2026 | 6717,3-6723,2 | Fark:5,89999999999964</div></div>
+<div class='c kc' data-t='06 00 25 6199 enis topuz'>
+<div class='cr'><span class='cn'>06 00 25 6199</span><span class='b bg'>TAMAMLANDI</span></div>
+<div class='cs'>Enis TOPUZ | GÜNDÜZ | IRMAKÇILAR</div>
+<div class='cs'>25.05.2026 | 1002-1008 | Fark:6</div></div>
+<div class='c kc' data-t='06 ftn 431 yusuf doğan'>
+<div class='cr'><span class='cn'>06 FTN 431</span><span class='b bg'>TAMAMLANDI</span></div>
+<div class='cs'>Yusuf DOĞAN | GÜNDÜZ | IRMAKÇILAR</div>
+<div class='cs'>25.05.2026 | 1638-1681 | Fark:43 | Sef:25</div></div>
+<div class='c kc' data-t='34 00 251 7252 arif çağlayan'>
+<div class='cr'><span class='cn'>34 00 251 7252</span><span class='b bg'>TAMAMLANDI</span></div>
+<div class='cs'>Arif ÇAĞLAYAN | GECE | IRMAKÇILAR</div>
+<div class='cs'>22.05.2026 | 2527,3-2530,2 | Fark:2,89999999999964</div></div>
+<div class='c kc' data-t='06 00 26 1243 tahir duran'>
+<div class='cr'><span class='cn'>06 00 26 1243</span><span class='b bg'>TAMAMLANDI</span></div>
+<div class='cs'>Tahir DURAN | GECE | IRMAKÇILAR</div>
+<div class='cs'>22.05.2026 | 224,2-227,5 | Fark:3,30000000000001</div></div>
+<div class='c kc' data-t='06 00 23 1810 ceyhun çekİrge'>
+<div class='cr'><span class='cn'>06 00 23 1810</span><span class='b bg'>TAMAMLANDI</span></div>
+<div class='cs'>Ceyhun ÇEKİRGE | GECE | IRMAKÇILAR</div>
+<div class='cs'>22.05.2026 | 6713,6-6717,3 | Fark:3,69999999999982</div></div>
+<div class='c kc' data-t='34 00 11 8065 mesut ögel'>
+<div class='cr'><span class='cn'>34 00 11 8065</span><span class='b bg'>TAMAMLANDI</span></div>
+<div class='cs'>Mesut ÖGEL | GECE | IRMAKÇILAR</div>
+<div class='cs'>22.05.2026 | 16388-16391,4 | Fark:3,40000000000146</div></div>
+<div class='c kc' data-t='06 eeu 386 yusuf kaya'>
+<div class='cr'><span class='cn'>06 EEU 386</span><span class='b bg'>TAMAMLANDI</span></div>
+<div class='cs'>YUSUF KAYA | GÜNDÜZ | ÇINARSAN</div>
+<div class='cs'>22.05.2026 | 62689-62704 | Fark:15 | Sef:13</div></div>
+<div class='c kc' data-t='06 bc 9266 abdullah çinar'>
+<div class='cr'><span class='cn'>06 BC 9266</span><span class='b bg'>TAMAMLANDI</span></div>
+<div class='cs'>ABDULLAH ÇINAR | GÜNDÜZ | ÇINARSAN</div>
+<div class='cs'>22.05.2026 | 290485-290502 | Fark:17 | Sef:16</div></div>
+<div class='c kc' data-t='06 fsf 855 alİ karademİr'>
+<div class='cr'><span class='cn'>06 FSF 855</span><span class='b bg'>TAMAMLANDI</span></div>
+<div class='cs'>ALİ KARADEMİR | GÜNDÜZ | ÇINARSAN</div>
+<div class='cs'>22.05.2026 | 625-639 | Fark:14 | Sef:11</div></div>
+<div class='c kc' data-t='06 bc 7235 bünyamİn çinar'>
+<div class='cr'><span class='cn'>06 BC 7235</span><span class='b bg'>TAMAMLANDI</span></div>
+<div class='cs'>BÜNYAMİN ÇINAR | GÜNDÜZ | ÇINARSAN</div>
+<div class='cs'>22.05.2026 | 181622-181644 | Fark:22 | Sef:17</div></div>
+<div class='c kc' data-t='06 fb 1135 u.tekİn tunç'>
+<div class='cr'><span class='cn'>06 FB 1135</span><span class='b bg'>TAMAMLANDI</span></div>
+<div class='cs'>U.TEKİN TUNÇ | GÜNDÜZ | ÇINARSAN</div>
+<div class='cs'>22.05.2026 | 56809-56831 | Fark:22 | Sef:17</div></div>
+<div class='c kc' data-t='06 ehe 609 hasan çelİk'>
+<div class='cr'><span class='cn'>06 EHE 609</span><span class='b bg'>TAMAMLANDI</span></div>
+<div class='cs'>HASAN ÇELİK | GÜNDÜZ | ÇINARSAN</div>
+<div class='cs'>22.05.2026 | 17956-17976 | Fark:20 | Sef:14</div></div>
+<div class='c kc' data-t='06 fc 7627 osman kaplan'>
+<div class='cr'><span class='cn'>06 FC 7627</span><span class='b bg'>TAMAMLANDI</span></div>
+<div class='cs'>OSMAN KAPLAN | GÜNDÜZ | ÇINARSAN</div>
+<div class='cs'>22.05.2026 | 1051-1075 | Fark:24 | Sef:18</div></div>
+<div class='c kc' data-t='06 bc 2431 fİkrİ tunç'>
+<div class='cr'><span class='cn'>06 BC 2431</span><span class='b bg'>TAMAMLANDI</span></div>
+<div class='cs'>FİKRİ TUNÇ | GÜNDÜZ | ÇINARSAN</div>
+<div class='cs'>22.05.2026 | 48843-48868 | Fark:25 | Sef:19</div></div>
+<div class='c kc' data-t='06 fsu 564 murat çelİk'>
+<div class='cr'><span class='cn'>06 FSU 564</span><span class='b bg'>TAMAMLANDI</span></div>
+<div class='cs'>MURAT ÇELİK | GÜNDÜZ | ÇINARSAN</div>
+<div class='cs'>22.05.2026 | 3542-3566 | Fark:24 | Sef:18</div></div>
+<div class='c kc' data-t='06 00 23 50 09 furkan çinar'>
+<div class='cr'><span class='cn'>06 00 23 50 09</span><span class='b bg'>TAMAMLANDI</span></div>
+<div class='cs'>FURKAN ÇINAR | GÜNDÜZ | ÇINARSAN</div>
+<div class='cs'>22.05.2026 | 4928-4930 | Fark:2</div></div>
+<div class='c kc' data-t='34 00 22 75 78 furkan çinar'>
+<div class='cr'><span class='cn'>34 00 22 75 78</span><span class='b bg'>TAMAMLANDI</span></div>
+<div class='cs'>FURKAN ÇINAR | GÜNDÜZ | ÇINARSAN</div>
+<div class='cs'>22.05.2026 | 6448,7-6453,2 | Fark:4,5</div></div>
+<div class='c kc' data-t='06 00 26 02 31 erol akçelİk'>
+<div class='cr'><span class='cn'>06 00 26 02 31</span><span class='b bg'>TAMAMLANDI</span></div>
+<div class='cs'>EROL AKÇELİK | GÜNDÜZ | ÇINARSAN</div>
+<div class='cs'>22.05.2026 | 402,9-407,1 | Fark:4,20000000000005</div></div>
+<div class='c kc' data-t='06 ftn 324 fatİh demİrsoy'>
+<div class='cr'><span class='cn'>06 FTN 324</span><span class='b bg'>TAMAMLANDI</span></div>
+<div class='cs'>FATİH DEMİRSOY | GECE | IRMAKÇILAR</div>
+<div class='cs'>22.05.2026 | 1438-1468 | Fark:30 | Sef:20</div></div>
+<div class='c kc' data-t='06 fvm 048 İsmail uygurtaş'>
+<div class='cr'><span class='cn'>06 FVM 048</span><span class='b bg'>TAMAMLANDI</span></div>
+<div class='cs'>İsmail UYGURTAŞ | GECE | IRMAKÇILAR</div>
+<div class='cs'>22.05.2026 | 9146-9178 | Fark:32 | Sef:19</div></div>
+<div class='c kc' data-t='06 ftn 195 özkan güner'>
+<div class='cr'><span class='cn'>06 FTN 195</span><span class='b bg'>TAMAMLANDI</span></div>
+<div class='cs'>Özkan GÜNER | GECE | IRMAKÇILAR</div>
+<div class='cs'>22.05.2026 | 1668-1703 | Fark:35 | Sef:21</div></div>
+<div class='c kc' data-t='06 fmz 699 halil uçakan'>
+<div class='cr'><span class='cn'>06 FMZ 699</span><span class='b bg'>TAMAMLANDI</span></div>
+<div class='cs'>Halil UÇAKAN | GECE | IRMAKÇILAR</div>
+<div class='cs'>22.05.2026 | 9371-9402 | Fark:31 | Sef:21</div></div>
+<div class='c kc' data-t='34 00 231 3626 hasan yaba'>
+<div class='cr'><span class='cn'>34 00 231 3626</span><span class='b bg'>TAMAMLANDI</span></div>
+<div class='cs'>Hasan YABA | GECE | IRMAKÇILAR</div>
+<div class='cs'>22.05.2026 | 3871,7-3875,7 | Fark:4</div></div>
+<div class='c kc' data-t='34 00 25 6043 ertuğrul şİmşek'>
+<div class='cr'><span class='cn'>34 00 25 6043</span><span class='b bg'>TAMAMLANDI</span></div>
+<div class='cs'>Ertuğrul ŞİMŞEK | GECE | IRMAKÇILAR</div>
+<div class='cs'>22.05.2026 | 3373-3376,5 | Fark:3,5</div></div>
+<div class='c kc' data-t='06 ftn 431 yusuf doğan'>
+<div class='cr'><span class='cn'>06 FTN 431</span><span class='b bg'>TAMAMLANDI</span></div>
+<div class='cs'>Yusuf DOĞAN | GECE | IRMAKÇILAR</div>
+<div class='cs'>22.05.2026 | 1602-1638 | Fark:36 | Sef:24</div></div>
+<div class='c kc' data-t='34 00 162 3298 taner kulaksiz'>
+<div class='cr'><span class='cn'>34 00 162 3298</span><span class='b bg'>TAMAMLANDI</span></div>
+<div class='cs'>Taner KULAKSIZ | GÜNDÜZ | IRMAKÇILAR</div>
+<div class='cs'>22.05.2026 | 14517-14525,4 | Fark:8,39999999999964</div></div>
+<div class='c kc' data-t='06 ftn 355 ziya ayhan'>
+<div class='cr'><span class='cn'>06 FTN 355</span><span class='b bg'>TAMAMLANDI</span></div>
+<div class='cs'>Ziya AYHAN | GÜNDÜZ | IRMAKÇILAR</div>
+<div class='cs'>22.05.2026 | 1287-1314 | Fark:27 | Sef:21</div></div>
+<div class='c kc' data-t='06 fmu 858 altan gülmez'>
+<div class='cr'><span class='cn'>06 FMU 858</span><span class='b bg'>TAMAMLANDI</span></div>
+<div class='cs'>Altan GÜLMEZ | GÜNDÜZ | IRMAKÇILAR</div>
+<div class='cs'>22.05.2026 | 7891-7921 | Fark:30 | Sef:18</div></div>
+<div class='c kc' data-t='06 fbm 211 ahmet doğan'>
+<div class='cr'><span class='cn'>06 FBM 211</span><span class='b bg'>TAMAMLANDI</span></div>
+<div class='cs'>Ahmet DOĞAN | GÜNDÜZ | IRMAKÇILAR</div>
+<div class='cs'>22.05.2026 | 36247-36303 | Fark:56 | Sef:36</div></div>
+<div class='c kc' data-t='06 ftn 579 satılmış işik'>
+<div class='cr'><span class='cn'>06 FTN 579</span><span class='b bg'>TAMAMLANDI</span></div>
+<div class='cs'>Satılmış IŞIK | GÜNDÜZ | IRMAKÇILAR</div>
+<div class='cs'>22.05.2026 | 1550-1586 | Fark:36 | Sef:23</div></div>
+<div class='c kc' data-t='06 ftn 253 hasan güney'>
+<div class='cr'><span class='cn'>06 FTN 253</span><span class='b bg'>TAMAMLANDI</span></div>
+<div class='cs'>Hasan GÜNEY | GÜNDÜZ | IRMAKÇILAR</div>
+<div class='cs'>22.05.2026 | 1290-1351 | Fark:61 | Sef:38</div></div>
+<div class='c kc' data-t='06 fmz 699 özgür ertaş'>
+<div class='cr'><span class='cn'>06 FMZ 699</span><span class='b bg'>TAMAMLANDI</span></div>
+<div class='cs'>Özgür ERTAŞ | GÜNDÜZ | IRMAKÇILAR</div>
+<div class='cs'>22.05.2026 | 9342-9371 | Fark:29 | Sef:22</div></div>
+<div class='c kc' data-t='06 00 26 1243 mustafa ünlü'>
+<div class='cr'><span class='cn'>06 00 26 1243</span><span class='b bg'>TAMAMLANDI</span></div>
+<div class='cs'>Mustafa ÜNLÜ | GÜNDÜZ | IRMAKÇILAR</div>
+<div class='cs'>22.05.2026 | 219,5-224,2 | Fark:4,69999999999999</div></div>
+<div class='c kc' data-t='34 00 231 3626 gökhan ayhan'>
+<div class='cr'><span class='cn'>34 00 231 3626</span><span class='b bg'>TAMAMLANDI</span></div>
+<div class='cs'>Gökhan AYHAN | GÜNDÜZ | IRMAKÇILAR</div>
+<div class='cs'>22.05.2026 | 3867,4-3871,7 | Fark:4,29999999999973</div></div>
+<div class='c kc' data-t='06 fkp 232 kürşat maraşlioğlu'>
+<div class='cr'><span class='cn'>06 FKP 232</span><span class='b bg'>TAMAMLANDI</span></div>
+<div class='cs'>Kürşat MARAŞLIOĞLU | GÜNDÜZ | IRMAKÇILAR</div>
+<div class='cs'>22.05.2026 | 28290-28345 | Fark:55 | Sef:27</div></div>
+<div class='c kc' data-t='06 ftn 324 h.dede çelİk'>
+<div class='cr'><span class='cn'>06 FTN 324</span><span class='b bg'>TAMAMLANDI</span></div>
+<div class='cs'>H.DEDE ÇELİK | GÜNDÜZ | IRMAKÇILAR</div>
+<div class='cs'>22.05.2026 | 1418-1438 | Fark:28 | Sef:16</div></div>
+<div class='c kc' data-t='06 00 25 6199 enis topuz'>
+<div class='cr'><span class='cn'>06 00 25 6199</span><span class='b bg'>TAMAMLANDI</span></div>
+<div class='cs'>Enis TOPUZ | GÜNDÜZ | IRMAKÇILAR</div>
+<div class='cs'>22.05.2026 | 993,4-1002 | Fark:8,60000000000002</div></div>
+<div class='c kc' data-t='06 fmz 726 kemal sezer'>
+<div class='cr'><span class='cn'>06 FMZ 726</span><span class='b bg'>TAMAMLANDI</span></div>
+<div class='cs'>Kemal SEZER | GÜNDÜZ | IRMAKÇILAR</div>
+<div class='cs'>22.05.2026 | 9917-9978 | Fark:61 | Sef:33</div></div>
+<div class='c kc' data-t='06 ftn 281 murat gülşen'>
+<div class='cr'><span class='cn'>06 FTN 281</span><span class='b bg'>TAMAMLANDI</span></div>
+<div class='cs'>Murat GÜLŞEN | GÜNDÜZ | IRMAKÇILAR</div>
+<div class='cs'>22.05.2026 | 1088-1119 | Fark:31 | Sef:17</div></div>
+<div class='c kc' data-t='06 ftn 487 müslüm altintaş'>
+<div class='cr'><span class='cn'>06 FTN 487</span><span class='b bg'>TAMAMLANDI</span></div>
+<div class='cs'>Müslüm ALTINTAŞ | GÜNDÜZ | IRMAKÇILAR</div>
+<div class='cs'>22.05.2026 | 1462-1495 | Fark:33 | Sef:22</div></div>
+<div class='c kc' data-t='06 fkp 159 arif özbek'>
+<div class='cr'><span class='cn'>06 FKP 159</span><span class='b bg'>TAMAMLANDI</span></div>
+<div class='cs'>Arif ÖZBEK | GÜNDÜZ | IRMAKÇILAR</div>
+<div class='cs'>22.05.2026 | 28669-28701 | Fark:32 | Sef:17</div></div>
+<div class='c kc' data-t='06 ftn 454 burhan kaan altin'>
+<div class='cr'><span class='cn'>06 FTN 454</span><span class='b bg'>TAMAMLANDI</span></div>
+<div class='cs'>Burhan Kaan ALTIN | GÜNDÜZ | IRMAKÇILAR</div>
+<div class='cs'>22.05.2026 | 1531-1566 | Fark:35 | Sef:22</div></div>
+<div class='c kc' data-t='06 fer 920 mehmet argali'>
+<div class='cr'><span class='cn'>06 FER 920</span><span class='b bg'>TAMAMLANDI</span></div>
+<div class='cs'>Mehmet ARGALI | GÜNDÜZ | IRMAKÇILAR</div>
+<div class='cs'>22.05.2026 | 23443-23495 | Fark:52 | Sef:38</div></div>
+<div class='c kc' data-t='06 fck 120 enes boztepe'>
+<div class='cr'><span class='cn'>06 FCK 120</span><span class='b bg'>TAMAMLANDI</span></div>
+<div class='cs'>Enes BOZTEPE | GÜNDÜZ | IRMAKÇILAR</div>
+<div class='cs'>22.05.2026 | 45118-45165 | Fark:47 | Sef:38</div></div>
+<div class='c kc' data-t='34 00 11 8065 ese güngör'>
+<div class='cr'><span class='cn'>34 00 11 8065</span><span class='b bg'>TAMAMLANDI</span></div>
+<div class='cs'>Ese GÜNGÖR | GÜNDÜZ | IRMAKÇILAR</div>
+<div class='cs'>22.05.2026 | 16382,3-16388 | Fark:5,70000000000073</div></div>
+<div class='c kc' data-t='34 00 25 6043 sercan doğan'>
+<div class='cr'><span class='cn'>34 00 25 6043</span><span class='b bg'>TAMAMLANDI</span></div>
+<div class='cs'>Sercan DOĞAN | GÜNDÜZ | IRMAKÇILAR</div>
+<div class='cs'>22.05.2026 | 3368-3373 | Fark:5</div></div>
+<div class='c kc' data-t='06 00 23 1810 arif çağlayan'>
+<div class='cr'><span class='cn'>06 00 23 1810</span><span class='b bg'>TAMAMLANDI</span></div>
+<div class='cs'>Arif ÇAĞLAYAN | GÜNDÜZ | IRMAKÇILAR</div>
+<div class='cs'>22.05.2026 | 6706-6713,6 | Fark:7,60000000000036</div></div>
+<div class='c kc' data-t='06 00 16 5515 batuhan bakirci'>
+<div class='cr'><span class='cn'>06 00 16 5515</span><span class='b bg'>TAMAMLANDI</span></div>
+<div class='cs'>Batuhan BAKIRCI | GÜNDÜZ | IRMAKÇILAR</div>
+<div class='cs'>22.05.2026 | 17017-17027 | Fark:10</div></div>
+<div class='c kc' data-t='3400 191 03 11 yusuf yorulmaz'>
+<div class='cr'><span class='cn'>3400 191 03 11</span><span class='b bg'>TAMAMLANDI</span></div>
+<div class='cs'>Yusuf YORULMAZ | GÜNDÜZ | IRMAKÇILAR</div>
+<div class='cs'>22.05.2026 | 5675-5686 | Fark:11</div></div>
+<div class='c kc' data-t='34 00 251 7252 uğur yücel'>
+<div class='cr'><span class='cn'>34 00 251 7252</span><span class='b bg'>TAMAMLANDI</span></div>
+<div class='cs'>Uğur YÜCEL | GÜNDÜZ | IRMAKÇILAR</div>
+<div class='cs'>22.05.2026 | 2520-2527,3 | Fark:7,30000000000018</div></div>
+<div class='c kc' data-t='06 fsf 855 alİ karademİr'>
+<div class='cr'><span class='cn'>06 FSF 855</span><span class='b bg'>TAMAMLANDI</span></div>
+<div class='cs'>ALİ KARADEMİR | GÜNDÜZ | ÇINARSAN</div>
+<div class='cs'>21.05.2026 | 590-625 | Fark:35 | Sef:27</div></div>
+<div class='c kc' data-t='06 bc 2431 fİkrİ tunç'>
+<div class='cr'><span class='cn'>06 BC 2431</span><span class='b bg'>TAMAMLANDI</span></div>
+<div class='cs'>FİKRİ TUNÇ | GÜNDÜZ | ÇINARSAN</div>
+<div class='cs'>21.05.2026 | 48803-48843 | Fark:40 | Sef:30</div></div>
+<div class='c kc' data-t='06 fb 1135 u.tekİn tunç'>
+<div class='cr'><span class='cn'>06 FB 1135</span><span class='b bg'>TAMAMLANDI</span></div>
+<div class='cs'>U.TEKİN TUNÇ | GÜNDÜZ | ÇINARSAN</div>
+<div class='cs'>21.05.2026 | 56773-56809 | Fark:36 | Sef:27</div></div>
+<div class='c kc' data-t='06 eeu 386 yusuf kaya'>
+<div class='cr'><span class='cn'>06 EEU 386</span><span class='b bg'>TAMAMLANDI</span></div>
+<div class='cs'>YUSUF KAYA | GÜNDÜZ | ÇINARSAN</div>
+<div class='cs'>21.05.2026 | 62649-62689 | Fark:40 | Sef:30</div></div>
+<div class='c kc' data-t='06 bc 9266 abdullah çinar'>
+<div class='cr'><span class='cn'>06 BC 9266</span><span class='b bg'>TAMAMLANDI</span></div>
+<div class='cs'>ABDULLAH ÇINAR | GÜNDÜZ | ÇINARSAN</div>
+<div class='cs'>21.05.2026 | 290452-290485 | Fark:33 | Sef:28</div></div>
+<div class='c kc' data-t='06 fc 7627 osman kaplan'>
+<div class='cr'><span class='cn'>06 FC 7627</span><span class='b bg'>TAMAMLANDI</span></div>
+<div class='cs'>OSMAN KAPLAN | GÜNDÜZ | ÇINARSAN</div>
+<div class='cs'>21.05.2026 | 1021-1051 | Fark:30 | Sef:23</div></div>
+<div class='c kc' data-t='06 bc 7235 bünyamİn çinar'>
+<div class='cr'><span class='cn'>06 BC 7235</span><span class='b bg'>TAMAMLANDI</span></div>
+<div class='cs'>BÜNYAMİN ÇINAR | GÜNDÜZ | ÇINARSAN</div>
+<div class='cs'>21.05.2026 | 181587-181622 | Fark:35 | Sef:28</div></div>
+<div class='c kc' data-t='06 fsu 564 murat çelİk'>
+<div class='cr'><span class='cn'>06 FSU 564</span><span class='b bg'>TAMAMLANDI</span></div>
+<div class='cs'>MURAT ÇELİK | GÜNDÜZ | ÇINARSAN</div>
+<div class='cs'>21.05.2026 | 3505-3542 | Fark:37 | Sef:28</div></div>
+<div class='c kc' data-t='06 ehe 609 hasan çelİk'>
+<div class='cr'><span class='cn'>06 EHE 609</span><span class='b bg'>TAMAMLANDI</span></div>
+<div class='cs'>HASAN ÇELİK | GÜNDÜZ | ÇINARSAN</div>
+<div class='cs'>21.05.2026 | 17921-17956 | Fark:35 | Sef:26</div></div>
+<div class='c kc' data-t='06 00 26 02 31 erol akçelİk'>
+<div class='cr'><span class='cn'>06 00 26 02 31</span><span class='b bg'>TAMAMLANDI</span></div>
+<div class='cs'>EROL AKÇELİK | GÜNDÜZ | ÇINARSAN</div>
+<div class='cs'>21.05.2026 | 396,8-402,9 | Fark:6,09999999999997</div></div>
+<div class='c kc' data-t='06 00 23 50 09 furkan çinar'>
+<div class='cr'><span class='cn'>06 00 23 50 09</span><span class='b bg'>TAMAMLANDI</span></div>
+<div class='cs'>FURKAN ÇINAR | GÜNDÜZ | ÇINARSAN</div>
+<div class='cs'>21.05.2026 | 4922,3-4928 | Fark:5,69999999999982</div></div>
+<div class='c kc' data-t='34 00 22 75 78 furkan çinar'>
+<div class='cr'><span class='cn'>34 00 22 75 78</span><span class='b bg'>TAMAMLANDI</span></div>
+<div class='cs'>FURKAN ÇINAR | GÜNDÜZ | ÇINARSAN</div>
+<div class='cs'>21.05.2026 | 6442,7-6448,7 | Fark:6</div></div>
+<div class='c kc' data-t='34 00 162 3298 taner kulaksiz'>
+<div class='cr'><span class='cn'>34 00 162 3298</span><span class='b bg'>TAMAMLANDI</span></div>
+<div class='cs'>Taner KULAKSIZ | GÜNDÜZ | IRMAKÇILAR</div>
+<div class='cs'>21.05.2026 | 14513-14517 | Fark:4</div></div>
+<div class='c kc' data-t='06 fkp 232 kürşat maraşlioğlu'>
+<div class='cr'><span class='cn'>06 FKP 232</span><span class='b bg'>TAMAMLANDI</span></div>
+<div class='cs'>Kürşat MARAŞLIOĞLU | GÜNDÜZ | IRMAKÇILAR</div>
+<div class='cs'>21.05.2026 | 28250-28290 | Fark:40 | Sef:25</div></div>
+<div class='c kc' data-t='06 ftn 195 h. dede çelİk'>
+<div class='cr'><span class='cn'>06 FTN 195</span><span class='b bg'>TAMAMLANDI</span></div>
+<div class='cs'>H. Dede ÇELİK | GÜNDÜZ | IRMAKÇILAR</div>
+<div class='cs'>21.05.2026 | 1668-1708 | Fark:40 | Sef:24</div></div>
+<div class='c kc' data-t='06 fmz 726 kemal sezer'>
+<div class='cr'><span class='cn'>06 FMZ 726</span><span class='b bg'>TAMAMLANDI</span></div>
+<div class='cs'>Kemal SEZER | GÜNDÜZ | IRMAKÇILAR</div>
+<div class='cs'>21.05.2026 | 9881-9917 | Fark:36 | Sef:22</div></div>
+<div class='c kc' data-t='06 00 26 1243 mustafa ünlü'>
+<div class='cr'><span class='cn'>06 00 26 1243</span><span class='b bg'>TAMAMLANDI</span></div>
+<div class='cs'>Mustafa ÜNLÜ | GÜNDÜZ | IRMAKÇILAR</div>
+<div class='cs'>21.05.2026 | 213,6-219,5 | Fark:5,90000000000001</div></div>
+</div>
+<div class='pg' id='p-mazot'>
+<div class='g2'>
+<div class='s'><div class='sl'>Mazot Stok</div><div class='sv vo'>5673 Lt</div></div>
+<div class='s'><div class='sl'>Adblue Stok</div><div class='sv vb'>0 Lt</div></div>
+</div>
+<div class='c' style='border-left:3px solid #BF360C'><div class='cs' style='color:#BF360C;font-weight:700'>AKTIF IRSALIYE</div><div class='cn'>BTI202600003773</div></div>
+<div class='st'>Plaka Sorgulama</div>
+<input class='sr' placeholder='Plaka giriniz...' oninput='fmz(this.value)'>
+<div class='st'>Son Mazot Kayitlari</div>
+<div class='c mc' data-t='06 ftn 253'>
+<div class='cr'><span class='cn'>06 FTN 253</span><span class='b bo'>141 Lt</span></div>
+<div class='cs'>22.05.2026 | Fis:25164 | Hasan GÜNEY</div></div>
+<div class='c mc' data-t='06 ftn 487'>
+<div class='cr'><span class='cn'>06 FTN 487</span><span class='b bo'>205 Lt</span></div>
+<div class='cs'>22.05.2026 | Fis:25163 | Müslüm ALTINTAŞ</div></div>
+<div class='c mc' data-t='06 fmu 858'>
+<div class='cr'><span class='cn'>06 FMU 858</span><span class='b bo'>172 Lt</span></div>
+<div class='cs'>22.05.2026 | Fis:25162 | Altan GÜLMEZ</div></div>
+<div class='c mc' data-t='08 87'>
+<div class='cr'><span class='cn'>08 87</span><span class='b bo'>92 Lt</span></div>
+<div class='cs'>22.05.2026 | Fis:25161 | Niyazi GÜNDOĞDU</div></div>
+<div class='c mc' data-t='06 fkp 232'>
+<div class='cr'><span class='cn'>06 FKP 232</span><span class='b bo'>148 Lt</span></div>
+<div class='cs'>22.05.2026 | Fis:25160 | Kürşat MARAŞLIOĞLU</div></div>
+<div class='c mc' data-t='06 fkp 159'>
+<div class='cr'><span class='cn'>06 FKP 159</span><span class='b bo'>152 Lt</span></div>
+<div class='cs'>22.05.2026 | Fis:25159 | Arif ÖZBEK</div></div>
+<div class='c mc' data-t='06 ftn 324'>
+<div class='cr'><span class='cn'>06 FTN 324</span><span class='b bo'>141 Lt</span></div>
+<div class='cs'>22.05.2026 | Fis:25158 | H.Dede ÇELİK</div></div>
+<div class='c mc' data-t='06 fbm 211'>
+<div class='cr'><span class='cn'>06 FBM 211</span><span class='b bo'>165 Lt</span></div>
+<div class='cs'>22.05.2026 | Fis:25157 | Ahmet DOĞAN</div></div>
+<div class='c mc' data-t='06 fmz 726'>
+<div class='cr'><span class='cn'>06 FMZ 726</span><span class='b bo'>153 Lt</span></div>
+<div class='cs'>22.05.2026 | Fis:25156 | Kemal SEZER</div></div>
+<div class='c mc' data-t='3400 191 03 11'>
+<div class='cr'><span class='cn'>3400 191 03 11</span><span class='b bo'>311 Lt</span></div>
+<div class='cs'>22.05.2026 | Fis:25155 | Yusuf YORULMAZ</div></div>
+<div class='c mc' data-t='06 00 23 1810'>
+<div class='cr'><span class='cn'>06 00 23 1810</span><span class='b bo'>278 Lt</span></div>
+<div class='cs'>22.05.2026 | Fis:25154 | Arif ÇAĞLAYAN</div></div>
+<div class='c mc' data-t='06 ftn 281'>
+<div class='cr'><span class='cn'>06 FTN 281</span><span class='b bo'>215 Lt</span></div>
+<div class='cs'>22.05.2026 | Fis:25153 | Murat GÜLŞEN</div></div>
+<div class='c mc' data-t='06 fer 920'>
+<div class='cr'><span class='cn'>06 FER 920</span><span class='b bo'>170 Lt</span></div>
+<div class='cs'>22.05.2026 | Fis:25152 | Mehmet ARGALI</div></div>
+<div class='c mc' data-t='06 ftn 579'>
+<div class='cr'><span class='cn'>06 FTN 579</span><span class='b bo'>229 Lt</span></div>
+<div class='cs'>22.05.2026 | Fis:25151 | Satılmış IŞIK</div></div>
+<div class='c mc' data-t='34 00 11 8065'>
+<div class='cr'><span class='cn'>34 00 11 8065</span><span class='b bo'>270 Lt</span></div>
+<div class='cs'>22.05.2026 | Fis:27750 | Ese GÜNGÖR</div></div>
+<div class='c mc' data-t='06 00 16 5515'>
+<div class='cr'><span class='cn'>06 00 16 5515</span><span class='b bo'>440 Lt</span></div>
+<div class='cs'>22.05.2026 | Fis:27749 | Batuhan BAKIRCI</div></div>
+<div class='c mc' data-t='34 00 251 7252'>
+<div class='cr'><span class='cn'>34 00 251 7252</span><span class='b bo'>255 Lt</span></div>
+<div class='cs'>22.05.2026 | Fis:27748 | Uğur YÜCEL</div></div>
+<div class='c mc' data-t='06 00 26 02 31'>
+<div class='cr'><span class='cn'>06 00 26 02 31</span><span class='b bo'>415 Lt</span></div>
+<div class='cs'>22.05.2026 | Fis:27511 | EROL AKÇELİK</div></div>
+<div class='c mc' data-t='06 fpb 142'>
+<div class='cr'><span class='cn'>06 FPB 142</span><span class='b bo'>39 Lt</span></div>
+<div class='cs'>22.05.2026 | Fis:27510 | ABDULLAH ÇINAR</div></div>
+<div class='c mc' data-t='06 bf 5241'>
+<div class='cr'><span class='cn'>06 BF 5241</span><span class='b bo'>41 Lt</span></div>
+<div class='cs'>22.05.2026 | Fis:27509 | ABDULLAH ÇINAR</div></div>
+<div class='c mc' data-t='06 bc 9266'>
+<div class='cr'><span class='cn'>06 BC 9266</span><span class='b bo'>195 Lt</span></div>
+<div class='cs'>22.05.2026 | Fis:27508 | ABDULLAH ÇINAR</div></div>
+<div class='c mc' data-t='06 00 23 50 09'>
+<div class='cr'><span class='cn'>06 00 23 50 09</span><span class='b bo'>316 Lt</span></div>
+<div class='cs'>22.05.2026 | Fis:27507 | ABDULLAH ÇINAR</div></div>
+<div class='c mc' data-t='06 bc 7235'>
+<div class='cr'><span class='cn'>06 BC 7235</span><span class='b bo'>180 Lt</span></div>
+<div class='cs'>22.05.2026 | Fis:27506 | ABDULLAH ÇINAR</div></div>
+<div class='c mc' data-t='06 fb 1135'>
+<div class='cr'><span class='cn'>06 FB 1135</span><span class='b bo'>236 Lt</span></div>
+<div class='cs'>22.05.2026 | Fis:27505 | U.TEKİN TUNÇ</div></div>
+<div class='c mc' data-t='06 ehe 609'>
+<div class='cr'><span class='cn'>06 EHE 609</span><span class='b bo'>233 Lt</span></div>
+<div class='cs'>22.05.2026 | Fis:27504 | HASAN ÇELİK</div></div>
+<div class='c mc' data-t='06 bc 2431'>
+<div class='cr'><span class='cn'>06 BC 2431</span><span class='b bo'>213 Lt</span></div>
+<div class='cs'>22.05.2026 | Fis:27503 | FİKRİ TUNÇ</div></div>
+<div class='c mc' data-t='06 fc 7627'>
+<div class='cr'><span class='cn'>06 FC 7627</span><span class='b bo'>229 Lt</span></div>
+<div class='cs'>22.05.2026 | Fis:27502 | OSMAN KAPLAN</div></div>
+<div class='c mc' data-t='06 fsu 564'>
+<div class='cr'><span class='cn'>06 FSU 564</span><span class='b bo'>263 Lt</span></div>
+<div class='cs'>22.05.2026 | Fis:27501 | MURAT ÇELİK</div></div>
+<div class='c mc' data-t='34 00 22 75 78'>
+<div class='cr'><span class='cn'>34 00 22 75 78</span><span class='b bo'>399 Lt</span></div>
+<div class='cs'>22.05.2026 | Fis:25050 | Ferhat YAĞIZ</div></div>
+<div class='c mc' data-t='06 fsf 855'>
+<div class='cr'><span class='cn'>06 FSF 855</span><span class='b bo'>210 Lt</span></div>
+<div class='cs'>21.05.2026 | Fis:25049 | ALİ KARADEMİR</div></div>
+<div class='c mc' data-t='06 bc 2431'>
+<div class='cr'><span class='cn'>06 BC 2431</span><span class='b bo'>50 Lt</span></div>
+<div class='cs'>21.05.2026 | Fis:25048 | FİKRİ TUNÇ</div></div>
+<div class='c mc' data-t='06 fmz 699'>
+<div class='cr'><span class='cn'>06 FMZ 699</span><span class='b bo'>90 Lt</span></div>
+<div class='cs'>21.05.2026 | Fis:27747 | Özgür ERTAŞ</div></div>
+<div class='c mc' data-t='06 ftn 454'>
+<div class='cr'><span class='cn'>06 FTN 454</span><span class='b bo'>46 Lt</span></div>
+<div class='cs'>21.05.2026 | Fis:27746 | Burhan Kaan ALTIN</div></div>
+<div class='c mc' data-t='06 00 16 5515'>
+<div class='cr'><span class='cn'>06 00 16 5515</span><span class='b bo'>112 Lt</span></div>
+<div class='cs'>21.05.2026 | Fis:27745 | Batuhan BAKIRCI</div></div>
+<div class='c mc' data-t='34 00 231 3626'>
+<div class='cr'><span class='cn'>34 00 231 3626</span><span class='b bo'>476 Lt</span></div>
+<div class='cs'>21.05.2026 | Fis:27744 | H.Ahmet GÜNEŞ</div></div>
+<div class='c mc' data-t='06 00 23 1810'>
+<div class='cr'><span class='cn'>06 00 23 1810</span><span class='b bo'>380 Lt</span></div>
+<div class='cs'>21.05.2026 | Fis:27743 | H.Ahmet GÜNEŞ</div></div>
+<div class='c mc' data-t='34 00 251 7252'>
+<div class='cr'><span class='cn'>34 00 251 7252</span><span class='b bo'>450 Lt</span></div>
+<div class='cs'>21.05.2026 | Fis:27742 | Uğur YÜCEL</div></div>
+<div class='c mc' data-t='3400 191 03 11'>
+<div class='cr'><span class='cn'>3400 191 03 11</span><span class='b bo'>340 Lt</span></div>
+<div class='cs'>21.05.2026 | Fis:27741 | H.Ahmet GÜNEŞ</div></div>
+<div class='c mc' data-t='06 00 25 6199'>
+<div class='cr'><span class='cn'>06 00 25 6199</span><span class='b bo'>496 Lt</span></div>
+<div class='cs'>21.05.2026 | Fis:27740 | H.Ahmet GÜNEŞ</div></div>
+<div class='c mc' data-t='06 00 26 1243'>
+<div class='cr'><span class='cn'>06 00 26 1243</span><span class='b bo'>316 Lt</span></div>
+<div class='cs'>21.05.2026 | Fis:27739 | Mustafa ÜNLÜ</div></div>
+<div class='c mc' data-t='06 ftk 969'>
+<div class='cr'><span class='cn'>06 FTK 969</span><span class='b bo'>18 Lt</span></div>
+<div class='cs'>21.05.2026 | Fis:27738 | Mesut AKKOÇ</div></div>
+<div class='c mc' data-t='06 fkf 383'>
+<div class='cr'><span class='cn'>06 FKF 383</span><span class='b bo'>51 Lt</span></div>
+<div class='cs'>21.05.2026 | Fis:27737 | Necati ALTAN</div></div>
+<div class='c mc' data-t='34 00 11 8065'>
+<div class='cr'><span class='cn'>34 00 11 8065</span><span class='b bo'>370 Lt</span></div>
+<div class='cs'>21.05.2026 | Fis:27736 | Ese GÜNGÖR</div></div>
+<div class='c mc' data-t='34 00 25 6043'>
+<div class='cr'><span class='cn'>34 00 25 6043</span><span class='b bo'>270 Lt</span></div>
+<div class='cs'>20.05.2026 | Fis:27735 | Sercan DOĞAN</div></div>
+<div class='c mc' data-t='06 fck 120'>
+<div class='cr'><span class='cn'>06 FCK 120</span><span class='b bo'>170 Lt</span></div>
+<div class='cs'>20.05.2026 | Fis:27734 | Enes BOZTEPE</div></div>
+<div class='c mc' data-t='06 ftn 253'>
+<div class='cr'><span class='cn'>06 FTN 253</span><span class='b bo'>155 Lt</span></div>
+<div class='cs'>20.05.2026 | Fis:27733 | Hasan GÜNEY</div></div>
+<div class='c mc' data-t='34 00 162 3298'>
+<div class='cr'><span class='cn'>34 00 162 3298</span><span class='b bo'>397 Lt</span></div>
+<div class='cs'>20.05.2026 | Fis:27732 | Taner KULAKSIZ</div></div>
+<div class='c mc' data-t='06 ftn 195'>
+<div class='cr'><span class='cn'>06 FTN 195</span><span class='b bo'>153 Lt</span></div>
+<div class='cs'>20.05.2026 | Fis:27731 | FATİH DEMİRSOY</div></div>
+<div class='c mc' data-t='06 fmv 048'>
+<div class='cr'><span class='cn'>06 FMV 048</span><span class='b bo'>147 Lt</span></div>
+<div class='cs'>20.05.2026 | Fis:27730 | HÜSNÜ AHMET GÜNEŞ</div></div>
+<div class='c mc' data-t='06 fkp 429'>
+<div class='cr'><span class='cn'>06 FKP 429</span><span class='b bo'>20 Lt</span></div>
+<div class='cs'>20.05.2026 | Fis:27729 | HÜSNÜ AHMET GÜNEŞ</div></div>
+</div>
+<div class='pg' id='p-rapor'>
+<div class='st'>Raporlar</div>
+<div class='c' style='cursor:pointer' onclick='sp("sefer")'><div class='cr'><span class='cn'>Gunluk Sefer Detayi</span><span style='color:#aaa'>&gt;</span></div><div class='cs'>Arac bazli km/sefer listesi</div></div>
+<div class='c' style='cursor:pointer' onclick='sp("acik")'><div class='cr'><span class='cn'>Acik Kayitlar</span><span style='color:#aaa'>&gt;</span></div><div class='cs'>0 adet tamamlanmamis kayit</div></div>
+<div class='c' style='cursor:pointer' onclick='sp("bos_kam")'><div class='cr'><span class='cn'>Bosta Kamyonlar</span><span style='color:#aaa'>&gt;</span></div><div class='cs'>36 kamyon bosta</div></div>
+<div class='c' style='cursor:pointer' onclick='sp("bos_mak")'><div class='cr'><span class='cn'>Bosta Makineler</span><span style='color:#aaa'>&gt;</span></div><div class='cs'>15 makine bosta</div></div>
+<div class='c' onclick='sp("mazot")'><div class='cr'><span class='cn'>Mazot Durumu</span><span style='color:#aaa'>&gt;</span></div><div class='cs'>Stok: 5673 Lt</div></div>
+</div>
+</div><div class='ft'>Armagan AYYILDIZ | TUPRAS Kirikkale | 2026</div>
+<script>
+function sp(id){document.querySelectorAll('.pg').forEach(p=>p.classList.remove('a'));
+document.querySelectorAll('.t').forEach(t=>t.classList.remove('a'));
+var pg=document.getElementById('p-'+id);if(pg)pg.classList.add('a');
+var tabs={'home':0,'arac':1,'kayit':2,'mazot':3,'rapor':4};
+if(id in tabs)document.querySelectorAll('.t')[tabs[id]].classList.add('a');
+window.scrollTo(0,0);}
+function fa(q){q=q.toLowerCase();document.querySelectorAll('.ac').forEach(c=>{c.style.display=c.dataset.t.includes(q)?'':'none'})}
+function fky(q){q=q.toLowerCase();document.querySelectorAll('.kc').forEach(c=>{c.style.display=c.dataset.t.includes(q)?'':'none'})}
+function fmz(q){q=q.toLowerCase();document.querySelectorAll('.mc').forEach(c=>{c.style.display=c.dataset.t.includes(q)?'':'none'})}
+function goster(id){var d=document.getElementById('d-'+id);if(d)d.style.display=d.style.display==='none'?'block':'none'}
+</script></body></html>
