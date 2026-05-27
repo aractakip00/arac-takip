@@ -1,59 +1,42 @@
 ﻿<!DOCTYPE html><html lang='tr'><head><meta charset='UTF-8'>
 <meta name='viewport' content='width=device-width,initial-scale=1,maximum-scale=1'>
 <meta http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate'>
-<title>Arac Takip</title>
-<meta name='apple-mobile-web-app-capable' content='yes'>
-<meta name='theme-color' content='#0F2047'>
-<style>
-*{box-sizing:border-box;margin:0;padding:0}body{font-family:'Segoe UI',system-ui,sans-serif;background:#f0f2f5;color:#1a1a1a}
+<title>Arac Takip</title><meta name='apple-mobile-web-app-capable' content='yes'><meta name='theme-color' content='#0F2047'>
+<style>*{box-sizing:border-box;margin:0;padding:0}body{font-family:'Segoe UI',system-ui,sans-serif;background:#f0f2f5;color:#1a1a1a}
 .hd{background:linear-gradient(135deg,#0F2047,#1a3a6c);color:#fff;padding:12px 16px;position:sticky;top:0;z-index:10}
-.hd h1{font-size:14px;font-weight:600}.hd p{font-size:9px;opacity:.6;margin-top:2px}
+.hd h1{font-size:14px}.hd p{font-size:9px;opacity:.6;margin-top:2px}
 .dt{background:#1a3a6c;color:#ddd;text-align:center;padding:5px;font-size:12px;font-weight:600}
 .tb{display:flex;background:#fff;border-bottom:1px solid #ddd;position:sticky;top:40px;z-index:9;overflow-x:auto}
-.t{flex:1;min-width:48px;padding:8px 2px;text-align:center;font-size:8px;color:#999;cursor:pointer;border-bottom:2.5px solid transparent;font-weight:700}
-.t.a{color:#0F2047;border-bottom-color:#f5a623}
-.ct{padding:10px;max-width:480px;margin:0 auto}
-.pg{display:none}.pg.a{display:block}
+.t{flex:1;min-width:48px;padding:8px 2px;text-align:center;font-size:8px;color:#999;cursor:pointer;border-bottom:2.5px solid transparent;font-weight:700}.t.a{color:#0F2047;border-bottom-color:#f5a623}
+.ct{padding:10px;max-width:480px;margin:0 auto}.pg{display:none}.pg.a{display:block}
 .g2{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px}
-.s{background:#fff;border-radius:12px;padding:12px;border:1px solid #e8e8e8;cursor:pointer;transition:all .15s}
-.s:active{transform:scale(.97)}
+.s{background:#fff;border-radius:12px;padding:12px;border:1px solid #e8e8e8;cursor:pointer}.s:active{transform:scale(.97)}
 .sl{font-size:10px;color:#888;font-weight:600}.sv{font-size:22px;font-weight:700;margin-top:3px}
 .st{font-size:12px;font-weight:700;color:#666;margin:12px 0 6px;padding-left:2px}
 .c{background:#fff;border-radius:10px;padding:10px 12px;margin-bottom:6px;border:1px solid #e8e8e8}
 .cr{display:flex;justify-content:space-between;align-items:center}
 .cn{font-size:12px;font-weight:700}.cs{font-size:10px;color:#888;margin-top:2px}
-.b{font-size:8px;padding:3px 8px;border-radius:20px;font-weight:700;letter-spacing:.3px}
-.bg{background:#e8f5e9;color:#2e7d32}.br{background:#ffebee;color:#c62828}
-.bb{background:#e3f2fd;color:#1565c0}.bo{background:#fff3e0;color:#e65100}
-.by{background:#f3e5f5;color:#7b1fa2}
+.b{font-size:8px;padding:3px 8px;border-radius:20px;font-weight:700}.bg{background:#e8f5e9;color:#2e7d32}.br{background:#ffebee;color:#c62828}
+.bb{background:#e3f2fd;color:#1565c0}.bo{background:#fff3e0;color:#e65100}.by{background:#f3e5f5;color:#7b1fa2}
 .sr{width:100%;padding:8px 12px;border-radius:10px;border:1px solid #ddd;font-size:12px;margin-bottom:10px;background:#fff}
 .ft{text-align:center;padding:14px;font-size:9px;color:#bbb}
 .vr{color:#c62828}.vg{color:#2e7d32}.vb{color:#1565c0}.vo{color:#e65100}.vy{color:#7b1fa2}
 .fh{background:linear-gradient(135deg,#1a3a5c,#0F2047);color:#fff;padding:8px 12px;border-radius:10px 10px 0 0;font-size:11px;font-weight:700;margin-top:10px;cursor:pointer}
-.fr{background:#fff;padding:7px 12px;border:1px solid #e8e8e8;font-size:11px}
-.fr:last-child{border-radius:0 0 10px 10px}
+.fr{background:#fff;padding:7px 12px;border:1px solid #e8e8e8;font-size:11px}.fr:last-child{border-radius:0 0 10px 10px}
 .bk{display:inline-block;padding:6px 16px;background:#0F2047;color:#fff;border-radius:20px;font-size:11px;cursor:pointer;margin-bottom:12px;font-weight:600}
 .fb{display:inline-block;padding:8px 18px;margin:4px;border-radius:10px;font-size:11px;font-weight:700;cursor:pointer;color:#fff}
-.hw{display:flex;gap:4px;margin-bottom:10px}
-.hd2{flex:1;background:#fff;border-radius:8px;padding:6px 4px;text-align:center;border:1px solid #e8e8e8}
+.hw{display:flex;gap:4px;margin-bottom:10px}.hd2{flex:1;background:#fff;border-radius:8px;padding:6px 4px;text-align:center;border:1px solid #e8e8e8}
 .hd2 .dn{font-size:9px;color:#888;font-weight:600}.hd2 .dv{font-size:14px;font-weight:700}
 .warn{background:#fff3e0;border-left:3px solid #e65100;border-radius:0 10px 10px 0;padding:8px 12px;margin-bottom:6px}
 .tel{display:inline-block;background:#2e7d32;color:#fff;padding:3px 10px;border-radius:15px;font-size:10px;text-decoration:none;margin-top:4px;font-weight:600}
 </style></head><body>
-<div class='hd'><h1>ARAC TAKIP SISTEMI</h1>
-<p>TUPRAS Kirikkale Santiye | 27.05.2026 22:29</p></div>
+<div class='hd'><h1>ARAC TAKIP SISTEMI</h1><p>TUPRAS Kirikkale Santiye | 27.05.2026 23:09</p></div>
 <div class='dt'>27.05.2026 Carsamba</div>
-<div class='tb'>
-<div class='t a' onclick='sp("home")'>ANASAYFA</div>
-<div class='t' onclick='sp("arac")'>ARACLAR</div>
-<div class='t' onclick='sp("personel")'>PERSONEL</div>
-<div class='t' onclick='sp("mazot")'>MAZOT</div>
-<div class='t' onclick='sp("sefer")'>SEFER</div>
-<div class='t' onclick='sp("bakim")'>BAKIM</div>
-</div><div class='ct'>
+<div class='tb'><div class='t a' onclick='sp("home")'>ANASAYFA</div><div class='t' onclick='sp("arac")'>ARACLAR</div>
+<div class='t' onclick='sp("personel")'>PERSONEL</div><div class='t' onclick='sp("mazot")'>MAZOT</div>
+<div class='t' onclick='sp("sefer")'>SEFER</div><div class='t' onclick='sp("bakim")'>BAKIM</div></div><div class='ct'>
 <div class='pg a' id='p-home'>
-<div class='st'>HAFTALIK SEFER (Pzt-Paz)</div>
-<div class='hw'>
+<div class='st'>HAFTALIK SEFER (Pzt-Paz)</div><div class='hw'>
 <div class='hd2'><div class='dn'>Pzt</div><div class='dv' style=''>584</div></div>
 <div class='hd2'><div class='dn'>Sal</div><div class='dv' style=''>0</div></div>
 <div class='hd2'><div class='dn'>Car</div><div class='dv' style='color:#1565c0'>135</div></div>
@@ -61,125 +44,68 @@
 <div class='hd2'><div class='dn'>Cum</div><div class='dv' style=''>0</div></div>
 <div class='hd2'><div class='dn'>Cmt</div><div class='dv' style=''>0</div></div>
 <div class='hd2'><div class='dn'>Paz</div><div class='dv' style=''>0</div></div>
-</div>
-<div class='c'><div class='cr'><span class='cn'>Hafta Toplam</span><span class='b bb'>719 sefer</span></div></div>
-<div class='g2'>
-<div class='s' onclick='sp("arac")'><div class='sl'>ARACLAR</div><div class='sv vb'>51</div><div class='cs'>36 kamyon, 15 makine</div></div>
-<div class='s' onclick='sp("personel")'><div class='sl'>PERSONEL</div><div class='sv vy'>55</div><div class='cs'>Mevcut personel</div></div>
-</div><div class='g2'>
-<div class='s' onclick='sp("sefer")'><div class='sl'>SEFER BILGISI</div><div class='sv vb'>135</div><div class='cs'>Bugunun seferi</div></div>
-<div class='s' onclick='sp("bakim")'><div class='sl'>BAKIMLAR</div><div class='sv' style='color:#aaa'>-</div><div class='cs'>Yaklasimda</div></div>
-</div><div class='g2'>
-<div class='s' onclick='sp("mazot")'><div class='sl'>MAZOT STOK</div><div class='sv vo'>5663 Lt</div></div>
-<div class='s' onclick='sp("acik")'><div class='sl'>ACIK KAYIT</div><div class='sv vr'>0</div></div>
-</div>
-<div class='st'>CALISAN ARACLAR (bugun)</div>
-<div class='g2'>
+</div><div class='c'><div class='cr'><span class='cn'>Hafta Toplam</span><span class='b bb'>719 sefer</span></div></div>
+<div class='g2'><div class='s' onclick='sp("arac")'><div class='sl'>ARACLAR</div><div class='sv vb'>51</div><div class='cs'>36 kamyon, 15 makine</div></div>
+<div class='s' onclick='sp("personel")'><div class='sl'>PERSONEL</div><div class='sv vy'>0</div><div class='cs'>Mevcut personel</div></div></div>
+<div class='g2'><div class='s' onclick='sp("sefer")'><div class='sl'>SEFER BILGISI</div><div class='sv vb'>135</div><div class='cs'>Bugunun seferi</div></div>
+<div class='s' onclick='sp("bakim")'><div class='sl'>BAKIMLAR</div><div class='sv' style='color:#aaa'>-</div><div class='cs'>Yaklasimda</div></div></div>
+<div class='g2'><div class='s' onclick='sp("mazot")'><div class='sl'>MAZOT STOK</div><div class='sv vo'>5663 Lt</div></div>
+<div class='s' onclick='sp("acik")'><div class='sl'>ACIK KAYIT</div><div class='sv vr'>0</div></div></div>
+<div class='st'>CALISAN ARACLAR (bugun)</div><div class='g2'>
 <div class='s' onclick='sp("cal_kam")'><div class='sl'>Kamyon</div><div class='sv vg'>3 / 36</div></div>
-<div class='s' onclick='sp("cal_mak")'><div class='sl'>Is Makinesi</div><div class='sv vg'>1 / 15</div></div>
-</div><div class='g2'>
-<div class='s' onclick='sp("cal_sof")'><div class='sl'>Calisan Sofor</div><div class='sv vb'>3</div></div>
-<div class='s' onclick='sp("cal_opr")'><div class='sl'>Calisan Operator</div><div class='sv vb'>1</div></div>
-</div>
+<div class='s' onclick='sp("cal_mak")'><div class='sl'>Is Makinesi</div><div class='sv vg'>1 / 15</div></div></div>
+<div class='g2'><div class='s' onclick='sp("cal_sof")'><div class='sl'>Calisan Sofor</div><div class='sv vb'>3</div></div>
+<div class='s' onclick='sp("cal_opr")'><div class='sl'>Calisan Operator</div><div class='sv vb'>1</div></div></div>
 <div class='st'>KULLANILMAYAN ARACLAR (2+ gun)</div>
-<div class='warn'><div class='cr'><span class='cn'>06 FTN 487</span><span class='b br'>2 gun</span></div>
-<div class='cs'>Kamyon | IRMAKÇILAR</div></div>
-<div class='warn'><div class='cr'><span class='cn'>06 FBM 211</span><span class='b br'>5 gun</span></div>
-<div class='cs'>Kamyon | IRMAKÇILAR</div></div>
-<div class='warn'><div class='cr'><span class='cn'>06 FTN 324</span><span class='b br'>2 gun</span></div>
-<div class='cs'>Kamyon | IRMAKÇILAR</div></div>
-<div class='warn'><div class='cr'><span class='cn'>06 FBM 106</span><span class='b br'>15 gun</span></div>
-<div class='cs'>Kamyon | IRMAKÇILAR</div></div>
-<div class='warn'><div class='cr'><span class='cn'>06 FBM 180</span><span class='b br'>14 gun</span></div>
-<div class='cs'>Kamyon | IRMAKÇILAR</div></div>
-<div class='warn'><div class='cr'><span class='cn'>06 FMU 817</span><span class='b br'>2 gun</span></div>
-<div class='cs'>Kamyon | IRMAKÇILAR</div></div>
-<div class='warn'><div class='cr'><span class='cn'>06 FTN 281</span><span class='b br'>2 gun</span></div>
-<div class='cs'>Kamyon | IRMAKÇILAR</div></div>
-<div class='warn'><div class='cr'><span class='cn'>06 FTN 579</span><span class='b br'>2 gun</span></div>
-<div class='cs'>Kamyon | IRMAKÇILAR</div></div>
-<div class='warn'><div class='cr'><span class='cn'>06 FTN 195</span><span class='b br'>2 gun</span></div>
-<div class='cs'>Kamyon | IRMAKÇILAR</div></div>
-<div class='warn'><div class='cr'><span class='cn'>06 FTN 431</span><span class='b br'>2 gun</span></div>
-<div class='cs'>Kamyon | IRMAKÇILAR</div></div>
-<div class='warn'><div class='cr'><span class='cn'>06 FTN 454</span><span class='b br'>2 gun</span></div>
-<div class='cs'>Kamyon | IRMAKÇILAR</div></div>
-<div class='warn'><div class='cr'><span class='cn'>06 FMZ 726</span><span class='b br'>2 gun</span></div>
-<div class='cs'>Kamyon | IRMAKÇILAR</div></div>
-<div class='warn'><div class='cr'><span class='cn'>06 FTN 253</span><span class='b br'>2 gun</span></div>
-<div class='cs'>Kamyon | IRMAKÇILAR</div></div>
-<div class='warn'><div class='cr'><span class='cn'>06 FER 920</span><span class='b br'>5 gun</span></div>
-<div class='cs'>Kamyon | IRMAKÇILAR</div></div>
-<div class='warn'><div class='cr'><span class='cn'>06 FTN 355</span><span class='b br'>2 gun</span></div>
-<div class='cs'>Kamyon | IRMAKÇILAR</div></div>
-<div class='warn'><div class='cr'><span class='cn'>06 FMZ 699</span><span class='b br'>2 gun</span></div>
-<div class='cs'>Kamyon | IRMAKÇILAR</div></div>
-<div class='warn'><div class='cr'><span class='cn'>06 TKP 429</span><span class='b br'>99 gun</span></div>
-<div class='cs'>Kamyon | IRMAKÇILAR</div></div>
-<div class='warn'><div class='cr'><span class='cn'>06 00 25 6199</span><span class='b br'>2 gun</span></div>
-<div class='cs'>İş Makinesi | IRMAKÇILAR</div></div>
-<div class='warn'><div class='cr'><span class='cn'>34 00 231 3626</span><span class='b br'>2 gun</span></div>
-<div class='cs'>İş Makinesi | IRMAKÇILAR</div></div>
-<div class='warn'><div class='cr'><span class='cn'>06 00 23 1810</span><span class='b br'>2 gun</span></div>
-<div class='cs'>İş Makinesi | IRMAKÇILAR</div></div>
-<div class='warn'><div class='cr'><span class='cn'>06 00 16 5515</span><span class='b br'>2 gun</span></div>
-<div class='cs'>İş Makinesi | IRMAKÇILAR</div></div>
-<div class='warn'><div class='cr'><span class='cn'>34 00 162 3298</span><span class='b br'>2 gun</span></div>
-<div class='cs'>İş Makinesi | IRMAKÇILAR</div></div>
-<div class='warn'><div class='cr'><span class='cn'>34 00 251 7252</span><span class='b br'>2 gun</span></div>
-<div class='cs'>İş Makinesi | IRMAKÇILAR</div></div>
-<div class='warn'><div class='cr'><span class='cn'>06 00 26 1243</span><span class='b br'>2 gun</span></div>
-<div class='cs'>İş Makinesi | IRMAKÇILAR</div></div>
-<div class='warn'><div class='cr'><span class='cn'>34 00 11 8065</span><span class='b br'>2 gun</span></div>
-<div class='cs'>İş Makinesi | IRMAKÇILAR</div></div>
-<div class='warn'><div class='cr'><span class='cn'>34 00 25 6043</span><span class='b br'>2 gun</span></div>
-<div class='cs'>İş Makinesi | IRMAKÇILAR</div></div>
-<div class='warn'><div class='cr'><span class='cn'>06 FKP 159</span><span class='b br'>2 gun</span></div>
-<div class='cs'>Kamyon | IRMAKÇILAR</div></div>
-<div class='warn'><div class='cr'><span class='cn'>06 FC 7627</span><span class='b br'>5 gun</span></div>
-<div class='cs'>Kamyon | ÇINARSAN</div></div>
-<div class='warn'><div class='cr'><span class='cn'>06 FSU 564</span><span class='b br'>2 gun</span></div>
-<div class='cs'>Kamyon | ÇINARSAN</div></div>
-<div class='warn'><div class='cr'><span class='cn'>06 BC 2431</span><span class='b br'>2 gun</span></div>
-<div class='cs'>Kamyon | ÇINARSAN</div></div>
-<div class='warn'><div class='cr'><span class='cn'>06 EEU 386</span><span class='b br'>2 gun</span></div>
-<div class='cs'>Kamyon | ÇINARSAN</div></div>
-<div class='warn'><div class='cr'><span class='cn'>06 EHE 609</span><span class='b br'>2 gun</span></div>
-<div class='cs'>Kamyon | ÇINARSAN</div></div>
-<div class='warn'><div class='cr'><span class='cn'>06 FSF 855</span><span class='b br'>5 gun</span></div>
-<div class='cs'>Kamyon | ÇINARSAN</div></div>
-<div class='warn'><div class='cr'><span class='cn'>06 00 23 50 09</span><span class='b br'>2 gun</span></div>
-<div class='cs'>İş Makinesi | ÇINARSAN</div></div>
-<div class='warn'><div class='cr'><span class='cn'>34 00 22 75 78</span><span class='b br'>2 gun</span></div>
-<div class='cs'>İş Makinesi | ÇINARSAN</div></div>
-<div class='warn'><div class='cr'><span class='cn'>06 00 26 02 31</span><span class='b br'>2 gun</span></div>
-<div class='cs'>İş Makinesi | ÇINARSAN</div></div>
-<div class='warn'><div class='cr'><span class='cn'>06 BC 9266</span><span class='b br'>2 gun</span></div>
-<div class='cs'>Kamyon | ÇINARSAN</div></div>
-<div class='warn'><div class='cr'><span class='cn'>06 FB 1135</span><span class='b br'>2 gun</span></div>
-<div class='cs'>Kamyon | ÇINARSAN</div></div>
-<div class='warn'><div class='cr'><span class='cn'>06 BC 7235</span><span class='b br'>2 gun</span></div>
-<div class='cs'>Kamyon | ÇINARSAN</div></div>
-<div class='warn'><div class='cr'><span class='cn'>06 FZJ 729</span><span class='b br'>7 gun</span></div>
-<div class='cs'>Kamyon | ÇINARSAN</div></div>
-<div class='warn'><div class='cr'><span class='cn'>06 FKP 232</span><span class='b br'>2 gun</span></div>
-<div class='cs'>Kamyon | IRMAKÇILAR</div></div>
-<div class='warn'><div class='cr'><span class='cn'>06 FKF 383</span><span class='b br'>99 gun</span></div>
-<div class='cs'>Kamyon | IRMAKÇILAR</div></div>
-<div class='warn'><div class='cr'><span class='cn'>06 FTK 969</span><span class='b br'>99 gun</span></div>
-<div class='cs'>JENERATÖR | IRMAKÇILAR</div></div>
-<div class='warn'><div class='cr'><span class='cn'>06 BF 5241</span><span class='b br'>99 gun</span></div>
-<div class='cs'>Kamyon | ÇINARSAN</div></div>
-<div class='warn'><div class='cr'><span class='cn'>06 FPB 142</span><span class='b br'>99 gun</span></div>
-<div class='cs'>Kamyon | ÇINARSAN</div></div>
-<div class='warn'><div class='cr'><span class='cn'>08 87</span><span class='b br'>99 gun</span></div>
-<div class='cs'>Silindir | IRMAKÇILAR</div></div>
-<div class='warn'><div class='cr'><span class='cn'>06 FME 393</span><span class='b br'>2 gun</span></div>
-<div class='cs'>Kamyon | IRMAKÇILAR</div></div>
+<div class='warn'><div class='cr'><span class='cn'>06 FTN 487</span><span class='b br'>2 gun</span></div><div class='cs'>Kamyon | IRMAKÇILAR</div></div>
+<div class='warn'><div class='cr'><span class='cn'>06 FBM 211</span><span class='b br'>5 gun</span></div><div class='cs'>Kamyon | IRMAKÇILAR</div></div>
+<div class='warn'><div class='cr'><span class='cn'>06 FTN 324</span><span class='b br'>2 gun</span></div><div class='cs'>Kamyon | IRMAKÇILAR</div></div>
+<div class='warn'><div class='cr'><span class='cn'>06 FBM 106</span><span class='b br'>15 gun</span></div><div class='cs'>Kamyon | IRMAKÇILAR</div></div>
+<div class='warn'><div class='cr'><span class='cn'>06 FBM 180</span><span class='b br'>14 gun</span></div><div class='cs'>Kamyon | IRMAKÇILAR</div></div>
+<div class='warn'><div class='cr'><span class='cn'>06 FMU 817</span><span class='b br'>2 gun</span></div><div class='cs'>Kamyon | IRMAKÇILAR</div></div>
+<div class='warn'><div class='cr'><span class='cn'>06 FTN 281</span><span class='b br'>2 gun</span></div><div class='cs'>Kamyon | IRMAKÇILAR</div></div>
+<div class='warn'><div class='cr'><span class='cn'>06 FTN 579</span><span class='b br'>2 gun</span></div><div class='cs'>Kamyon | IRMAKÇILAR</div></div>
+<div class='warn'><div class='cr'><span class='cn'>06 FTN 195</span><span class='b br'>2 gun</span></div><div class='cs'>Kamyon | IRMAKÇILAR</div></div>
+<div class='warn'><div class='cr'><span class='cn'>06 FTN 431</span><span class='b br'>2 gun</span></div><div class='cs'>Kamyon | IRMAKÇILAR</div></div>
+<div class='warn'><div class='cr'><span class='cn'>06 FTN 454</span><span class='b br'>2 gun</span></div><div class='cs'>Kamyon | IRMAKÇILAR</div></div>
+<div class='warn'><div class='cr'><span class='cn'>06 FMZ 726</span><span class='b br'>2 gun</span></div><div class='cs'>Kamyon | IRMAKÇILAR</div></div>
+<div class='warn'><div class='cr'><span class='cn'>06 FTN 253</span><span class='b br'>2 gun</span></div><div class='cs'>Kamyon | IRMAKÇILAR</div></div>
+<div class='warn'><div class='cr'><span class='cn'>06 FER 920</span><span class='b br'>5 gun</span></div><div class='cs'>Kamyon | IRMAKÇILAR</div></div>
+<div class='warn'><div class='cr'><span class='cn'>06 FTN 355</span><span class='b br'>2 gun</span></div><div class='cs'>Kamyon | IRMAKÇILAR</div></div>
+<div class='warn'><div class='cr'><span class='cn'>06 FMZ 699</span><span class='b br'>2 gun</span></div><div class='cs'>Kamyon | IRMAKÇILAR</div></div>
+<div class='warn'><div class='cr'><span class='cn'>06 TKP 429</span><span class='b br'>99 gun</span></div><div class='cs'>Kamyon | IRMAKÇILAR</div></div>
+<div class='warn'><div class='cr'><span class='cn'>06 00 25 6199</span><span class='b br'>2 gun</span></div><div class='cs'>İş Makinesi | IRMAKÇILAR</div></div>
+<div class='warn'><div class='cr'><span class='cn'>34 00 231 3626</span><span class='b br'>2 gun</span></div><div class='cs'>İş Makinesi | IRMAKÇILAR</div></div>
+<div class='warn'><div class='cr'><span class='cn'>06 00 23 1810</span><span class='b br'>2 gun</span></div><div class='cs'>İş Makinesi | IRMAKÇILAR</div></div>
+<div class='warn'><div class='cr'><span class='cn'>06 00 16 5515</span><span class='b br'>2 gun</span></div><div class='cs'>İş Makinesi | IRMAKÇILAR</div></div>
+<div class='warn'><div class='cr'><span class='cn'>34 00 162 3298</span><span class='b br'>2 gun</span></div><div class='cs'>İş Makinesi | IRMAKÇILAR</div></div>
+<div class='warn'><div class='cr'><span class='cn'>34 00 251 7252</span><span class='b br'>2 gun</span></div><div class='cs'>İş Makinesi | IRMAKÇILAR</div></div>
+<div class='warn'><div class='cr'><span class='cn'>06 00 26 1243</span><span class='b br'>2 gun</span></div><div class='cs'>İş Makinesi | IRMAKÇILAR</div></div>
+<div class='warn'><div class='cr'><span class='cn'>34 00 11 8065</span><span class='b br'>2 gun</span></div><div class='cs'>İş Makinesi | IRMAKÇILAR</div></div>
+<div class='warn'><div class='cr'><span class='cn'>34 00 25 6043</span><span class='b br'>2 gun</span></div><div class='cs'>İş Makinesi | IRMAKÇILAR</div></div>
+<div class='warn'><div class='cr'><span class='cn'>06 FKP 159</span><span class='b br'>2 gun</span></div><div class='cs'>Kamyon | IRMAKÇILAR</div></div>
+<div class='warn'><div class='cr'><span class='cn'>06 FC 7627</span><span class='b br'>5 gun</span></div><div class='cs'>Kamyon | ÇINARSAN</div></div>
+<div class='warn'><div class='cr'><span class='cn'>06 FSU 564</span><span class='b br'>2 gun</span></div><div class='cs'>Kamyon | ÇINARSAN</div></div>
+<div class='warn'><div class='cr'><span class='cn'>06 BC 2431</span><span class='b br'>2 gun</span></div><div class='cs'>Kamyon | ÇINARSAN</div></div>
+<div class='warn'><div class='cr'><span class='cn'>06 EEU 386</span><span class='b br'>2 gun</span></div><div class='cs'>Kamyon | ÇINARSAN</div></div>
+<div class='warn'><div class='cr'><span class='cn'>06 EHE 609</span><span class='b br'>2 gun</span></div><div class='cs'>Kamyon | ÇINARSAN</div></div>
+<div class='warn'><div class='cr'><span class='cn'>06 FSF 855</span><span class='b br'>5 gun</span></div><div class='cs'>Kamyon | ÇINARSAN</div></div>
+<div class='warn'><div class='cr'><span class='cn'>06 00 23 50 09</span><span class='b br'>2 gun</span></div><div class='cs'>İş Makinesi | ÇINARSAN</div></div>
+<div class='warn'><div class='cr'><span class='cn'>34 00 22 75 78</span><span class='b br'>2 gun</span></div><div class='cs'>İş Makinesi | ÇINARSAN</div></div>
+<div class='warn'><div class='cr'><span class='cn'>06 00 26 02 31</span><span class='b br'>2 gun</span></div><div class='cs'>İş Makinesi | ÇINARSAN</div></div>
+<div class='warn'><div class='cr'><span class='cn'>06 BC 9266</span><span class='b br'>2 gun</span></div><div class='cs'>Kamyon | ÇINARSAN</div></div>
+<div class='warn'><div class='cr'><span class='cn'>06 FB 1135</span><span class='b br'>2 gun</span></div><div class='cs'>Kamyon | ÇINARSAN</div></div>
+<div class='warn'><div class='cr'><span class='cn'>06 BC 7235</span><span class='b br'>2 gun</span></div><div class='cs'>Kamyon | ÇINARSAN</div></div>
+<div class='warn'><div class='cr'><span class='cn'>06 FZJ 729</span><span class='b br'>7 gun</span></div><div class='cs'>Kamyon | ÇINARSAN</div></div>
+<div class='warn'><div class='cr'><span class='cn'>06 FKP 232</span><span class='b br'>2 gun</span></div><div class='cs'>Kamyon | IRMAKÇILAR</div></div>
+<div class='warn'><div class='cr'><span class='cn'>06 FKF 383</span><span class='b br'>99 gun</span></div><div class='cs'>Kamyon | IRMAKÇILAR</div></div>
+<div class='warn'><div class='cr'><span class='cn'>06 FTK 969</span><span class='b br'>99 gun</span></div><div class='cs'>JENERATÖR | IRMAKÇILAR</div></div>
+<div class='warn'><div class='cr'><span class='cn'>06 BF 5241</span><span class='b br'>99 gun</span></div><div class='cs'>Kamyon | ÇINARSAN</div></div>
+<div class='warn'><div class='cr'><span class='cn'>06 FPB 142</span><span class='b br'>99 gun</span></div><div class='cs'>Kamyon | ÇINARSAN</div></div>
+<div class='warn'><div class='cr'><span class='cn'>08 87</span><span class='b br'>99 gun</span></div><div class='cs'>Silindir | IRMAKÇILAR</div></div>
+<div class='warn'><div class='cr'><span class='cn'>06 FME 393</span><span class='b br'>2 gun</span></div><div class='cs'>Kamyon | IRMAKÇILAR</div></div>
 </div>
-<div class='pg' id='p-cal_kam'>
-<div class='bk' onclick='sp("home")'>&lt; Geri</div>
-<div class='st'>Calisan Kamyonlar (3)</div>
+<div class='pg' id='p-cal_kam'><div class='bk' onclick='sp("home")'>&lt; Geri</div><div class='st'>Calisan Kamyonlar (3)</div>
 <div class='c'><div class='cr'><span class='cn'>06 FCK 120</span><span class='b bg'>Aktif</span></div>
 <div class='cs'>KAMYON | IRMAKÇILAR | Enes BOZTEPE</div></div>
 <div class='c'><div class='cr'><span class='cn'>06 FVM 048</span><span class='b bg'>Aktif</span></div>
@@ -187,9 +113,7 @@
 <div class='c'><div class='cr'><span class='cn'>06 FMU 858</span><span class='b bg'>Aktif</span></div>
 <div class='cs'>KAMYON | IRMAKÇILAR | Altan GÜLMEZ</div></div>
 </div>
-<div class='pg' id='p-bos_kam'>
-<div class='bk' onclick='sp("home")'>&lt; Geri</div>
-<div class='st'>Bosta Kamyonlar (33)</div>
+<div class='pg' id='p-bos_kam'><div class='bk' onclick='sp("home")'>&lt; Geri</div><div class='st'>Bosta Kamyonlar (33)</div>
 <div class='c'><div class='cr'><span class='cn'>06 FTN 487</span><span class='b br'>Bosta</span></div>
 <div class='cs'>KAMYON | IRMAKÇILAR | Müslüm ALTINTAŞ</div></div>
 <div class='c'><div class='cr'><span class='cn'>06 FBM 211</span><span class='b br'>Bosta</span></div>
@@ -257,15 +181,11 @@
 <div class='c'><div class='cr'><span class='cn'>06 FME 393</span><span class='b br'>Bosta</span></div>
 <div class='cs'>KAMYON | IRMAKÇILAR | Y. Tahir ERDURAN</div></div>
 </div>
-<div class='pg' id='p-cal_mak'>
-<div class='bk' onclick='sp("home")'>&lt; Geri</div>
-<div class='st'>Calisan Makineler (1)</div>
+<div class='pg' id='p-cal_mak'><div class='bk' onclick='sp("home")'>&lt; Geri</div><div class='st'>Calisan Makineler (1)</div>
 <div class='c'><div class='cr'><span class='cn'>3400 191 03 11</span><span class='b bg'>Aktif</span></div>
 <div class='cs'>EKSKAVATÖR (690) | IRMAKÇILAR | Batuhan BAKIRCI</div></div>
 </div>
-<div class='pg' id='p-bos_mak'>
-<div class='bk' onclick='sp("home")'>&lt; Geri</div>
-<div class='st'>Bosta Makineler (14)</div>
+<div class='pg' id='p-bos_mak'><div class='bk' onclick='sp("home")'>&lt; Geri</div><div class='st'>Bosta Makineler (14)</div>
 <div class='c'><div class='cr'><span class='cn'>06 00 25 6199</span><span class='b br'>Bosta</span></div>
 <div class='cs'>EKSKAVATÖR (690) | IRMAKÇILAR | Enis TOPUZ</div></div>
 <div class='c'><div class='cr'><span class='cn'>34 00 231 3626</span><span class='b br'>Bosta</span></div>
@@ -295,50 +215,27 @@
 <div class='c'><div class='cr'><span class='cn'>08 87</span><span class='b br'>Bosta</span></div>
 <div class='cs'>SİLİNDİR | IRMAKÇILAR | Niyazi GÜNDOĞDU</div></div>
 </div>
-<div class='pg' id='p-cal_sof'>
-<div class='bk' onclick='sp("home")'>&lt; Geri</div>
-<div class='st'>Calisan Soforler (3)</div>
-<div class='c'><div class='cr'><span class='cn'>Enes BOZTEPE</span><span class='b bg'>Aktif</span></div>
-<div class='cs'>06 FCK 120 | IRMAKÇILAR</div></div>
-<div class='c'><div class='cr'><span class='cn'>İsmail UYGURTAŞ</span><span class='b bg'>Aktif</span></div>
-<div class='cs'>06 FVM 048 | IRMAKÇILAR</div></div>
-<div class='c'><div class='cr'><span class='cn'>Altan GÜLMEZ</span><span class='b bg'>Aktif</span></div>
-<div class='cs'>06 FMU 858 | IRMAKÇILAR</div></div>
+<div class='pg' id='p-cal_sof'><div class='bk' onclick='sp("home")'>&lt; Geri</div><div class='st'>Calisan Soforler (3)</div>
+<div class='c'><div class='cr'><span class='cn'>Enes BOZTEPE</span><span class='b bg'>Aktif</span></div><div class='cs'>06 FCK 120 | IRMAKÇILAR</div></div>
+<div class='c'><div class='cr'><span class='cn'>İsmail UYGURTAŞ</span><span class='b bg'>Aktif</span></div><div class='cs'>06 FVM 048 | IRMAKÇILAR</div></div>
+<div class='c'><div class='cr'><span class='cn'>Altan GÜLMEZ</span><span class='b bg'>Aktif</span></div><div class='cs'>06 FMU 858 | IRMAKÇILAR</div></div>
 </div>
-<div class='pg' id='p-cal_opr'>
-<div class='bk' onclick='sp("home")'>&lt; Geri</div>
-<div class='st'>Calisan Operatorler (1)</div>
-<div class='c'><div class='cr'><span class='cn'>Batuhan BAKIRCI</span><span class='b bb'>Operator</span></div>
-<div class='cs'>3400 191 03 11 | IRMAKÇILAR</div></div>
+<div class='pg' id='p-cal_opr'><div class='bk' onclick='sp("home")'>&lt; Geri</div><div class='st'>Calisan Operatorler (1)</div>
+<div class='c'><div class='cr'><span class='cn'>Batuhan BAKIRCI</span><span class='b bb'>Operator</span></div><div class='cs'>3400 191 03 11 | IRMAKÇILAR</div></div>
 </div>
-<div class='pg' id='p-acik'>
-<div class='bk' onclick='sp("home")'>&lt; Geri</div>
-<div class='st'>Acik Kayitlar (0)</div>
+<div class='pg' id='p-acik'><div class='bk' onclick='sp("home")'>&lt; Geri</div><div class='st'>Acik Kayitlar (0)</div>
 </div>
-<div class='pg' id='p-sefer_detay'>
-<div class='bk' onclick='sp("sefer")'>&lt; Geri</div>
-<div class='st'>Bugunun Sefer Detayi (4 arac)</div>
-<div class='c'><div class='cr'><span class='cn'>06 FCK 120</span><span class='b bg'>30 sefer</span></div>
-<div class='cs'>Enes BOZTEPE | IRMAKÇILAR | GÜNDÜZ</div>
-<div class='cs' style='color:#1a1a1a;font-weight:600'>35 km</div></div>
-<div class='c'><div class='cr'><span class='cn'>06 FVM 048</span><span class='b bg'>50 sefer</span></div>
-<div class='cs'>İsmail UYGURTAŞ | IRMAKÇILAR | GÜNDÜZ</div>
-<div class='cs' style='color:#1a1a1a;font-weight:600'>9 km</div></div>
-<div class='c'><div class='cr'><span class='cn'>06 FMU 858</span><span class='b bg'>40 sefer</span></div>
-<div class='cs'>Altan GÜLMEZ | IRMAKÇILAR | GÜNDÜZ</div>
-<div class='cs' style='color:#1a1a1a;font-weight:600'>79 km</div></div>
-<div class='c'><div class='cr'><span class='cn'>06 FMU 858</span><span class='b bg'>15 sefer</span></div>
-<div class='cs'>Altan GÜLMEZ | IRMAKÇILAR | GÜNDÜZ</div>
-<div class='cs' style='color:#1a1a1a;font-weight:600'>79 km</div></div>
+<div class='pg' id='p-sefer_detay'><div class='bk' onclick='sp("sefer")'>&lt; Geri</div><div class='st'>Bugunun Sefer Detayi (4 arac)</div>
+<div class='c'><div class='cr'><span class='cn'>06 FCK 120</span><span class='b bg'>30 sefer</span></div><div class='cs'>Enes BOZTEPE | IRMAKÇILAR | GÜNDÜZ</div><div class='cs' style='color:#1a1a1a;font-weight:600'>35 km</div></div>
+<div class='c'><div class='cr'><span class='cn'>06 FVM 048</span><span class='b bg'>50 sefer</span></div><div class='cs'>İsmail UYGURTAŞ | IRMAKÇILAR | GÜNDÜZ</div><div class='cs' style='color:#1a1a1a;font-weight:600'>9 km</div></div>
+<div class='c'><div class='cr'><span class='cn'>06 FMU 858</span><span class='b bg'>40 sefer</span></div><div class='cs'>Altan GÜLMEZ | IRMAKÇILAR | GÜNDÜZ</div><div class='cs' style='color:#1a1a1a;font-weight:600'>79 km</div></div>
+<div class='c'><div class='cr'><span class='cn'>06 FMU 858</span><span class='b bg'>15 sefer</span></div><div class='cs'>Altan GÜLMEZ | IRMAKÇILAR | GÜNDÜZ</div><div class='cs' style='color:#1a1a1a;font-weight:600'>79 km</div></div>
 </div>
-<div class='pg' id='p-arac'>
-<input class='sr' placeholder='Plaka veya marka ara...' oninput='fa(this.value)'>
-<div class='fh'>IRMAKCILAR ARAC ENVANTER</div>
-<div style='padding:8px;background:#fff;border:1px solid #e8e8e8;border-radius:0 0 10px 10px'>
+<div class='pg' id='p-arac'><input class='sr' placeholder='Plaka veya marka ara...' oninput='fa(this.value)'>
+<div class='fh'>IRMAKCILAR ARAC ENVANTER</div><div style='padding:8px;background:#fff;border:1px solid #e8e8e8;border-radius:0 0 10px 10px'>
 <span class='fb' style='background:#1565c0' onclick='goster("irm_kam")'>Kamyonlar</span>
 <span class='fb' style='background:#00695c' onclick='goster("irm_mak")'>Is Makineleri</span></div>
-<div class='fh'>CINARSAN ARAC ENVANTER</div>
-<div style='padding:8px;background:#fff;border:1px solid #e8e8e8;border-radius:0 0 10px 10px'>
+<div class='fh'>CINARSAN ARAC ENVANTER</div><div style='padding:8px;background:#fff;border:1px solid #e8e8e8;border-radius:0 0 10px 10px'>
 <span class='fb' style='background:#1565c0' onclick='goster("cnr_kam")'>Kamyonlar</span>
 <span class='fb' style='background:#00695c' onclick='goster("cnr_mak")'>Is Makineleri</span></div>
 <div id='d-irm_kam' style='display:none'>
@@ -454,320 +351,113 @@
 <div class='cs'>SİLİNDİR | Niyazi GÜNDOĞDU</div></div>
 </div>
 <div id='d-cnr_kam' style='display:none'>
+<div class='c ac' data-t='06 fc 7627 kamyon'>
+<div class='cr'><span class='cn'>06 FC 7627</span><span class='b br'>Bosta</span></div>
+<div class='cs'>KAMYON | ABDULLAH ÇINAR</div></div>
+<div class='c ac' data-t='06 fsu 564 kamyon'>
+<div class='cr'><span class='cn'>06 FSU 564</span><span class='b br'>Bosta</span></div>
+<div class='cs'>KAMYON | MURAT ÇELİK</div></div>
+<div class='c ac' data-t='06 bc 2431 kamyon'>
+<div class='cr'><span class='cn'>06 BC 2431</span><span class='b br'>Bosta</span></div>
+<div class='cs'>KAMYON | U.TEKİN TUNÇ</div></div>
+<div class='c ac' data-t='06 eeu 386 kamyon'>
+<div class='cr'><span class='cn'>06 EEU 386</span><span class='b br'>Bosta</span></div>
+<div class='cs'>KAMYON | FİKRİ TUNÇ</div></div>
+<div class='c ac' data-t='06 ehe 609 kamyon'>
+<div class='cr'><span class='cn'>06 EHE 609</span><span class='b br'>Bosta</span></div>
+<div class='cs'>KAMYON | HASAN ÇELİK</div></div>
+<div class='c ac' data-t='06 fsf 855 kamyon'>
+<div class='cr'><span class='cn'>06 FSF 855</span><span class='b br'>Bosta</span></div>
+<div class='cs'>KAMYON | KADİR BEKTAŞ</div></div>
+<div class='c ac' data-t='06 bc 9266 kamyon'>
+<div class='cr'><span class='cn'>06 BC 9266</span><span class='b br'>Bosta</span></div>
+<div class='cs'>KAMYON | </div></div>
+<div class='c ac' data-t='06 fb 1135 kamyon'>
+<div class='cr'><span class='cn'>06 FB 1135</span><span class='b br'>Bosta</span></div>
+<div class='cs'>KAMYON | </div></div>
+<div class='c ac' data-t='06 bc 7235 kamyon'>
+<div class='cr'><span class='cn'>06 BC 7235</span><span class='b br'>Bosta</span></div>
+<div class='cs'>KAMYON | BÜNYAMİN ÇINAR</div></div>
+<div class='c ac' data-t='06 fzj 729 kamyon'>
+<div class='cr'><span class='cn'>06 FZJ 729</span><span class='b br'>Bosta</span></div>
+<div class='cs'>KAMYON | </div></div>
+<div class='c ac' data-t='06 bf 5241 kamyon'>
+<div class='cr'><span class='cn'>06 BF 5241</span><span class='b br'>Bosta</span></div>
+<div class='cs'>KAMYON | </div></div>
+<div class='c ac' data-t='06 fpb 142 kamyon'>
+<div class='cr'><span class='cn'>06 FPB 142</span><span class='b br'>Bosta</span></div>
+<div class='cs'>KAMYON | </div></div>
 </div>
 <div id='d-cnr_mak' style='display:none'>
+<div class='c ac' data-t='06 00 23 50 09 hİdromek'>
+<div class='cr'><span class='cn'>06 00 23 50 09</span><span class='b br'>Bosta</span></div>
+<div class='cs'>HİDROMEK | FURKAN ÇINAR</div></div>
+<div class='c ac' data-t='34 00 22 75 78 volvo'>
+<div class='cr'><span class='cn'>34 00 22 75 78</span><span class='b br'>Bosta</span></div>
+<div class='cs'>VOLVO | FURKAN ÇINAR</div></div>
+<div class='c ac' data-t='06 00 26 02 31 hİtachİ'>
+<div class='cr'><span class='cn'>06 00 26 02 31</span><span class='b br'>Bosta</span></div>
+<div class='cs'>HİTACHİ | EROL AKÇELİK</div></div>
 </div>
-<div class='st'>GUNLUK DURUM</div>
-<div class='g2'>
+<div class='st'>GUNLUK DURUM</div><div class='g2'>
 <div class='s' onclick='sp("cal_kam")'><div class='sl'>Calisan Kamyon</div><div class='sv vg'>3</div></div>
-<div class='s' onclick='sp("cal_mak")'><div class='sl'>Calisan Makine</div><div class='sv vg'>1</div></div>
-</div><div class='g2'>
+<div class='s' onclick='sp("cal_mak")'><div class='sl'>Calisan Makine</div><div class='sv vg'>1</div></div></div><div class='g2'>
 <div class='s' onclick='sp("bos_kam")'><div class='sl'>Bosta Kamyon</div><div class='sv vr'>33</div></div>
-<div class='s' onclick='sp("bos_mak")'><div class='sl'>Bosta Makine</div><div class='sv vr'>14</div></div>
+<div class='s' onclick='sp("bos_mak")'><div class='sl'>Bosta Makine</div><div class='sv vr'>14</div></div></div></div>
+<div class='pg' id='p-personel'><input class='sr' placeholder='Personel ara...' oninput='fpr(this.value)'>
+<div class='g2'><div class='s' onclick='goster("mevcut_per")'><div class='sl'>Mevcut Personel</div><div class='sv vg'>0</div></div>
+<div class='s' onclick='goster("ayrilan_per")'><div class='sl'>Ayrilan Personel</div><div class='sv vr'>0</div></div></div>
+<div style='padding:4px 0'>
+<span class='fb' style='background:#1565c0;font-size:10px;padding:6px 12px' onclick='fprF("all")'>Tumu</span>
+<span class='fb' style='background:#1a3a5c;font-size:10px;padding:6px 12px' onclick='fprF("irmak")'>Irmakcilar</span>
+<span class='fb' style='background:#00695c;font-size:10px;padding:6px 12px' onclick='fprF("inar")'>Cinarsan</span></div>
+<div class='s' onclick='goster("izinli_per")' style='border-left:3px solid #7b1fa2;margin-top:8px'>
+<div class='cr'><span class='cn vy'>Izinli Personel</span><span class='b by'>0 kisi</span></div></div>
+<div id='d-mevcut_per' style='display:none'><div class='st'>Mevcut Personel</div>
+</div>
+<div id='d-ayrilan_per' style='display:none'><div class='st'>Ayrilan Personel</div>
+</div>
+<div id='d-izinli_per' style='display:none'><div class='st'>Izinli Personel</div>
 </div></div>
-<div class='pg' id='p-personel'>
-<input class='sr' placeholder='Personel ara...' oninput='fpr(this.value)'>
-<div class='g2'>
-<div class='s' onclick='goster("mevcut_per")'><div class='sl'>Mevcut Personel</div><div class='sv vg'>55</div></div>
-<div class='s' onclick='goster("ayrilan_per")'><div class='sl'>Ayrilan Personel</div><div class='sv vr'>1</div></div>
-</div>
-<div class='c' style='border-left:3px solid #7b1fa2'><div class='cr'><span class='cn vy'>Izinli Personel</span><span class='b by'>1 kisi</span></div></div>
-<div id='d-mevcut_per' style='display:none'>
-<div class='st'>Mevcut Personel</div>
-<div class='c pc' data-t='ahmet doğan irmakçilar şoför'>
-<div class='cr'><span class='cn'>Ahmet DOĞAN</span><span class='b bg'>Şoför</span></div>
-<div class='cs'>IRMAKÇILAR
-</div>
-<a class='tel' href='tel:05401235858'>&#128222; 05401235858</a>
-<div class='cs vy' style='margin-top:4px'>Izin: 27.05.2026 - 05.06.2026</div>
-</div>
-<div class='c pc' data-t='altan gülmez irmakçilar şoför'>
-<div class='cr'><span class='cn'>Altan GÜLMEZ</span><span class='b bg'>Şoför</span></div>
-<div class='cs'>IRMAKÇILAR
-</div>
-<a class='tel' href='tel:05401235858'>&#128222; 05401235858</a>
-</div>
-<div class='c pc' data-t='arif çağlayan irmakçilar operatör'>
-<div class='cr'><span class='cn'>Arif ÇAĞLAYAN</span><span class='b bb'>Operatör</span></div>
-<div class='cs'>IRMAKÇILAR
-</div>
-</div>
-<div class='c pc' data-t='batuhan bakirci irmakçilar operatör'>
-<div class='cr'><span class='cn'>Batuhan BAKIRCI</span><span class='b bb'>Operatör</span></div>
-<div class='cs'>IRMAKÇILAR
-</div>
-</div>
-<div class='c pc' data-t='burhan kaan altin irmakçilar şoför'>
-<div class='cr'><span class='cn'>Burhan Kaan ALTIN</span><span class='b bg'>Şoför</span></div>
-<div class='cs'>IRMAKÇILAR
-</div>
-</div>
-<div class='c pc' data-t='ceyhun çekİrge irmakçilar operatör'>
-<div class='cr'><span class='cn'>Ceyhun ÇEKİRGE</span><span class='b bb'>Operatör</span></div>
-<div class='cs'>IRMAKÇILAR
-</div>
-</div>
-<div class='c pc' data-t='erol akçelİk çinarsan operatör'>
-<div class='cr'><span class='cn'>EROL AKÇELİK</span><span class='b bb'>Operatör</span></div>
-<div class='cs'>ÇINARSAN
-</div>
-</div>
-<div class='c pc' data-t='enes boztepe irmakçilar şoför'>
-<div class='cr'><span class='cn'>Enes BOZTEPE</span><span class='b bg'>Şoför</span></div>
-<div class='cs'>IRMAKÇILAR
-</div>
-</div>
-<div class='c pc' data-t='enis topuz irmakçilar operatör'>
-<div class='cr'><span class='cn'>Enis TOPUZ</span><span class='b bb'>Operatör</span></div>
-<div class='cs'>IRMAKÇILAR
-</div>
-</div>
-<div class='c pc' data-t='ertuğrul şİmşek irmakçilar operatör'>
-<div class='cr'><span class='cn'>Ertuğrul ŞİMŞEK</span><span class='b bb'>Operatör</span></div>
-<div class='cs'>IRMAKÇILAR
-</div>
-</div>
-<div class='c pc' data-t='ese güngör irmakçilar operatör'>
-<div class='cr'><span class='cn'>Ese GÜNGÖR</span><span class='b bb'>Operatör</span></div>
-<div class='cs'>IRMAKÇILAR
-</div>
-</div>
-<div class='c pc' data-t='furkan çinar çinarsan operatör'>
-<div class='cr'><span class='cn'>FURKAN ÇINAR</span><span class='b bb'>Operatör</span></div>
-<div class='cs'>ÇINARSAN
-</div>
-</div>
-<div class='c pc' data-t='fİkrİ tunç çinarsan şoför'>
-<div class='cr'><span class='cn'>FİKRİ TUNÇ</span><span class='b bg'>Şoför</span></div>
-<div class='cs'>ÇINARSAN
-</div>
-</div>
-<div class='c pc' data-t='gökhan ayhan irmakçilar operatör'>
-<div class='cr'><span class='cn'>Gökhan AYHAN</span><span class='b bb'>Operatör</span></div>
-<div class='cs'>IRMAKÇILAR
-</div>
-</div>
-<div class='c pc' data-t='hasan güney irmakçilar şoför'>
-<div class='cr'><span class='cn'>HASAN GÜNEY</span><span class='b bg'>Şoför</span></div>
-<div class='cs'>IRMAKÇILAR
-</div>
-</div>
-<div class='c pc' data-t='hasan çelİk çinarsan şoför'>
-<div class='cr'><span class='cn'>HASAN ÇELİK</span><span class='b bg'>Şoför</span></div>
-<div class='cs'>ÇINARSAN
-</div>
-</div>
-<div class='c pc' data-t='halil uçakan irmakçilar şoför'>
-<div class='cr'><span class='cn'>Halil UÇAKAN</span><span class='b bg'>Şoför</span></div>
-<div class='cs'>IRMAKÇILAR
-</div>
-</div>
-<div class='c pc' data-t='hasan yaba irmakçilar operatör'>
-<div class='cr'><span class='cn'>Hasan YABA</span><span class='b bb'>Operatör</span></div>
-<div class='cs'>IRMAKÇILAR
-</div>
-</div>
-<div class='c pc' data-t='kadİr bektaş çinarsan şoför'>
-<div class='cr'><span class='cn'>KADİR BEKTAŞ</span><span class='b bg'>Şoför</span></div>
-<div class='cs'>ÇINARSAN
-</div>
-</div>
-<div class='c pc' data-t='kamil sağir irmakçilar şoför'>
-<div class='cr'><span class='cn'>Kamil SAĞIR</span><span class='b bg'>Şoför</span></div>
-<div class='cs'>IRMAKÇILAR
-</div>
-</div>
-<div class='c pc' data-t='kemal sezer irmakçilar şoför'>
-<div class='cr'><span class='cn'>Kemal SEZER</span><span class='b bg'>Şoför</span></div>
-<div class='cs'>IRMAKÇILAR
-</div>
-</div>
-<div class='c pc' data-t='murat çelİk çinarsan şoför'>
-<div class='cr'><span class='cn'>MURAT ÇELİK</span><span class='b bg'>Şoför</span></div>
-<div class='cs'>ÇINARSAN
-</div>
-</div>
-<div class='c pc' data-t='mehmet argali irmakçilar şoför'>
-<div class='cr'><span class='cn'>Mehmet ARGALI</span><span class='b bg'>Şoför</span></div>
-<div class='cs'>IRMAKÇILAR
-</div>
-</div>
-<div class='c pc' data-t='mesut ögel irmakçilar operatör'>
-<div class='cr'><span class='cn'>Mesut ÖGEL</span><span class='b bb'>Operatör</span></div>
-<div class='cs'>IRMAKÇILAR
-</div>
-</div>
-<div class='c pc' data-t='murat gülşen irmakçilar şoför'>
-<div class='cr'><span class='cn'>Murat GÜLŞEN</span><span class='b bg'>Şoför</span></div>
-<div class='cs'>IRMAKÇILAR
-</div>
-</div>
-<div class='c pc' data-t='mustafa ünlü irmakçilar operatör'>
-<div class='cr'><span class='cn'>Mustafa ÜNLÜ</span><span class='b bb'>Operatör</span></div>
-<div class='cs'>IRMAKÇILAR
-</div>
-</div>
-<div class='c pc' data-t='müslüm altintaş irmakçilar şoför'>
-<div class='cr'><span class='cn'>Müslüm ALTINTAŞ</span><span class='b bg'>Şoför</span></div>
-<div class='cs'>IRMAKÇILAR
-</div>
-</div>
-<div class='c pc' data-t='satılmış işik irmakçilar şoför'>
-<div class='cr'><span class='cn'>Satılmış IŞIK</span><span class='b bg'>Şoför</span></div>
-<div class='cs'>IRMAKÇILAR
-</div>
-</div>
-<div class='c pc' data-t='sercan doğan irmakçilar operatör'>
-<div class='cr'><span class='cn'>Sercan DOĞAN</span><span class='b bb'>Operatör</span></div>
-<div class='cs'>IRMAKÇILAR
-</div>
-</div>
-<div class='c pc' data-t='tarik polat irmakçilar şoför'>
-<div class='cr'><span class='cn'>TARIK POLAT</span><span class='b bg'>Şoför</span></div>
-<div class='cs'>IRMAKÇILAR
-</div>
-</div>
-<div class='c pc' data-t='tahir duran irmakçilar operatör'>
-<div class='cr'><span class='cn'>Tahir DURAN</span><span class='b bb'>Operatör</span></div>
-<div class='cs'>IRMAKÇILAR
-</div>
-</div>
-<div class='c pc' data-t='taner kulaksiz irmakçilar operatör'>
-<div class='cr'><span class='cn'>Taner KULAKSIZ</span><span class='b bb'>Operatör</span></div>
-<div class='cs'>IRMAKÇILAR
-</div>
-</div>
-<div class='c pc' data-t='u.tekİn tunç çinarsan şoför'>
-<div class='cr'><span class='cn'>U.TEKİN TUNÇ</span><span class='b bg'>Şoför</span></div>
-<div class='cs'>ÇINARSAN
-</div>
-</div>
-<div class='c pc' data-t='uğur yücel irmakçilar operatör'>
-<div class='cr'><span class='cn'>Uğur YÜCEL</span><span class='b bb'>Operatör</span></div>
-<div class='cs'>IRMAKÇILAR
-</div>
-</div>
-<div class='c pc' data-t='yusuf doğan irmakçilar şoför'>
-<div class='cr'><span class='cn'>Yusuf DOĞAN</span><span class='b bg'>Şoför</span></div>
-<div class='cs'>IRMAKÇILAR
-</div>
-</div>
-<div class='c pc' data-t='yusuf yorulmaz irmakçilar operatör'>
-<div class='cr'><span class='cn'>Yusuf YORULMAZ</span><span class='b bb'>Operatör</span></div>
-<div class='cs'>IRMAKÇILAR
-</div>
-</div>
-<div class='c pc' data-t='ziya ayhan irmakçilar şoför'>
-<div class='cr'><span class='cn'>Ziya AYHAN</span><span class='b bg'>Şoför</span></div>
-<div class='cs'>IRMAKÇILAR
-</div>
-</div>
-<div class='c pc' data-t='özgür ertaş irmakçilar şoför'>
-<div class='cr'><span class='cn'>Özgür ERTAŞ</span><span class='b bg'>Şoför</span></div>
-<div class='cs'>IRMAKÇILAR
-</div>
-</div>
-<div class='c pc' data-t='özkan güner irmakçilar şoför'>
-<div class='cr'><span class='cn'>Özkan GÜNER</span><span class='b bg'>Şoför</span></div>
-<div class='cs'>IRMAKÇILAR
-</div>
-</div>
-<div class='c pc' data-t='İsmail uygurtaş irmakçilar şoför'>
-<div class='cr'><span class='cn'>İsmail UYGURTAŞ</span><span class='b bg'>Şoför</span></div>
-<div class='cs'>IRMAKÇILAR
-</div>
-</div>
-<div class='c pc' data-t='bayram akbaş irmakçilar şoför'>
-<div class='cr'><span class='cn'>Bayram AKBAŞ</span><span class='b bg'>Şoför</span></div>
-<div class='cs'>IRMAKÇILAR
-</div>
-</div>
-<div class='c pc' data-t='mustafa atay irmakçilar şoför'>
-<div class='cr'><span class='cn'>Mustafa ATAY</span><span class='b bg'>Şoför</span></div>
-<div class='cs'>IRMAKÇILAR
-</div>
-</div>
-<div class='c pc' data-t='yusuf kaya çinarsan şoför'>
-<div class='cr'><span class='cn'>YUSUF KAYA</span><span class='b bg'>Şoför</span></div>
-<div class='cs'>ÇINARSAN
-</div>
-</div>
-<div class='c pc' data-t='bünyamİn çinar çinarsan şoför'>
-<div class='cr'><span class='cn'>BÜNYAMİN ÇINAR</span><span class='b bg'>Şoför</span></div>
-<div class='cs'>ÇINARSAN
-</div>
-</div>
-<div class='c pc' data-t='bayram çinar çinarsan şoför'>
-<div class='cr'><span class='cn'>BAYRAM ÇINAR</span><span class='b bg'>Şoför</span></div>
-<div class='cs'>ÇINARSAN
-</div>
-</div>
-<div class='c pc' data-t='fatİh demİrsoy irmakçilar şoför'>
-<div class='cr'><span class='cn'>FATİH DEMİRSOY</span><span class='b bg'>Şoför</span></div>
-<div class='cs'>IRMAKÇILAR
-</div>
-</div>
-<div class='c pc' data-t='alİ karademİr çinarsan şoför'>
-<div class='cr'><span class='cn'>ALİ KARADEMİR</span><span class='b bg'>Şoför</span></div>
-<div class='cs'>ÇINARSAN
-</div>
-</div>
-<div class='c pc' data-t='osman kaplan çinarsan şoför'>
-<div class='cr'><span class='cn'>OSMAN KAPLAN</span><span class='b bg'>Şoför</span></div>
-<div class='cs'>ÇINARSAN
-</div>
-</div>
-<div class='c pc' data-t='h.dede çelİk irmakçilar şoför'>
-<div class='cr'><span class='cn'>H.Dede ÇELİK</span><span class='b bg'>Şoför</span></div>
-<div class='cs'>IRMAKÇILAR
-</div>
-</div>
-<div class='c pc' data-t='mesut akkoç irmakçilar şoför'>
-<div class='cr'><span class='cn'>Mesut AKKOÇ</span><span class='b bg'>Şoför</span></div>
-<div class='cs'>IRMAKÇILAR
-</div>
-</div>
-<div class='c pc' data-t='h.ahmet güneş irmakçilar şoför'>
-<div class='cr'><span class='cn'>H.Ahmet GÜNEŞ</span><span class='b bg'>Şoför</span></div>
-<div class='cs'>IRMAKÇILAR
-</div>
-</div>
-<div class='c pc' data-t='ferhat yağiz çinarsan şoför'>
-<div class='cr'><span class='cn'>Ferhat YAĞIZ</span><span class='b bg'>Şoför</span></div>
-<div class='cs'>ÇINARSAN
-</div>
-</div>
-<div class='c pc' data-t='y. tahir erduran irmakçilar şoför'>
-<div class='cr'><span class='cn'>Y. Tahir ERDURAN</span><span class='b bg'>Şoför</span></div>
-<div class='cs'>IRMAKÇILAR
-</div>
-</div>
-<div class='c pc' data-t='erhan düzen irmakçilar operatör'>
-<div class='cr'><span class='cn'>Erhan DÜZEN</span><span class='b bb'>Operatör</span></div>
-<div class='cs'>IRMAKÇILAR
-</div>
-</div>
-<div class='c pc' data-t='erol uçan irmakçilar operatör'>
-<div class='cr'><span class='cn'>Erol UÇAN</span><span class='b bb'>Operatör</span></div>
-<div class='cs'>IRMAKÇILAR
-</div>
-</div>
-</div>
-<div id='d-ayrilan_per' style='display:none'>
-<div class='st'>Ayrilan Personel</div>
-<div class='c pc' data-t='bayram terler'>
-<div class='cr'><span class='cn'>Bayram TERLER</span><span class='b br'>Ayrildi</span></div>
-<div class='cs'>IRMAKÇILAR | Şoför
-</div></div>
-</div></div>
-<div class='pg' id='p-mazot'>
-<div class='g2'>
+<div class='pg' id='p-mazot'><div class='g2'>
 <div class='s'><div class='sl'>Mazot Stok</div><div class='sv vo'>5663 Lt</div></div>
-<div class='s'><div class='sl'>Adblue Stok</div><div class='sv vb'>0 Lt</div></div>
+<div class='s'><div class='sl'>Adblue Stok</div><div class='sv vb'>0 Lt</div></div></div>
+<div class='c' style='border-left:3px solid #e65100;cursor:pointer' onclick='goster("irs_detay")'>
+<div class='cs' style='color:#e65100;font-weight:700'>AKTIF IRSALIYE (tikla detay)</div><div class='cn'>BTI202600003773</div></div>
+<div id='d-irs_detay' style='display:none'><div class='st'>Irsaliye Sorgulama</div>
+<input class='sr' placeholder='Irsaliye no giriniz...' oninput='firs(this.value)'>
+<div class='c ic' data-t='bti202600003773'>
+<div class='cr'><span class='cn'>Irs: BTI202600003773</span><span class='b bo'>11969 Lt</span></div>
+<div class='cs'>22.05.2026 | Muhur: 252650 | H. AHMET GÜNEŞ</div></div>
+<div class='c ic' data-t='bti2026000003682'>
+<div class='cr'><span class='cn'>Irs: BTI2026000003682</span><span class='b bo'>11942 Lt</span></div>
+<div class='cs'>20.05.2026 | Muhur: 252521 | H. Ahmet GÜNEŞ</div></div>
+<div class='c ic' data-t='bti2026000003590'>
+<div class='cr'><span class='cn'>Irs: BTI2026000003590</span><span class='b bo'>12455 Lt</span></div>
+<div class='cs'>18.05.2026 | Muhur: 252341 | H. Ahmet GÜNEŞ</div></div>
+<div class='c ic' data-t='bti2026000003482'>
+<div class='cr'><span class='cn'>Irs: BTI2026000003482</span><span class='b bo'>12433 Lt</span></div>
+<div class='cs'>13.05.2026 | Muhur: 252159 | H. Ahmet GÜNEŞ</div></div>
+<div class='c ic' data-t='bti2026000003349'>
+<div class='cr'><span class='cn'>Irs: BTI2026000003349</span><span class='b bo'>9711 Lt</span></div>
+<div class='cs'>09.05.2026 | Muhur: 251986 | H. Ahmet GÜNEŞ</div></div>
+<div class='c ic' data-t='bti2026000003253'>
+<div class='cr'><span class='cn'>Irs: BTI2026000003253</span><span class='b bo'>12020 Lt</span></div>
+<div class='cs'>05.05.2026 | Muhur: 251800 | H. Ahmet GÜNEŞ</div></div>
+<div class='c ic' data-t=''>
+<div class='cr'><span class='cn'>Irs: </span><span class='b bo'>11903 Lt</span></div>
+<div class='cs'>27.04.2026 | Muhur:  | H. Ahmet GÜNEŞ</div></div>
+<div class='c ic' data-t=''>
+<div class='cr'><span class='cn'>Irs: </span><span class='b bo'>9811 Lt</span></div>
+<div class='cs'>21.04.2026 | Muhur:  | H. Ahmet GÜNEŞ</div></div>
+<div class='c ic' data-t=''>
+<div class='cr'><span class='cn'>Irs: </span><span class='b bo'>12026 Lt</span></div>
+<div class='cs'>10.04.2026 | Muhur:  | H. Ahmet GÜNEŞ</div></div>
+<div class='c ic' data-t=''>
+<div class='cr'><span class='cn'>Irs: </span><span class='b bo'>10135 Lt</span></div>
+<div class='cs'>17.03.2026 | Muhur:  | H. Ahmet GÜNEŞ</div></div>
 </div>
-<div class='c' style='border-left:3px solid #e65100'><div class='cs' style='color:#e65100;font-weight:700'>AKTIF IRSALIYE</div><div class='cn'>BTI202600003773</div></div>
-<div class='st'>Plaka Sorgulama</div>
-<input class='sr' placeholder='Plaka giriniz...' oninput='fmz(this.value)'>
+<div class='st'>Plaka Sorgulama</div><input class='sr' placeholder='Plaka giriniz...' oninput='fmz(this.value)'>
 <div class='st'>Son Mazot Kayitlari</div>
 <div class='c mc' data-t='06 fck 120'>
 <div class='cr'><span class='cn'>06 FCK 120</span><span class='b bo'>10 Lt</span></div>
@@ -921,9 +611,7 @@
 <div class='cs'>20.05.2026 | Fis:27730 | HÜSNÜ AHMET GÜNEŞ</div></div>
 </div>
 <div class='pg' id='p-sefer'>
-<div class='c' style='text-align:center;border-left:3px solid #1565c0'>
-<div class='cs' style='font-weight:700;color:#1565c0'>MAYIS AYI TOPLAM SEFER</div>
-<div class='sv vb' style='font-size:28px'>10678</div></div>
+<div class='c' style='text-align:center;border-left:3px solid #1565c0'><div class='cs' style='font-weight:700;color:#1565c0'>MAYIS AYI TOPLAM SEFER</div><div class='sv vb' style='font-size:28px'>10678</div></div>
 <div class='fh'>IRMAKCILAR SEFER</div>
 <div class='fr'><div class='cr'><span>Gunduz</span><span class='cn'>0 sefer | 0 km</span></div></div>
 <div class='fr'><div class='cr'><span>Gece</span><span class='cn'>0 sefer | 0 km</span></div></div>
@@ -932,28 +620,30 @@
 <div class='fr'><div class='cr'><span>Gunduz</span><span class='cn'>0 sefer | 0 km</span></div></div>
 <div class='fr'><div class='cr'><span>Gece</span><span class='cn'>0 sefer | 0 km</span></div></div>
 <div class='fr' style='background:#f5f5f5'><div class='cr'><span style='font-weight:700'>TOPLAM</span><span class='cn vb'>0 sefer | 0 km</span></div></div>
-<div class='c' style='text-align:center;margin-top:10px;background:#e8f5e9'>
-<div class='cs' style='font-weight:700'>GUNLUK TOPLAM</div>
-<div class='sv vg'>135 sefer | 202 km</div></div>
+<div class='c' style='text-align:center;margin-top:10px;background:#e8f5e9'><div class='cs' style='font-weight:700'>GUNLUK TOPLAM</div><div class='sv vg'>135 sefer | 202 km</div></div>
+<div class='st'>GUNLUK RAPOR - 27.05.2026</div><div class='c'>
+<div class='cr'><span class='cs'>Calisan Kamyon</span><span class='cn'>3</span></div>
+<div class='cr'><span class='cs'>Calisan Makine</span><span class='cn'>1</span></div>
+<div class='cr'><span class='cs'>Calisan Sofor</span><span class='cn'>3</span></div>
+<div class='cr'><span class='cs'>Calisan Operator</span><span class='cn'>1</span></div>
+<div class='cr'><span class='cs'>Bosta Kamyon</span><span class='cn vr'>33</span></div>
+<div class='cr'><span class='cs'>Bosta Makine</span><span class='cn vr'>14</span></div>
+<div class='cr'><span class='cs'>Acik Kayit</span><span class='cn vo'>0</span></div></div>
 <div class='st'>DETAY RAPORLAR</div>
 <div class='c' style='cursor:pointer' onclick='sp("sefer_detay")'><div class='cr'><span class='cn'>Arac Bazli Sefer Detayi</span><span style='color:#aaa'>&gt;</span></div></div>
 </div>
-<div class='pg' id='p-bakim'>
-<div class='st'>BAKIM TAKIP</div>
-<div class='c' style='text-align:center;padding:30px'>
-<div style='font-size:40px'>&#128295;</div>
-<div class='cn' style='color:#aaa;margin-top:8px'>Bakim modulu yaklasimda</div>
+<div class='pg' id='p-bakim'><div class='st'>BAKIM TAKIP</div><div class='c' style='text-align:center;padding:30px'>
+<div style='font-size:40px'>&#128295;</div><div class='cn' style='color:#aaa;margin-top:8px'>Bakim modulu yaklasimda</div>
 <div class='cs'>Excel'e bakim verileri eklendikten sonra aktif olacak</div></div></div>
 </div><div class='ft'>ARMAGAN AYYILDIZ | TUPRAS Kirikkale Santiye | 2026</div>
 <script>
-function sp(id){document.querySelectorAll('.pg').forEach(p=>p.classList.remove('a'));
-document.querySelectorAll('.t').forEach(t=>t.classList.remove('a'));
-var pg=document.getElementById('p-'+id);if(pg)pg.classList.add('a');
-var tabs={'home':0,'arac':1,'personel':2,'mazot':3,'sefer':4,'bakim':5};
-if(id in tabs)document.querySelectorAll('.t')[tabs[id]].classList.add('a');
-window.scrollTo(0,0);}
+function sp(id){document.querySelectorAll('.pg').forEach(p=>p.classList.remove('a'));document.querySelectorAll('.t').forEach(t=>t.classList.remove('a'));
+var pg=document.getElementById('p-'+id);if(pg)pg.classList.add('a');var tabs={'home':0,'arac':1,'personel':2,'mazot':3,'sefer':4,'bakim':5};
+if(id in tabs)document.querySelectorAll('.t')[tabs[id]].classList.add('a');window.scrollTo(0,0);}
 function fa(q){q=q.toLowerCase();document.querySelectorAll('.ac').forEach(c=>{c.style.display=c.dataset.t.includes(q)?'':'none'})}
 function fmz(q){q=q.toLowerCase();document.querySelectorAll('.mc').forEach(c=>{c.style.display=c.dataset.t.includes(q)?'':'none'})}
 function fpr(q){q=q.toLowerCase();document.querySelectorAll('.pc').forEach(c=>{c.style.display=c.dataset.t.includes(q)?'':'none'})}
+function fprF(f){document.querySelectorAll('.pc').forEach(c=>{if(f==='all')c.style.display='';else c.style.display=c.dataset.t.includes(f)?'':'none'})}
+function firs(q){q=q.toLowerCase();document.querySelectorAll('.ic').forEach(c=>{c.style.display=c.dataset.t.includes(q)?'':'none'})}
 function goster(id){var d=document.getElementById('d-'+id);if(d)d.style.display=d.style.display==='none'?'block':'none'}
 </script></body></html>
