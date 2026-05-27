@@ -1,23 +1,21 @@
 ﻿<!DOCTYPE html><html lang='tr'><head><meta charset='UTF-8'>
 <meta name='viewport' content='width=device-width,initial-scale=1,maximum-scale=1'>
 <meta http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate'>
-<meta http-equiv='Pragma' content='no-cache'>
 <title>Arac Takip</title>
 <meta name='apple-mobile-web-app-capable' content='yes'>
 <meta name='theme-color' content='#0F2047'>
 <style>
-*{box-sizing:border-box;margin:0;padding:0}body{font-family:'Segoe UI',system-ui,sans-serif;background:#f0f2f5;color:#1a1a1a;-webkit-text-size-adjust:100%}
+*{box-sizing:border-box;margin:0;padding:0}body{font-family:'Segoe UI',system-ui,sans-serif;background:#f0f2f5;color:#1a1a1a}
 .hd{background:linear-gradient(135deg,#0F2047,#1a3a6c);color:#fff;padding:12px 16px;position:sticky;top:0;z-index:10}
 .hd h1{font-size:14px;font-weight:600}.hd p{font-size:9px;opacity:.6;margin-top:2px}
 .dt{background:#1a3a6c;color:#ddd;text-align:center;padding:5px;font-size:12px;font-weight:600}
 .tb{display:flex;background:#fff;border-bottom:1px solid #ddd;position:sticky;top:40px;z-index:9;overflow-x:auto}
-.t{flex:1;min-width:50px;padding:8px 2px;text-align:center;font-size:9px;color:#999;cursor:pointer;border-bottom:2.5px solid transparent;font-weight:600}
+.t{flex:1;min-width:48px;padding:8px 2px;text-align:center;font-size:8px;color:#999;cursor:pointer;border-bottom:2.5px solid transparent;font-weight:700}
 .t.a{color:#0F2047;border-bottom-color:#f5a623}
 .ct{padding:10px;max-width:480px;margin:0 auto}
 .pg{display:none}.pg.a{display:block}
 .g2{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px}
-.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;margin-bottom:10px}
-.s{background:#fff;border-radius:12px;padding:12px;border:1px solid #e8e8e8;cursor:pointer;transition:all .2s}
+.s{background:#fff;border-radius:12px;padding:12px;border:1px solid #e8e8e8;cursor:pointer;transition:all .15s}
 .s:active{transform:scale(.97)}
 .sl{font-size:10px;color:#888;font-weight:600}.sv{font-size:22px;font-weight:700;margin-top:3px}
 .st{font-size:12px;font-weight:700;color:#666;margin:12px 0 6px;padding-left:2px}
@@ -35,15 +33,15 @@
 .fr{background:#fff;padding:7px 12px;border:1px solid #e8e8e8;font-size:11px}
 .fr:last-child{border-radius:0 0 10px 10px}
 .bk{display:inline-block;padding:6px 16px;background:#0F2047;color:#fff;border-radius:20px;font-size:11px;cursor:pointer;margin-bottom:12px;font-weight:600}
-.fb{display:inline-block;padding:8px 18px;margin:4px;border-radius:10px;font-size:11px;font-weight:700;cursor:pointer;color:#fff;border:none}
-.fb:active{opacity:.8}
+.fb{display:inline-block;padding:8px 18px;margin:4px;border-radius:10px;font-size:11px;font-weight:700;cursor:pointer;color:#fff}
 .hw{display:flex;gap:4px;margin-bottom:10px}
 .hd2{flex:1;background:#fff;border-radius:8px;padding:6px 4px;text-align:center;border:1px solid #e8e8e8}
-.hd2 .dn{font-size:9px;color:#888;font-weight:600}.hd2 .dv{font-size:14px;font-weight:700;color:#1a1a1a}
+.hd2 .dn{font-size:9px;color:#888;font-weight:600}.hd2 .dv{font-size:14px;font-weight:700}
 .warn{background:#fff3e0;border-left:3px solid #e65100;border-radius:0 10px 10px 0;padding:8px 12px;margin-bottom:6px}
+.tel{display:inline-block;background:#2e7d32;color:#fff;padding:3px 10px;border-radius:15px;font-size:10px;text-decoration:none;margin-top:4px;font-weight:600}
 </style></head><body>
 <div class='hd'><h1>ARAC TAKIP SISTEMI</h1>
-<p>TUPRAS Kirikkale Santiye | Son guncelleme: 27.05.2026 18:05</p></div>
+<p>TUPRAS Kirikkale Santiye | 27.05.2026 22:20</p></div>
 <div class='dt'>27.05.2026 Carsamba</div>
 <div class='tb'>
 <div class='t a' onclick='sp("home")'>ANASAYFA</div>
@@ -54,12 +52,23 @@
 <div class='t' onclick='sp("bakim")'>BAKIM</div>
 </div><div class='ct'>
 <div class='pg a' id='p-home'>
+<div class='st'>HAFTALIK SEFER (Pzt-Paz)</div>
+<div class='hw'>
+<div class='hd2'><div class='dn'>Pzt</div><div class='dv' style=''>584</div></div>
+<div class='hd2'><div class='dn'>Sal</div><div class='dv' style=''>0</div></div>
+<div class='hd2'><div class='dn'>Car</div><div class='dv' style='color:#1565c0'>135</div></div>
+<div class='hd2'><div class='dn'>Per</div><div class='dv' style=''>0</div></div>
+<div class='hd2'><div class='dn'>Cum</div><div class='dv' style=''>0</div></div>
+<div class='hd2'><div class='dn'>Cmt</div><div class='dv' style=''>0</div></div>
+<div class='hd2'><div class='dn'>Paz</div><div class='dv' style=''>0</div></div>
+</div>
+<div class='c'><div class='cr'><span class='cn'>Hafta Toplam</span><span class='b bb'>719 sefer</span></div></div>
 <div class='g2'>
 <div class='s' onclick='sp("arac")'><div class='sl'>ARACLAR</div><div class='sv vb'>51</div><div class='cs'>36 kamyon, 15 makine</div></div>
 <div class='s' onclick='sp("personel")'><div class='sl'>PERSONEL</div><div class='sv vy'>55</div><div class='cs'>Mevcut personel</div></div>
 </div><div class='g2'>
 <div class='s' onclick='sp("sefer")'><div class='sl'>SEFER BILGISI</div><div class='sv vb'>135</div><div class='cs'>Bugunun seferi</div></div>
-<div class='s' onclick='sp("bakim")'><div class='sl'>BAKIMLAR</div><div class='sv' style='color:#aaa'>-</div><div class='cs'>Yaklasan bakim</div></div>
+<div class='s' onclick='sp("bakim")'><div class='sl'>BAKIMLAR</div><div class='sv' style='color:#aaa'>-</div><div class='cs'>Yaklasimda</div></div>
 </div><div class='g2'>
 <div class='s' onclick='sp("mazot")'><div class='sl'>MAZOT STOK</div><div class='sv vo'>5663 Lt</div></div>
 <div class='s' onclick='sp("acik")'><div class='sl'>ACIK KAYIT</div><div class='sv vr'>0</div></div>
@@ -167,17 +176,6 @@
 <div class='cs'>Silindir | IRMAKÇILAR</div></div>
 <div class='warn'><div class='cr'><span class='cn'>06 FME 393</span><span class='b br'>2 gun</span></div>
 <div class='cs'>Kamyon | IRMAKÇILAR</div></div>
-<div class='st'>HAFTALIK SEFER (Pzt-Paz)</div>
-<div class='hw'>
-<div class='hd2'><div class='dn'>Pzt</div><div class='dv' style=''>584</div></div>
-<div class='hd2'><div class='dn'>Sal</div><div class='dv' style=''>0</div></div>
-<div class='hd2'><div class='dn'>Car</div><div class='dv' style='color:#1565c0'>135</div></div>
-<div class='hd2'><div class='dn'>Per</div><div class='dv' style=''>0</div></div>
-<div class='hd2'><div class='dn'>Cum</div><div class='dv' style=''>0</div></div>
-<div class='hd2'><div class='dn'>Cmt</div><div class='dv' style=''>0</div></div>
-<div class='hd2'><div class='dn'>Paz</div><div class='dv' style=''>0</div></div>
-</div>
-<div class='c'><div class='cr'><span class='cn'>Hafta Toplam</span><span class='b bb'>719 sefer</span></div></div>
 </div>
 <div class='pg' id='p-cal_kam'>
 <div class='bk' onclick='sp("home")'>&lt; Geri</div>
@@ -468,133 +466,298 @@
 <div class='s' onclick='sp("bos_mak")'><div class='sl'>Bosta Makine</div><div class='sv vr'>14</div></div>
 </div></div>
 <div class='pg' id='p-personel'>
-<div class='st'>PERSONEL</div>
+<input class='sr' placeholder='Personel ara...' oninput='fpr(this.value)'>
 <div class='g2'>
 <div class='s' onclick='goster("mevcut_per")'><div class='sl'>Mevcut Personel</div><div class='sv vg'>55</div></div>
-<div class='s' onclick='goster("ayrilan_per")'><div class='sl'>Ayrilan Personel</div><div class='sv vr'>2</div></div>
+<div class='s' onclick='goster("ayrilan_per")'><div class='sl'>Ayrilan Personel</div><div class='sv vr'>1</div></div>
 </div>
-<div class='c' style='border-left:3px solid #7b1fa2'><div class='cn vy'>Izinli Personel</div><div class='cs'>Yaklasimda (Excel'e izin tablosu eklenecek)</div></div>
+<div class='c' style='border-left:3px solid #7b1fa2'><div class='cr'><span class='cn vy'>Izinli Personel</span><span class='b by'>1 kisi</span></div></div>
 <div id='d-mevcut_per' style='display:none'>
 <div class='st'>Mevcut Personel</div>
-<div class='c'><div class='cr'><span class='cn'>ABDULLAH ÇINAR</span><span class='b bg'>Şoför</span></div>
-<div class='cs'>ÇINARSAN</div></div>
-<div class='c'><div class='cr'><span class='cn'>Ahmet DOĞAN</span><span class='b bg'>Şoför</span></div>
-<div class='cs'>IRMAKÇILAR</div></div>
-<div class='c'><div class='cr'><span class='cn'>Altan GÜLMEZ</span><span class='b bg'>Şoför</span></div>
-<div class='cs'>IRMAKÇILAR</div></div>
-<div class='c'><div class='cr'><span class='cn'>Arif ÇAĞLAYAN</span><span class='b bg'>Operatör</span></div>
-<div class='cs'>IRMAKÇILAR</div></div>
-<div class='c'><div class='cr'><span class='cn'>Batuhan BAKIRCI</span><span class='b bg'>Operatör</span></div>
-<div class='cs'>IRMAKÇILAR</div></div>
-<div class='c'><div class='cr'><span class='cn'>Burhan Kaan ALTIN</span><span class='b bg'>Şoför</span></div>
-<div class='cs'>IRMAKÇILAR</div></div>
-<div class='c'><div class='cr'><span class='cn'>Ceyhun ÇEKİRGE</span><span class='b bg'>Operatör</span></div>
-<div class='cs'>IRMAKÇILAR</div></div>
-<div class='c'><div class='cr'><span class='cn'>EROL AKÇELİK</span><span class='b bg'>Operatör</span></div>
-<div class='cs'>ÇINARSAN</div></div>
-<div class='c'><div class='cr'><span class='cn'>Enes BOZTEPE</span><span class='b bg'>Şoför</span></div>
-<div class='cs'>IRMAKÇILAR</div></div>
-<div class='c'><div class='cr'><span class='cn'>Enis TOPUZ</span><span class='b bg'>Operatör</span></div>
-<div class='cs'>IRMAKÇILAR</div></div>
-<div class='c'><div class='cr'><span class='cn'>Ertuğrul ŞİMŞEK</span><span class='b bg'>Operatör</span></div>
-<div class='cs'>IRMAKÇILAR</div></div>
-<div class='c'><div class='cr'><span class='cn'>Ese GÜNGÖR</span><span class='b bg'>Operatör</span></div>
-<div class='cs'>IRMAKÇILAR</div></div>
-<div class='c'><div class='cr'><span class='cn'>FURKAN ÇINAR</span><span class='b bg'>Operatör</span></div>
-<div class='cs'>ÇINARSAN</div></div>
-<div class='c'><div class='cr'><span class='cn'>FİKRİ TUNÇ</span><span class='b bg'>Şoför</span></div>
-<div class='cs'>ÇINARSAN</div></div>
-<div class='c'><div class='cr'><span class='cn'>Gökhan AYHAN</span><span class='b bg'>Operatör</span></div>
-<div class='cs'>IRMAKÇILAR</div></div>
-<div class='c'><div class='cr'><span class='cn'>HASAN GÜNEY</span><span class='b bg'>Şoför</span></div>
-<div class='cs'>IRMAKÇILAR</div></div>
-<div class='c'><div class='cr'><span class='cn'>HASAN ÇELİK</span><span class='b bg'>Şoför</span></div>
-<div class='cs'>ÇINARSAN</div></div>
-<div class='c'><div class='cr'><span class='cn'>Halil UÇAKAN</span><span class='b bg'>Şoför</span></div>
-<div class='cs'>IRMAKÇILAR</div></div>
-<div class='c'><div class='cr'><span class='cn'>Hasan YABA</span><span class='b bg'>Operatör</span></div>
-<div class='cs'>IRMAKÇILAR</div></div>
-<div class='c'><div class='cr'><span class='cn'>KADİR BEKTAŞ</span><span class='b bg'>Şoför</span></div>
-<div class='cs'>ÇINARSAN</div></div>
-<div class='c'><div class='cr'><span class='cn'>Kamil SAĞIR</span><span class='b bg'>Şoför</span></div>
-<div class='cs'>IRMAKÇILAR</div></div>
-<div class='c'><div class='cr'><span class='cn'>Kemal SEZER</span><span class='b bg'>Şoför</span></div>
-<div class='cs'>IRMAKÇILAR</div></div>
-<div class='c'><div class='cr'><span class='cn'>MURAT ÇELİK</span><span class='b bg'>Şoför</span></div>
-<div class='cs'>ÇINARSAN</div></div>
-<div class='c'><div class='cr'><span class='cn'>Mehmet ARGALI</span><span class='b bg'>Şoför</span></div>
-<div class='cs'>IRMAKÇILAR</div></div>
-<div class='c'><div class='cr'><span class='cn'>Mesut ÖGEL</span><span class='b bg'>Operatör</span></div>
-<div class='cs'>IRMAKÇILAR</div></div>
-<div class='c'><div class='cr'><span class='cn'>Murat GÜLŞEN</span><span class='b bg'>Şoför</span></div>
-<div class='cs'>IRMAKÇILAR</div></div>
-<div class='c'><div class='cr'><span class='cn'>Mustafa ÜNLÜ</span><span class='b bg'>Operatör</span></div>
-<div class='cs'>IRMAKÇILAR</div></div>
-<div class='c'><div class='cr'><span class='cn'>Müslüm ALTINTAŞ</span><span class='b bg'>Şoför</span></div>
-<div class='cs'>IRMAKÇILAR</div></div>
-<div class='c'><div class='cr'><span class='cn'>Satılmış IŞIK</span><span class='b bg'>Şoför</span></div>
-<div class='cs'>IRMAKÇILAR</div></div>
-<div class='c'><div class='cr'><span class='cn'>Sercan DOĞAN</span><span class='b bg'>Operatör</span></div>
-<div class='cs'>IRMAKÇILAR</div></div>
-<div class='c'><div class='cr'><span class='cn'>TARIK POLAT</span><span class='b bg'>Şoför</span></div>
-<div class='cs'>IRMAKÇILAR</div></div>
-<div class='c'><div class='cr'><span class='cn'>Tahir DURAN</span><span class='b bg'>Operatör</span></div>
-<div class='cs'>IRMAKÇILAR</div></div>
-<div class='c'><div class='cr'><span class='cn'>Taner KULAKSIZ</span><span class='b bg'>Operatör</span></div>
-<div class='cs'>IRMAKÇILAR</div></div>
-<div class='c'><div class='cr'><span class='cn'>U.TEKİN TUNÇ</span><span class='b bg'>Şoför</span></div>
-<div class='cs'>ÇINARSAN</div></div>
-<div class='c'><div class='cr'><span class='cn'>Uğur YÜCEL</span><span class='b bg'>Operatör</span></div>
-<div class='cs'>IRMAKÇILAR</div></div>
-<div class='c'><div class='cr'><span class='cn'>Yusuf DOĞAN</span><span class='b bg'>Şoför</span></div>
-<div class='cs'>IRMAKÇILAR</div></div>
-<div class='c'><div class='cr'><span class='cn'>Yusuf YORULMAZ</span><span class='b bg'>Operatör</span></div>
-<div class='cs'>IRMAKÇILAR</div></div>
-<div class='c'><div class='cr'><span class='cn'>Ziya AYHAN</span><span class='b bg'>Şoför</span></div>
-<div class='cs'>IRMAKÇILAR</div></div>
-<div class='c'><div class='cr'><span class='cn'>Özgür ERTAŞ</span><span class='b bg'>Şoför</span></div>
-<div class='cs'>IRMAKÇILAR</div></div>
-<div class='c'><div class='cr'><span class='cn'>Özkan GÜNER</span><span class='b bg'>Şoför</span></div>
-<div class='cs'>IRMAKÇILAR</div></div>
-<div class='c'><div class='cr'><span class='cn'>İsmail UYGURTAŞ</span><span class='b bg'>Şoför</span></div>
-<div class='cs'>IRMAKÇILAR</div></div>
-<div class='c'><div class='cr'><span class='cn'>Bayram AKBAŞ</span><span class='b bg'>Şoför</span></div>
-<div class='cs'>IRMAKÇILAR</div></div>
-<div class='c'><div class='cr'><span class='cn'>YUSUF KAYA</span><span class='b bg'>Şoför</span></div>
-<div class='cs'>ÇINARSAN</div></div>
-<div class='c'><div class='cr'><span class='cn'>BÜNYAMİN ÇINAR</span><span class='b bg'>Şoför</span></div>
-<div class='cs'>ÇINARSAN</div></div>
-<div class='c'><div class='cr'><span class='cn'>BAYRAM ÇINAR</span><span class='b bg'>Şoför</span></div>
-<div class='cs'>ÇINARSAN</div></div>
-<div class='c'><div class='cr'><span class='cn'>FATİH DEMİRSOY</span><span class='b bg'>Şoför</span></div>
-<div class='cs'>IRMAKÇILAR</div></div>
-<div class='c'><div class='cr'><span class='cn'>ALİ KARADEMİR</span><span class='b bg'>Şoför</span></div>
-<div class='cs'>ÇINARSAN</div></div>
-<div class='c'><div class='cr'><span class='cn'>OSMAN KAPLAN</span><span class='b bg'>Şoför</span></div>
-<div class='cs'>ÇINARSAN</div></div>
-<div class='c'><div class='cr'><span class='cn'>H.Dede ÇELİK</span><span class='b bg'>Şoför</span></div>
-<div class='cs'>IRMAKÇILAR</div></div>
-<div class='c'><div class='cr'><span class='cn'>Mesut AKKOÇ</span><span class='b bg'>Şoför</span></div>
-<div class='cs'>IRMAKÇILAR</div></div>
-<div class='c'><div class='cr'><span class='cn'>H.Ahmet GÜNEŞ</span><span class='b bg'>Şoför</span></div>
-<div class='cs'>IRMAKÇILAR</div></div>
-<div class='c'><div class='cr'><span class='cn'>Ferhat YAĞIZ</span><span class='b bg'>Şoför</span></div>
-<div class='cs'>ÇINARSAN</div></div>
-<div class='c'><div class='cr'><span class='cn'>Y. Tahir ERDURAN</span><span class='b bg'>Şoför</span></div>
-<div class='cs'>IRMAKÇILAR</div></div>
-<div class='c'><div class='cr'><span class='cn'>Erhan DÜZEN</span><span class='b bg'>Operatör</span></div>
-<div class='cs'>IRMAKÇILAR</div></div>
-<div class='c'><div class='cr'><span class='cn'>Erol UÇAN</span><span class='b bg'>Operatör</span></div>
-<div class='cs'>IRMAKÇILAR</div></div>
+<div class='c pc' data-t='ahmet doğan irmakçilar şoför'>
+<div class='cr'><span class='cn'>Ahmet DOĞAN</span><span class='b bg'>Şoför</span></div>
+<div class='cs'>IRMAKÇILAR
+</div>
+<div class='cs vy' style='margin-top:4px'>Izin: 27.05.2026 - 05.06.2026</div>
+</div>
+<div class='c pc' data-t='altan gülmez irmakçilar şoför'>
+<div class='cr'><span class='cn'>Altan GÜLMEZ</span><span class='b bg'>Şoför</span></div>
+<div class='cs'>IRMAKÇILAR
+</div>
+</div>
+<div class='c pc' data-t='arif çağlayan irmakçilar operatör'>
+<div class='cr'><span class='cn'>Arif ÇAĞLAYAN</span><span class='b bb'>Operatör</span></div>
+<div class='cs'>IRMAKÇILAR
+</div>
+</div>
+<div class='c pc' data-t='batuhan bakirci irmakçilar operatör'>
+<div class='cr'><span class='cn'>Batuhan BAKIRCI</span><span class='b bb'>Operatör</span></div>
+<div class='cs'>IRMAKÇILAR
+</div>
+</div>
+<div class='c pc' data-t='burhan kaan altin irmakçilar şoför'>
+<div class='cr'><span class='cn'>Burhan Kaan ALTIN</span><span class='b bg'>Şoför</span></div>
+<div class='cs'>IRMAKÇILAR
+</div>
+</div>
+<div class='c pc' data-t='ceyhun çekİrge irmakçilar operatör'>
+<div class='cr'><span class='cn'>Ceyhun ÇEKİRGE</span><span class='b bb'>Operatör</span></div>
+<div class='cs'>IRMAKÇILAR
+</div>
+</div>
+<div class='c pc' data-t='erol akçelİk çinarsan operatör'>
+<div class='cr'><span class='cn'>EROL AKÇELİK</span><span class='b bb'>Operatör</span></div>
+<div class='cs'>ÇINARSAN
+</div>
+</div>
+<div class='c pc' data-t='enes boztepe irmakçilar şoför'>
+<div class='cr'><span class='cn'>Enes BOZTEPE</span><span class='b bg'>Şoför</span></div>
+<div class='cs'>IRMAKÇILAR
+</div>
+</div>
+<div class='c pc' data-t='enis topuz irmakçilar operatör'>
+<div class='cr'><span class='cn'>Enis TOPUZ</span><span class='b bb'>Operatör</span></div>
+<div class='cs'>IRMAKÇILAR
+</div>
+</div>
+<div class='c pc' data-t='ertuğrul şİmşek irmakçilar operatör'>
+<div class='cr'><span class='cn'>Ertuğrul ŞİMŞEK</span><span class='b bb'>Operatör</span></div>
+<div class='cs'>IRMAKÇILAR
+</div>
+</div>
+<div class='c pc' data-t='ese güngör irmakçilar operatör'>
+<div class='cr'><span class='cn'>Ese GÜNGÖR</span><span class='b bb'>Operatör</span></div>
+<div class='cs'>IRMAKÇILAR
+</div>
+</div>
+<div class='c pc' data-t='furkan çinar çinarsan operatör'>
+<div class='cr'><span class='cn'>FURKAN ÇINAR</span><span class='b bb'>Operatör</span></div>
+<div class='cs'>ÇINARSAN
+</div>
+</div>
+<div class='c pc' data-t='fİkrİ tunç çinarsan şoför'>
+<div class='cr'><span class='cn'>FİKRİ TUNÇ</span><span class='b bg'>Şoför</span></div>
+<div class='cs'>ÇINARSAN
+</div>
+</div>
+<div class='c pc' data-t='gökhan ayhan irmakçilar operatör'>
+<div class='cr'><span class='cn'>Gökhan AYHAN</span><span class='b bb'>Operatör</span></div>
+<div class='cs'>IRMAKÇILAR
+</div>
+</div>
+<div class='c pc' data-t='hasan güney irmakçilar şoför'>
+<div class='cr'><span class='cn'>HASAN GÜNEY</span><span class='b bg'>Şoför</span></div>
+<div class='cs'>IRMAKÇILAR
+</div>
+</div>
+<div class='c pc' data-t='hasan çelİk çinarsan şoför'>
+<div class='cr'><span class='cn'>HASAN ÇELİK</span><span class='b bg'>Şoför</span></div>
+<div class='cs'>ÇINARSAN
+</div>
+</div>
+<div class='c pc' data-t='halil uçakan irmakçilar şoför'>
+<div class='cr'><span class='cn'>Halil UÇAKAN</span><span class='b bg'>Şoför</span></div>
+<div class='cs'>IRMAKÇILAR
+</div>
+</div>
+<div class='c pc' data-t='hasan yaba irmakçilar operatör'>
+<div class='cr'><span class='cn'>Hasan YABA</span><span class='b bb'>Operatör</span></div>
+<div class='cs'>IRMAKÇILAR
+</div>
+</div>
+<div class='c pc' data-t='kadİr bektaş çinarsan şoför'>
+<div class='cr'><span class='cn'>KADİR BEKTAŞ</span><span class='b bg'>Şoför</span></div>
+<div class='cs'>ÇINARSAN
+</div>
+</div>
+<div class='c pc' data-t='kamil sağir irmakçilar şoför'>
+<div class='cr'><span class='cn'>Kamil SAĞIR</span><span class='b bg'>Şoför</span></div>
+<div class='cs'>IRMAKÇILAR
+</div>
+</div>
+<div class='c pc' data-t='kemal sezer irmakçilar şoför'>
+<div class='cr'><span class='cn'>Kemal SEZER</span><span class='b bg'>Şoför</span></div>
+<div class='cs'>IRMAKÇILAR
+</div>
+</div>
+<div class='c pc' data-t='murat çelİk çinarsan şoför'>
+<div class='cr'><span class='cn'>MURAT ÇELİK</span><span class='b bg'>Şoför</span></div>
+<div class='cs'>ÇINARSAN
+</div>
+</div>
+<div class='c pc' data-t='mehmet argali irmakçilar şoför'>
+<div class='cr'><span class='cn'>Mehmet ARGALI</span><span class='b bg'>Şoför</span></div>
+<div class='cs'>IRMAKÇILAR
+</div>
+</div>
+<div class='c pc' data-t='mesut ögel irmakçilar operatör'>
+<div class='cr'><span class='cn'>Mesut ÖGEL</span><span class='b bb'>Operatör</span></div>
+<div class='cs'>IRMAKÇILAR
+</div>
+</div>
+<div class='c pc' data-t='murat gülşen irmakçilar şoför'>
+<div class='cr'><span class='cn'>Murat GÜLŞEN</span><span class='b bg'>Şoför</span></div>
+<div class='cs'>IRMAKÇILAR
+</div>
+</div>
+<div class='c pc' data-t='mustafa ünlü irmakçilar operatör'>
+<div class='cr'><span class='cn'>Mustafa ÜNLÜ</span><span class='b bb'>Operatör</span></div>
+<div class='cs'>IRMAKÇILAR
+</div>
+</div>
+<div class='c pc' data-t='müslüm altintaş irmakçilar şoför'>
+<div class='cr'><span class='cn'>Müslüm ALTINTAŞ</span><span class='b bg'>Şoför</span></div>
+<div class='cs'>IRMAKÇILAR
+</div>
+</div>
+<div class='c pc' data-t='satılmış işik irmakçilar şoför'>
+<div class='cr'><span class='cn'>Satılmış IŞIK</span><span class='b bg'>Şoför</span></div>
+<div class='cs'>IRMAKÇILAR
+</div>
+</div>
+<div class='c pc' data-t='sercan doğan irmakçilar operatör'>
+<div class='cr'><span class='cn'>Sercan DOĞAN</span><span class='b bb'>Operatör</span></div>
+<div class='cs'>IRMAKÇILAR
+</div>
+</div>
+<div class='c pc' data-t='tarik polat irmakçilar şoför'>
+<div class='cr'><span class='cn'>TARIK POLAT</span><span class='b bg'>Şoför</span></div>
+<div class='cs'>IRMAKÇILAR
+</div>
+</div>
+<div class='c pc' data-t='tahir duran irmakçilar operatör'>
+<div class='cr'><span class='cn'>Tahir DURAN</span><span class='b bb'>Operatör</span></div>
+<div class='cs'>IRMAKÇILAR
+</div>
+</div>
+<div class='c pc' data-t='taner kulaksiz irmakçilar operatör'>
+<div class='cr'><span class='cn'>Taner KULAKSIZ</span><span class='b bb'>Operatör</span></div>
+<div class='cs'>IRMAKÇILAR
+</div>
+</div>
+<div class='c pc' data-t='u.tekİn tunç çinarsan şoför'>
+<div class='cr'><span class='cn'>U.TEKİN TUNÇ</span><span class='b bg'>Şoför</span></div>
+<div class='cs'>ÇINARSAN
+</div>
+</div>
+<div class='c pc' data-t='uğur yücel irmakçilar operatör'>
+<div class='cr'><span class='cn'>Uğur YÜCEL</span><span class='b bb'>Operatör</span></div>
+<div class='cs'>IRMAKÇILAR
+</div>
+</div>
+<div class='c pc' data-t='yusuf doğan irmakçilar şoför'>
+<div class='cr'><span class='cn'>Yusuf DOĞAN</span><span class='b bg'>Şoför</span></div>
+<div class='cs'>IRMAKÇILAR
+</div>
+</div>
+<div class='c pc' data-t='yusuf yorulmaz irmakçilar operatör'>
+<div class='cr'><span class='cn'>Yusuf YORULMAZ</span><span class='b bb'>Operatör</span></div>
+<div class='cs'>IRMAKÇILAR
+</div>
+</div>
+<div class='c pc' data-t='ziya ayhan irmakçilar şoför'>
+<div class='cr'><span class='cn'>Ziya AYHAN</span><span class='b bg'>Şoför</span></div>
+<div class='cs'>IRMAKÇILAR
+</div>
+</div>
+<div class='c pc' data-t='özgür ertaş irmakçilar şoför'>
+<div class='cr'><span class='cn'>Özgür ERTAŞ</span><span class='b bg'>Şoför</span></div>
+<div class='cs'>IRMAKÇILAR
+</div>
+</div>
+<div class='c pc' data-t='özkan güner irmakçilar şoför'>
+<div class='cr'><span class='cn'>Özkan GÜNER</span><span class='b bg'>Şoför</span></div>
+<div class='cs'>IRMAKÇILAR
+</div>
+</div>
+<div class='c pc' data-t='İsmail uygurtaş irmakçilar şoför'>
+<div class='cr'><span class='cn'>İsmail UYGURTAŞ</span><span class='b bg'>Şoför</span></div>
+<div class='cs'>IRMAKÇILAR
+</div>
+</div>
+<div class='c pc' data-t='bayram akbaş irmakçilar şoför'>
+<div class='cr'><span class='cn'>Bayram AKBAŞ</span><span class='b bg'>Şoför</span></div>
+<div class='cs'>IRMAKÇILAR
+</div>
+</div>
+<div class='c pc' data-t='mustafa atay irmakçilar şoför'>
+<div class='cr'><span class='cn'>Mustafa ATAY</span><span class='b bg'>Şoför</span></div>
+<div class='cs'>IRMAKÇILAR
+</div>
+</div>
+<div class='c pc' data-t='yusuf kaya çinarsan şoför'>
+<div class='cr'><span class='cn'>YUSUF KAYA</span><span class='b bg'>Şoför</span></div>
+<div class='cs'>ÇINARSAN
+</div>
+</div>
+<div class='c pc' data-t='bünyamİn çinar çinarsan şoför'>
+<div class='cr'><span class='cn'>BÜNYAMİN ÇINAR</span><span class='b bg'>Şoför</span></div>
+<div class='cs'>ÇINARSAN
+</div>
+</div>
+<div class='c pc' data-t='bayram çinar çinarsan şoför'>
+<div class='cr'><span class='cn'>BAYRAM ÇINAR</span><span class='b bg'>Şoför</span></div>
+<div class='cs'>ÇINARSAN
+</div>
+</div>
+<div class='c pc' data-t='fatİh demİrsoy irmakçilar şoför'>
+<div class='cr'><span class='cn'>FATİH DEMİRSOY</span><span class='b bg'>Şoför</span></div>
+<div class='cs'>IRMAKÇILAR
+</div>
+</div>
+<div class='c pc' data-t='alİ karademİr çinarsan şoför'>
+<div class='cr'><span class='cn'>ALİ KARADEMİR</span><span class='b bg'>Şoför</span></div>
+<div class='cs'>ÇINARSAN
+</div>
+</div>
+<div class='c pc' data-t='osman kaplan çinarsan şoför'>
+<div class='cr'><span class='cn'>OSMAN KAPLAN</span><span class='b bg'>Şoför</span></div>
+<div class='cs'>ÇINARSAN
+</div>
+</div>
+<div class='c pc' data-t='h.dede çelİk irmakçilar şoför'>
+<div class='cr'><span class='cn'>H.Dede ÇELİK</span><span class='b bg'>Şoför</span></div>
+<div class='cs'>IRMAKÇILAR
+</div>
+</div>
+<div class='c pc' data-t='mesut akkoç irmakçilar şoför'>
+<div class='cr'><span class='cn'>Mesut AKKOÇ</span><span class='b bg'>Şoför</span></div>
+<div class='cs'>IRMAKÇILAR
+</div>
+</div>
+<div class='c pc' data-t='h.ahmet güneş irmakçilar şoför'>
+<div class='cr'><span class='cn'>H.Ahmet GÜNEŞ</span><span class='b bg'>Şoför</span></div>
+<div class='cs'>IRMAKÇILAR
+</div>
+</div>
+<div class='c pc' data-t='ferhat yağiz çinarsan şoför'>
+<div class='cr'><span class='cn'>Ferhat YAĞIZ</span><span class='b bg'>Şoför</span></div>
+<div class='cs'>ÇINARSAN
+</div>
+</div>
+<div class='c pc' data-t='y. tahir erduran irmakçilar şoför'>
+<div class='cr'><span class='cn'>Y. Tahir ERDURAN</span><span class='b bg'>Şoför</span></div>
+<div class='cs'>IRMAKÇILAR
+</div>
+</div>
+<div class='c pc' data-t='erhan düzen irmakçilar operatör'>
+<div class='cr'><span class='cn'>Erhan DÜZEN</span><span class='b bb'>Operatör</span></div>
+<div class='cs'>IRMAKÇILAR
+</div>
+</div>
+<div class='c pc' data-t='erol uçan irmakçilar operatör'>
+<div class='cr'><span class='cn'>Erol UÇAN</span><span class='b bb'>Operatör</span></div>
+<div class='cs'>IRMAKÇILAR
+</div>
+</div>
 </div>
 <div id='d-ayrilan_per' style='display:none'>
 <div class='st'>Ayrilan Personel</div>
-<div class='c'><div class='cr'><span class='cn'>Bayram TERLER</span><span class='b br'>Ayrildi</span></div>
-<div class='cs'>IRMAKÇILAR | Şoför</div></div>
-<div class='c'><div class='cr'><span class='cn'>Mustafa ATAY</span><span class='b br'>Ayrildi</span></div>
-<div class='cs'>IRMAKÇILAR | Şoför</div></div>
-</div>
-</div>
+<div class='c pc' data-t='bayram terler'>
+<div class='cr'><span class='cn'>Bayram TERLER</span><span class='b br'>Ayrildi</span></div>
+<div class='cs'>IRMAKÇILAR | Şoför
+</div></div>
+</div></div>
 <div class='pg' id='p-mazot'>
 <div class='g2'>
 <div class='s'><div class='sl'>Mazot Stok</div><div class='sv vo'>5663 Lt</div></div>
@@ -759,11 +922,11 @@
 <div class='c' style='text-align:center;border-left:3px solid #1565c0'>
 <div class='cs' style='font-weight:700;color:#1565c0'>MAYIS AYI TOPLAM SEFER</div>
 <div class='sv vb' style='font-size:28px'>10678</div></div>
-<div class='fh' onclick='sp("sefer_detay")' style='cursor:pointer'>IRMAKCILAR SEFER</div>
+<div class='fh'>IRMAKCILAR SEFER</div>
 <div class='fr'><div class='cr'><span>Gunduz</span><span class='cn'>0 sefer | 0 km</span></div></div>
 <div class='fr'><div class='cr'><span>Gece</span><span class='cn'>0 sefer | 0 km</span></div></div>
 <div class='fr' style='background:#f5f5f5'><div class='cr'><span style='font-weight:700'>TOPLAM</span><span class='cn vb'>0 sefer | 0 km</span></div></div>
-<div class='fh' onclick='sp("sefer_detay")' style='cursor:pointer'>CINARSAN SEFER</div>
+<div class='fh'>CINARSAN SEFER</div>
 <div class='fr'><div class='cr'><span>Gunduz</span><span class='cn'>0 sefer | 0 km</span></div></div>
 <div class='fr'><div class='cr'><span>Gece</span><span class='cn'>0 sefer | 0 km</span></div></div>
 <div class='fr' style='background:#f5f5f5'><div class='cr'><span style='font-weight:700'>TOPLAM</span><span class='cn vb'>0 sefer | 0 km</span></div></div>
@@ -776,10 +939,9 @@
 <div class='pg' id='p-bakim'>
 <div class='st'>BAKIM TAKIP</div>
 <div class='c' style='text-align:center;padding:30px'>
-<div class='sv' style='color:#ccc;font-size:40px'>&#128295;</div>
+<div style='font-size:40px'>&#128295;</div>
 <div class='cn' style='color:#aaa;margin-top:8px'>Bakim modulu yaklasimda</div>
-<div class='cs'>Excel'e bakim verileri eklendikten sonra aktif olacak</div></div>
-</div>
+<div class='cs'>Excel'e bakim verileri eklendikten sonra aktif olacak</div></div></div>
 </div><div class='ft'>ARMAGAN AYYILDIZ | TUPRAS Kirikkale Santiye | 2026</div>
 <script>
 function sp(id){document.querySelectorAll('.pg').forEach(p=>p.classList.remove('a'));
@@ -789,7 +951,7 @@ var tabs={'home':0,'arac':1,'personel':2,'mazot':3,'sefer':4,'bakim':5};
 if(id in tabs)document.querySelectorAll('.t')[tabs[id]].classList.add('a');
 window.scrollTo(0,0);}
 function fa(q){q=q.toLowerCase();document.querySelectorAll('.ac').forEach(c=>{c.style.display=c.dataset.t.includes(q)?'':'none'})}
-function fky(q){q=q.toLowerCase();document.querySelectorAll('.kc').forEach(c=>{c.style.display=c.dataset.t.includes(q)?'':'none'})}
 function fmz(q){q=q.toLowerCase();document.querySelectorAll('.mc').forEach(c=>{c.style.display=c.dataset.t.includes(q)?'':'none'})}
+function fpr(q){q=q.toLowerCase();document.querySelectorAll('.pc').forEach(c=>{c.style.display=c.dataset.t.includes(q)?'':'none'})}
 function goster(id){var d=document.getElementById('d-'+id);if(d)d.style.display=d.style.display==='none'?'block':'none'}
 </script></body></html>
