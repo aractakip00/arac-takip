@@ -30,7 +30,15 @@
 .warn{background:#fff3e0;border-left:3px solid #e65100;border-radius:0 10px 10px 0;padding:8px 12px;margin-bottom:6px}
 .tel{display:inline-block;background:#2e7d32;color:#fff;padding:3px 10px;border-radius:15px;font-size:10px;text-decoration:none;margin-top:4px;font-weight:600}
 </style></head><body>
-<div class='hd'><h1>ARAC TAKIP SISTEMI</h1><p>TUPRAS Kirikkale Santiye | 30.05.2026 16:01</p></div>
+<div id='sifre-ekran' style='position:fixed;top:0;left:0;width:100%;height:100%;background:#0F2047;z-index:999;display:flex;align-items:center;justify-content:center'>
+<div style='text-align:center;color:#fff;padding:20px'>
+<div style='font-size:18px;font-weight:700;margin-bottom:20px'>ARAC TAKIP SISTEMI</div>
+<div style='font-size:12px;margin-bottom:15px;opacity:.7'>Devam etmek icin sifre giriniz</div>
+<input type='password' id='sifreInput' placeholder='Sifre' style='padding:10px 16px;border-radius:10px;border:none;font-size:14px;width:200px;text-align:center' onkeypress='if(event.key==="Enter")sifreKontrol()'>
+<br><br><div onclick='sifreKontrol()' style='background:#f5a623;color:#0F2047;padding:10px 30px;border-radius:10px;display:inline-block;font-weight:700;cursor:pointer;font-size:13px'>GIRIS</div>
+<div id='sifreHata' style='color:#ff5252;font-size:11px;margin-top:10px'></div>
+</div></div>
+<div class='hd'><h1>ARAC TAKIP SISTEMI</h1><p>TUPRAS Kirikkale Santiye | 30.05.2026 16:08</p></div>
 <div class='dt'>30.05.2026 Cumartesi</div>
 <div class='tb'><div class='t a' onclick='sp("home")'>ANASAYFA</div><div class='t' onclick='sp("arac")'>ARACLAR</div>
 <div class='t' onclick='sp("personel")'>PERSONEL</div><div class='t' onclick='sp("mazot")'>MAZOT</div>
@@ -2164,6 +2172,9 @@
 <div class='cs'>Excel'e bakim verileri eklendikten sonra aktif olacak</div></div></div>
 </div><div class='ft'>ARMAGAN AYYILDIZ | TUPRAS Kirikkale Santiye | 2026</div>
 <script>
+var SIFRE='MKA1881';
+function sifreKontrol(){var s=document.getElementById('sifreInput').value;if(s===SIFRE){localStorage.setItem('aracTakipAuth','ok');document.getElementById('sifre-ekran').style.display='none'}else{document.getElementById('sifreHata').textContent='Yanlis sifre!'}}
+if(localStorage.getItem('aracTakipAuth')==='ok'){document.getElementById('sifre-ekran').style.display='none'}
 function sp(id){document.querySelectorAll('.pg').forEach(p=>p.classList.remove('a'));document.querySelectorAll('.t').forEach(t=>t.classList.remove('a'));
 var pg=document.getElementById('p-'+id);if(pg)pg.classList.add('a');var tabs={'home':0,'arac':1,'personel':2,'mazot':3,'sefer':4,'bakim':5};
 if(id in tabs)document.querySelectorAll('.t')[tabs[id]].classList.add('a');window.scrollTo(0,0);}
