@@ -30,7 +30,7 @@
 .warn{background:#fff3e0;border-left:3px solid #e65100;border-radius:0 10px 10px 0;padding:8px 12px;margin-bottom:6px}
 .tel{display:inline-block;background:#2e7d32;color:#fff;padding:3px 10px;border-radius:15px;font-size:10px;text-decoration:none;margin-top:4px;font-weight:600}
 </style></head><body>
-<div class='hd'><h1>ARAC TAKIP SISTEMI</h1><p>TUPRAS Kirikkale Santiye | 30.05.2026 15:16</p></div>
+<div class='hd'><h1>ARAC TAKIP SISTEMI</h1><p>TUPRAS Kirikkale Santiye | 30.05.2026 15:45</p></div>
 <div class='dt'>30.05.2026 Cumartesi</div>
 <div class='tb'><div class='t a' onclick='sp("home")'>ANASAYFA</div><div class='t' onclick='sp("arac")'>ARACLAR</div>
 <div class='t' onclick='sp("personel")'>PERSONEL</div><div class='t' onclick='sp("mazot")'>MAZOT</div>
@@ -708,6 +708,7 @@
 <div class='pg' id='p-mazot'><div class='g2'>
 <div class='s'><div class='sl'>Mazot Stok</div><div class='sv vo'>5663 Lt</div></div>
 <div class='s'><div class='sl'>Adblue Stok</div><div class='sv vb'>0 Lt</div></div></div>
+function tumKayit(c){document.querySelectorAll('.ek').forEach(e=>{e.style.display=c?'':'none'})}
 <div class='c' style='border-left:3px solid #e65100;cursor:pointer' onclick='goster("irs_detay")'>
 <div class='cs' style='color:#e65100;font-weight:700'>AKTIF IRSALIYE (tikla detay)</div><div class='cn'>BTI202600003773</div></div>
 <div id='d-irs_detay' style='display:none'><div class='st'>Irsaliye Sorgulama</div>
@@ -744,157 +745,1861 @@
 <div class='cs'>17.03.2026 | Muhur:  | H. Ahmet GÜNEŞ</div></div>
 </div>
 <div class='st'>Plaka Sorgulama</div><input class='sr' placeholder='Plaka giriniz...' oninput='fmz(this.value)'>
-<div class='st'>Son Mazot Kayitlari</div>
+<div style='display:flex;justify-content:space-between;align-items:center;margin:12px 0 6px'>
+<span class='st' style='margin:0'>Mazot Kayitlari</span>
+<label style='font-size:10px;color:#888;cursor:pointer'><input type='checkbox' id='cbTum' onchange='tumKayit(this.checked)' style='margin-right:4px'>Tum Kayitlar</label></div>
 <div class='c mc' data-t='06 fck 120'>
 <div class='cr'><span class='cn'>06 FCK 120</span><span class='b bo'>10 Lt</span></div>
 <div class='cs'>23.05.2026 | Fis:25165 | Enes BOZTEPE</div></div>
+<div class='c mc' data-t='06 fck 120'>
 <div class='c mc' data-t='06 ftn 253'>
 <div class='cr'><span class='cn'>06 FTN 253</span><span class='b bo'>141 Lt</span></div>
 <div class='cs'>22.05.2026 | Fis:25164 | Hasan GÜNEY</div></div>
+<div class='c mc' data-t='06 ftn 253'>
 <div class='c mc' data-t='06 ftn 487'>
 <div class='cr'><span class='cn'>06 FTN 487</span><span class='b bo'>205 Lt</span></div>
 <div class='cs'>22.05.2026 | Fis:25163 | Müslüm ALTINTAŞ</div></div>
+<div class='c mc' data-t='06 ftn 487'>
 <div class='c mc' data-t='06 fmu 858'>
 <div class='cr'><span class='cn'>06 FMU 858</span><span class='b bo'>172 Lt</span></div>
 <div class='cs'>22.05.2026 | Fis:25162 | Altan GÜLMEZ</div></div>
+<div class='c mc' data-t='06 fmu 858'>
 <div class='c mc' data-t='08 87'>
 <div class='cr'><span class='cn'>08 87</span><span class='b bo'>92 Lt</span></div>
 <div class='cs'>22.05.2026 | Fis:25161 | Niyazi GÜNDOĞDU</div></div>
+<div class='c mc' data-t='08 87'>
 <div class='c mc' data-t='06 fkp 232'>
 <div class='cr'><span class='cn'>06 FKP 232</span><span class='b bo'>148 Lt</span></div>
 <div class='cs'>22.05.2026 | Fis:25160 | Kürşat MARAŞLIOĞLU</div></div>
+<div class='c mc' data-t='06 fkp 232'>
 <div class='c mc' data-t='06 fkp 159'>
 <div class='cr'><span class='cn'>06 FKP 159</span><span class='b bo'>152 Lt</span></div>
 <div class='cs'>22.05.2026 | Fis:25159 | Arif ÖZBEK</div></div>
+<div class='c mc' data-t='06 fkp 159'>
 <div class='c mc' data-t='06 ftn 324'>
 <div class='cr'><span class='cn'>06 FTN 324</span><span class='b bo'>141 Lt</span></div>
 <div class='cs'>22.05.2026 | Fis:25158 | H.Dede ÇELİK</div></div>
+<div class='c mc' data-t='06 ftn 324'>
 <div class='c mc' data-t='06 fbm 211'>
 <div class='cr'><span class='cn'>06 FBM 211</span><span class='b bo'>165 Lt</span></div>
 <div class='cs'>22.05.2026 | Fis:25157 | Ahmet DOĞAN</div></div>
+<div class='c mc' data-t='06 fbm 211'>
 <div class='c mc' data-t='06 fmz 726'>
 <div class='cr'><span class='cn'>06 FMZ 726</span><span class='b bo'>153 Lt</span></div>
 <div class='cs'>22.05.2026 | Fis:25156 | Kemal SEZER</div></div>
+<div class='c mc' data-t='06 fmz 726'>
 <div class='c mc' data-t='3400 191 03 11'>
 <div class='cr'><span class='cn'>3400 191 03 11</span><span class='b bo'>311 Lt</span></div>
 <div class='cs'>22.05.2026 | Fis:25155 | Yusuf YORULMAZ</div></div>
+<div class='c mc' data-t='3400 191 03 11'>
 <div class='c mc' data-t='06 00 23 1810'>
 <div class='cr'><span class='cn'>06 00 23 1810</span><span class='b bo'>278 Lt</span></div>
 <div class='cs'>22.05.2026 | Fis:25154 | Arif ÇAĞLAYAN</div></div>
+<div class='c mc' data-t='06 00 23 1810'>
 <div class='c mc' data-t='06 ftn 281'>
 <div class='cr'><span class='cn'>06 FTN 281</span><span class='b bo'>215 Lt</span></div>
 <div class='cs'>22.05.2026 | Fis:25153 | Murat GÜLŞEN</div></div>
+<div class='c mc' data-t='06 ftn 281'>
 <div class='c mc' data-t='06 fer 920'>
 <div class='cr'><span class='cn'>06 FER 920</span><span class='b bo'>170 Lt</span></div>
 <div class='cs'>22.05.2026 | Fis:25152 | Mehmet ARGALI</div></div>
+<div class='c mc' data-t='06 fer 920'>
 <div class='c mc' data-t='06 ftn 579'>
 <div class='cr'><span class='cn'>06 FTN 579</span><span class='b bo'>229 Lt</span></div>
 <div class='cs'>22.05.2026 | Fis:25151 | Satılmış IŞIK</div></div>
+<div class='c mc' data-t='06 ftn 579'>
 <div class='c mc' data-t='34 00 11 8065'>
 <div class='cr'><span class='cn'>34 00 11 8065</span><span class='b bo'>270 Lt</span></div>
 <div class='cs'>22.05.2026 | Fis:27750 | Ese GÜNGÖR</div></div>
+<div class='c mc' data-t='34 00 11 8065'>
 <div class='c mc' data-t='06 00 16 5515'>
 <div class='cr'><span class='cn'>06 00 16 5515</span><span class='b bo'>440 Lt</span></div>
 <div class='cs'>22.05.2026 | Fis:27749 | Batuhan BAKIRCI</div></div>
+<div class='c mc' data-t='06 00 16 5515'>
 <div class='c mc' data-t='34 00 251 7252'>
 <div class='cr'><span class='cn'>34 00 251 7252</span><span class='b bo'>255 Lt</span></div>
 <div class='cs'>22.05.2026 | Fis:27748 | Uğur YÜCEL</div></div>
+<div class='c mc' data-t='34 00 251 7252'>
 <div class='c mc' data-t='06 00 26 02 31'>
 <div class='cr'><span class='cn'>06 00 26 02 31</span><span class='b bo'>415 Lt</span></div>
 <div class='cs'>22.05.2026 | Fis:27511 | EROL AKÇELİK</div></div>
+<div class='c mc' data-t='06 00 26 02 31'>
 <div class='c mc' data-t='06 fpb 142'>
 <div class='cr'><span class='cn'>06 FPB 142</span><span class='b bo'>39 Lt</span></div>
 <div class='cs'>22.05.2026 | Fis:27510 | ABDULLAH ÇINAR</div></div>
+<div class='c mc' data-t='06 fpb 142'>
 <div class='c mc' data-t='06 bf 5241'>
 <div class='cr'><span class='cn'>06 BF 5241</span><span class='b bo'>41 Lt</span></div>
 <div class='cs'>22.05.2026 | Fis:27509 | ABDULLAH ÇINAR</div></div>
+<div class='c mc' data-t='06 bf 5241'>
 <div class='c mc' data-t='06 bc 9266'>
 <div class='cr'><span class='cn'>06 BC 9266</span><span class='b bo'>195 Lt</span></div>
 <div class='cs'>22.05.2026 | Fis:27508 | ABDULLAH ÇINAR</div></div>
+<div class='c mc' data-t='06 bc 9266'>
 <div class='c mc' data-t='06 00 23 50 09'>
 <div class='cr'><span class='cn'>06 00 23 50 09</span><span class='b bo'>316 Lt</span></div>
 <div class='cs'>22.05.2026 | Fis:27507 | ABDULLAH ÇINAR</div></div>
+<div class='c mc' data-t='06 00 23 50 09'>
 <div class='c mc' data-t='06 bc 7235'>
 <div class='cr'><span class='cn'>06 BC 7235</span><span class='b bo'>180 Lt</span></div>
 <div class='cs'>22.05.2026 | Fis:27506 | ABDULLAH ÇINAR</div></div>
+<div class='c mc' data-t='06 bc 7235'>
 <div class='c mc' data-t='06 fb 1135'>
 <div class='cr'><span class='cn'>06 FB 1135</span><span class='b bo'>236 Lt</span></div>
 <div class='cs'>22.05.2026 | Fis:27505 | U.TEKİN TUNÇ</div></div>
+<div class='c mc' data-t='06 fb 1135'>
 <div class='c mc' data-t='06 ehe 609'>
 <div class='cr'><span class='cn'>06 EHE 609</span><span class='b bo'>233 Lt</span></div>
 <div class='cs'>22.05.2026 | Fis:27504 | HASAN ÇELİK</div></div>
+<div class='c mc' data-t='06 ehe 609'>
 <div class='c mc' data-t='06 bc 2431'>
 <div class='cr'><span class='cn'>06 BC 2431</span><span class='b bo'>213 Lt</span></div>
 <div class='cs'>22.05.2026 | Fis:27503 | FİKRİ TUNÇ</div></div>
+<div class='c mc' data-t='06 bc 2431'>
 <div class='c mc' data-t='06 fc 7627'>
 <div class='cr'><span class='cn'>06 FC 7627</span><span class='b bo'>229 Lt</span></div>
 <div class='cs'>22.05.2026 | Fis:27502 | OSMAN KAPLAN</div></div>
+<div class='c mc' data-t='06 fc 7627'>
 <div class='c mc' data-t='06 fsu 564'>
 <div class='cr'><span class='cn'>06 FSU 564</span><span class='b bo'>263 Lt</span></div>
 <div class='cs'>22.05.2026 | Fis:27501 | MURAT ÇELİK</div></div>
+<div class='c mc' data-t='06 fsu 564'>
 <div class='c mc' data-t='34 00 22 75 78'>
 <div class='cr'><span class='cn'>34 00 22 75 78</span><span class='b bo'>399 Lt</span></div>
 <div class='cs'>22.05.2026 | Fis:25050 | Ferhat YAĞIZ</div></div>
+<div class='c mc' data-t='34 00 22 75 78'>
 <div class='c mc' data-t='06 fsf 855'>
 <div class='cr'><span class='cn'>06 FSF 855</span><span class='b bo'>210 Lt</span></div>
 <div class='cs'>21.05.2026 | Fis:25049 | ALİ KARADEMİR</div></div>
+<div class='c mc' data-t='06 fsf 855'>
 <div class='c mc' data-t='06 bc 2431'>
 <div class='cr'><span class='cn'>06 BC 2431</span><span class='b bo'>50 Lt</span></div>
 <div class='cs'>21.05.2026 | Fis:25048 | FİKRİ TUNÇ</div></div>
+<div class='c mc' data-t='06 bc 2431'>
 <div class='c mc' data-t='06 fmz 699'>
 <div class='cr'><span class='cn'>06 FMZ 699</span><span class='b bo'>90 Lt</span></div>
 <div class='cs'>21.05.2026 | Fis:27747 | Özgür ERTAŞ</div></div>
+<div class='c mc' data-t='06 fmz 699'>
 <div class='c mc' data-t='06 ftn 454'>
 <div class='cr'><span class='cn'>06 FTN 454</span><span class='b bo'>46 Lt</span></div>
 <div class='cs'>21.05.2026 | Fis:27746 | Burhan Kaan ALTIN</div></div>
+<div class='c mc' data-t='06 ftn 454'>
 <div class='c mc' data-t='06 00 16 5515'>
 <div class='cr'><span class='cn'>06 00 16 5515</span><span class='b bo'>112 Lt</span></div>
 <div class='cs'>21.05.2026 | Fis:27745 | Batuhan BAKIRCI</div></div>
+<div class='c mc' data-t='06 00 16 5515'>
 <div class='c mc' data-t='34 00 231 3626'>
 <div class='cr'><span class='cn'>34 00 231 3626</span><span class='b bo'>476 Lt</span></div>
 <div class='cs'>21.05.2026 | Fis:27744 | H.Ahmet GÜNEŞ</div></div>
+<div class='c mc' data-t='34 00 231 3626'>
 <div class='c mc' data-t='06 00 23 1810'>
 <div class='cr'><span class='cn'>06 00 23 1810</span><span class='b bo'>380 Lt</span></div>
 <div class='cs'>21.05.2026 | Fis:27743 | H.Ahmet GÜNEŞ</div></div>
+<div class='c mc' data-t='06 00 23 1810'>
 <div class='c mc' data-t='34 00 251 7252'>
 <div class='cr'><span class='cn'>34 00 251 7252</span><span class='b bo'>450 Lt</span></div>
 <div class='cs'>21.05.2026 | Fis:27742 | Uğur YÜCEL</div></div>
+<div class='c mc' data-t='34 00 251 7252'>
 <div class='c mc' data-t='3400 191 03 11'>
 <div class='cr'><span class='cn'>3400 191 03 11</span><span class='b bo'>340 Lt</span></div>
 <div class='cs'>21.05.2026 | Fis:27741 | H.Ahmet GÜNEŞ</div></div>
+<div class='c mc' data-t='3400 191 03 11'>
 <div class='c mc' data-t='06 00 25 6199'>
 <div class='cr'><span class='cn'>06 00 25 6199</span><span class='b bo'>496 Lt</span></div>
 <div class='cs'>21.05.2026 | Fis:27740 | H.Ahmet GÜNEŞ</div></div>
+<div class='c mc' data-t='06 00 25 6199'>
 <div class='c mc' data-t='06 00 26 1243'>
 <div class='cr'><span class='cn'>06 00 26 1243</span><span class='b bo'>316 Lt</span></div>
 <div class='cs'>21.05.2026 | Fis:27739 | Mustafa ÜNLÜ</div></div>
+<div class='c mc' data-t='06 00 26 1243'>
 <div class='c mc' data-t='06 ftk 969'>
 <div class='cr'><span class='cn'>06 FTK 969</span><span class='b bo'>18 Lt</span></div>
 <div class='cs'>21.05.2026 | Fis:27738 | Mesut AKKOÇ</div></div>
+<div class='c mc' data-t='06 ftk 969'>
 <div class='c mc' data-t='06 fkf 383'>
 <div class='cr'><span class='cn'>06 FKF 383</span><span class='b bo'>51 Lt</span></div>
 <div class='cs'>21.05.2026 | Fis:27737 | Necati ALTAN</div></div>
+<div class='c mc' data-t='06 fkf 383'>
 <div class='c mc' data-t='34 00 11 8065'>
 <div class='cr'><span class='cn'>34 00 11 8065</span><span class='b bo'>370 Lt</span></div>
 <div class='cs'>21.05.2026 | Fis:27736 | Ese GÜNGÖR</div></div>
+<div class='c mc' data-t='34 00 11 8065'>
 <div class='c mc' data-t='34 00 25 6043'>
 <div class='cr'><span class='cn'>34 00 25 6043</span><span class='b bo'>270 Lt</span></div>
 <div class='cs'>20.05.2026 | Fis:27735 | Sercan DOĞAN</div></div>
+<div class='c mc' data-t='34 00 25 6043'>
 <div class='c mc' data-t='06 fck 120'>
 <div class='cr'><span class='cn'>06 FCK 120</span><span class='b bo'>170 Lt</span></div>
 <div class='cs'>20.05.2026 | Fis:27734 | Enes BOZTEPE</div></div>
+<div class='c mc' data-t='06 fck 120'>
 <div class='c mc' data-t='06 ftn 253'>
 <div class='cr'><span class='cn'>06 FTN 253</span><span class='b bo'>155 Lt</span></div>
 <div class='cs'>20.05.2026 | Fis:27733 | Hasan GÜNEY</div></div>
+<div class='c mc' data-t='06 ftn 253'>
 <div class='c mc' data-t='34 00 162 3298'>
 <div class='cr'><span class='cn'>34 00 162 3298</span><span class='b bo'>397 Lt</span></div>
 <div class='cs'>20.05.2026 | Fis:27732 | Taner KULAKSIZ</div></div>
+<div class='c mc' data-t='34 00 162 3298'>
 <div class='c mc' data-t='06 ftn 195'>
 <div class='cr'><span class='cn'>06 FTN 195</span><span class='b bo'>153 Lt</span></div>
 <div class='cs'>20.05.2026 | Fis:27731 | FATİH DEMİRSOY</div></div>
+<div class='c mc' data-t='06 ftn 195'>
 <div class='c mc' data-t='06 fmv 048'>
 <div class='cr'><span class='cn'>06 FMV 048</span><span class='b bo'>147 Lt</span></div>
 <div class='cs'>20.05.2026 | Fis:27730 | HÜSNÜ AHMET GÜNEŞ</div></div>
+<div class='c mc' data-t='06 fmv 048'>
+<div class='c mc' data-t='06 fkp 429'>
+<div class='cr'><span class='cn'>06 FKP 429</span><span class='b bo'>20 Lt</span></div>
+<div class='cs'>20.05.2026 | Fis:27729 | HÜSNÜ AHMET GÜNEŞ</div></div>
+<div class='c mc ek' data-t='06 fkp 429' style='display:none'>
+<div class='c mc' data-t='06 ftn 431'>
+<div class='cr'><span class='cn'>06 FTN 431</span><span class='b bo'>163 Lt</span></div>
+<div class='cs'>20.05.2026 | Fis:27728 | HÜSNÜ AHMET GÜNEŞ</div></div>
+<div class='c mc ek' data-t='06 ftn 431' style='display:none'>
+<div class='c mc' data-t='34 00 19 10311'>
+<div class='cr'><span class='cn'>34 00 19 10311</span><span class='b bo'>386 Lt</span></div>
+<div class='cs'>20.05.2026 | Fis:27727 | YUSUF YORULMAZ</div></div>
+<div class='c mc ek' data-t='34 00 19 10311' style='display:none'>
+<div class='c mc' data-t='06 00 23 1810'>
+<div class='cr'><span class='cn'>06 00 23 1810</span><span class='b bo'>457 Lt</span></div>
+<div class='cs'>20.05.2026 | Fis:27726 | ARİF ÇAĞLAYAN</div></div>
+<div class='c mc ek' data-t='06 00 23 1810' style='display:none'>
+<div class='c mc' data-t='06 00 16 5515'>
+<div class='cr'><span class='cn'>06 00 16 5515</span><span class='b bo'>499 Lt</span></div>
+<div class='cs'>20.05.2026 | Fis:27725 | BATUHAN BAKIRCI</div></div>
+<div class='c mc ek' data-t='06 00 16 5515' style='display:none'>
+<div class='c mc' data-t='34 00 23 13626'>
+<div class='cr'><span class='cn'>34 00 23 13626</span><span class='b bo'>522 Lt</span></div>
+<div class='cs'>20.05.2026 | Fis:27724 | GÖKHAN AYHAN</div></div>
+<div class='c mc ek' data-t='34 00 23 13626' style='display:none'>
+<div class='c mc' data-t='34 00 25 17252'>
+<div class='cr'><span class='cn'>34 00 25 17252</span><span class='b bo'>514 Lt</span></div>
+<div class='cs'>20.05.2026 | Fis:27723 | UĞUR YÜCEL</div></div>
+<div class='c mc ek' data-t='34 00 25 17252' style='display:none'>
+<div class='c mc' data-t='06 fmz 726'>
+<div class='cr'><span class='cn'>06 FMZ 726</span><span class='b bo'>180 Lt</span></div>
+<div class='cs'>20.05.2026 | Fis:27722 | KEMAL SEZER</div></div>
+<div class='c mc ek' data-t='06 fmz 726' style='display:none'>
+<div class='c mc' data-t='06 ftn 355'>
+<div class='cr'><span class='cn'>06 FTN 355</span><span class='b bo'>162 Lt</span></div>
+<div class='cs'>20.05.2026 | Fis:27721 | ZİYA AYHAN</div></div>
+<div class='c mc ek' data-t='06 ftn 355' style='display:none'>
+<div class='c mc' data-t='06 fbm 211'>
+<div class='cr'><span class='cn'>06 FBM 211</span><span class='b bo'>196 Lt</span></div>
+<div class='cs'>20.05.2026 | Fis:27720 | AHMET DOĞAN</div></div>
+<div class='c mc ek' data-t='06 fbm 211' style='display:none'>
+<div class='c mc' data-t='06 fmu 858'>
+<div class='cr'><span class='cn'>06 FMU 858</span><span class='b bo'>210 Lt</span></div>
+<div class='cs'>20.05.2026 | Fis:27719 | ALTAN GÜLMEZ</div></div>
+<div class='c mc ek' data-t='06 fmu 858' style='display:none'>
+<div class='c mc' data-t='06 fkp 159'>
+<div class='cr'><span class='cn'>06 FKP 159</span><span class='b bo'>143 Lt</span></div>
+<div class='cs'>20.05.2026 | Fis:27718 | ARİF ÖZBEK</div></div>
+<div class='c mc ek' data-t='06 fkp 159' style='display:none'>
+<div class='c mc' data-t='06 fkp 232'>
+<div class='cr'><span class='cn'>06 FKP 232</span><span class='b bo'>171 Lt</span></div>
+<div class='cs'>20.05.2026 | Fis:27717 | KÜRŞAT MARAŞLIOĞLU</div></div>
+<div class='c mc ek' data-t='06 fkp 232' style='display:none'>
+<div class='c mc' data-t='06 ftn 324'>
+<div class='cr'><span class='cn'>06 FTN 324</span><span class='b bo'>178 Lt</span></div>
+<div class='cs'>20.05.2026 | Fis:27716 | H. DEDE ÇELİK</div></div>
+<div class='c mc ek' data-t='06 ftn 324' style='display:none'>
+<div class='c mc' data-t='06 fmz 699'>
+<div class='cr'><span class='cn'>06 FMZ 699</span><span class='b bo'>170 Lt</span></div>
+<div class='cs'>20.05.2026 | Fis:27715 | ÖZGÜR ERTAŞ</div></div>
+<div class='c mc ek' data-t='06 fmz 699' style='display:none'>
+<div class='c mc' data-t='06 fer 920'>
+<div class='cr'><span class='cn'>06 FER 920</span><span class='b bo'>188 Lt</span></div>
+<div class='cs'>20.05.2026 | Fis:27714 | MEHMET ARGALI</div></div>
+<div class='c mc ek' data-t='06 fer 920' style='display:none'>
+<div class='c mc' data-t='06 00 26 1243'>
+<div class='cr'><span class='cn'>06 00 26 1243</span><span class='b bo'>312 Lt</span></div>
+<div class='cs'>20.05.2026 | Fis:27713 | MUSTAFA ÜNLÜ</div></div>
+<div class='c mc ek' data-t='06 00 26 1243' style='display:none'>
+<div class='c mc' data-t='34 00 25 6043'>
+<div class='cr'><span class='cn'>34 00 25 6043</span><span class='b bo'>243 Lt</span></div>
+<div class='cs'>20.05.2026 | Fis:27712 | SERCAN DOĞAN</div></div>
+<div class='c mc ek' data-t='34 00 25 6043' style='display:none'>
+<div class='c mc' data-t='34 00 11 80 65'>
+<div class='cr'><span class='cn'>34 00 11 80 65</span><span class='b bo'>498 Lt</span></div>
+<div class='cs'>20.05.2026 | Fis:27711 | ESE GÜNGÖR</div></div>
+<div class='c mc ek' data-t='34 00 11 80 65' style='display:none'>
+<div class='c mc' data-t='06 00 25 6199'>
+<div class='cr'><span class='cn'>06 00 25 6199</span><span class='b bo'>705 Lt</span></div>
+<div class='cs'>20.05.2026 | Fis:27710 | ENİS TOPUZ</div></div>
+<div class='c mc ek' data-t='06 00 25 6199' style='display:none'>
+<div class='c mc' data-t='06 bf 5241'>
+<div class='cr'><span class='cn'>06 BF 5241</span><span class='b bo'>40 Lt</span></div>
+<div class='cs'>20.05.2026 | Fis:25047 | ABDULLAH ÇINAR</div></div>
+<div class='c mc ek' data-t='06 bf 5241' style='display:none'>
+<div class='c mc' data-t='34 00 22 7578'>
+<div class='cr'><span class='cn'>34 00 22 7578</span><span class='b bo'>480 Lt</span></div>
+<div class='cs'>20.05.2026 | Fis:25046 | FERHAT YAĞIZ</div></div>
+<div class='c mc ek' data-t='34 00 22 7578' style='display:none'>
+<div class='c mc' data-t='06 00 23 5009'>
+<div class='cr'><span class='cn'>06 00 23 5009</span><span class='b bo'>370 Lt</span></div>
+<div class='cs'>20.05.2026 | Fis:25045 | FURKAN ÇINAR</div></div>
+<div class='c mc ek' data-t='06 00 23 5009' style='display:none'>
+<div class='c mc' data-t='06 00 26 0231'>
+<div class='cr'><span class='cn'>06 00 26 0231</span><span class='b bo'>427 Lt</span></div>
+<div class='cs'>20.05.2026 | Fis:25044 | EROL AKÇELİK</div></div>
+<div class='c mc ek' data-t='06 00 26 0231' style='display:none'>
+<div class='c mc' data-t='06 00 16 5515'>
+<div class='cr'><span class='cn'>06 00 16 5515</span><span class='b bo'>447 Lt</span></div>
+<div class='cs'>19.05.2026 | Fis:27847 | BATUHAN BAKIRCI</div></div>
+<div class='c mc ek' data-t='06 00 16 5515' style='display:none'>
+<div class='c mc' data-t='34 00 11 80 65'>
+<div class='cr'><span class='cn'>34 00 11 80 65</span><span class='b bo'>174 Lt</span></div>
+<div class='cs'>19.05.2026 | Fis:27709 | ESE GÜNGÖR</div></div>
+<div class='c mc ek' data-t='34 00 11 80 65' style='display:none'>
+<div class='c mc' data-t='34 00 19 10311'>
+<div class='cr'><span class='cn'>34 00 19 10311</span><span class='b bo'>450 Lt</span></div>
+<div class='cs'>19.05.2026 | Fis:27708 | ENİS TOPUZ</div></div>
+<div class='c mc ek' data-t='34 00 19 10311' style='display:none'>
+<div class='c mc' data-t='34 00 23 13626'>
+<div class='cr'><span class='cn'>34 00 23 13626</span><span class='b bo'>603 Lt</span></div>
+<div class='cs'>19.05.2026 | Fis:27707 | GÖKHAN AYHAN</div></div>
+<div class='c mc ek' data-t='34 00 23 13626' style='display:none'>
+<div class='c mc' data-t='06 00 23 1810'>
+<div class='cr'><span class='cn'>06 00 23 1810</span><span class='b bo'>466 Lt</span></div>
+<div class='cs'>19.05.2026 | Fis:27706 | ARİF ÇAĞLAYAN</div></div>
+<div class='c mc ek' data-t='06 00 23 1810' style='display:none'>
+<div class='c mc' data-t='06 ftn 454'>
+<div class='cr'><span class='cn'>06 FTN 454</span><span class='b bo'>65 Lt</span></div>
+<div class='cs'>19.05.2026 | Fis:27704 | BURHAN KAAN ALTIN</div></div>
+<div class='c mc ek' data-t='06 ftn 454' style='display:none'>
+<div class='c mc' data-t='34 00 25 6043'>
+<div class='cr'><span class='cn'>34 00 25 6043</span><span class='b bo'>321 Lt</span></div>
+<div class='cs'>19.05.2026 | Fis:27703 | SERCAN DOĞAN</div></div>
+<div class='c mc ek' data-t='34 00 25 6043' style='display:none'>
+<div class='c mc' data-t='06 ftn 253'>
+<div class='cr'><span class='cn'>06 FTN 253</span><span class='b bo'>160 Lt</span></div>
+<div class='cs'>19.05.2026 | Fis:27702 | HASAN GÜNEY</div></div>
+<div class='c mc ek' data-t='06 ftn 253' style='display:none'>
+<div class='c mc' data-t='06 ftn 487'>
+<div class='cr'><span class='cn'>06 FTN 487</span><span class='b bo'>145 Lt</span></div>
+<div class='cs'>19.05.2026 | Fis:27701 | MÜSLÜM ALTINTAŞ</div></div>
+<div class='c mc ek' data-t='06 ftn 487' style='display:none'>
+<div class='c mc' data-t='06 fck 120'>
+<div class='cr'><span class='cn'>06 FCK 120</span><span class='b bo'>173 Lt</span></div>
+<div class='cs'>19.05.2026 | Fis:27850 | ENES BOZTEPE</div></div>
+<div class='c mc ek' data-t='06 fck 120' style='display:none'>
+<div class='c mc' data-t='06 ftn 195'>
+<div class='cr'><span class='cn'>06 FTN 195</span><span class='b bo'>160 Lt</span></div>
+<div class='cs'>19.05.2026 | Fis:27849 | FATİH DEMİRSOY</div></div>
+<div class='c mc ek' data-t='06 ftn 195' style='display:none'>
+<div class='c mc' data-t='06 fkf 383'>
+<div class='cr'><span class='cn'>06 FKF 383</span><span class='b bo'>44 Lt</span></div>
+<div class='cs'>19.05.2026 | Fis:27848 | NECATİ ALTAN</div></div>
+<div class='c mc ek' data-t='06 fkf 383' style='display:none'>
+<div class='c mc' data-t='06 fpb 142'>
+<div class='cr'><span class='cn'>06 FPB 142</span><span class='b bo'>40 Lt</span></div>
+<div class='cs'>19.05.2026 | Fis:25043 | KADİR BEKTAŞ</div></div>
+<div class='c mc ek' data-t='06 fpb 142' style='display:none'>
+<div class='c mc' data-t='06 fzj 729'>
+<div class='cr'><span class='cn'>06 FZJ 729</span><span class='b bo'>284 Lt</span></div>
+<div class='cs'>19.05.2026 | Fis:25042 | ABDULLAH ÇINAR</div></div>
+<div class='c mc ek' data-t='06 fzj 729' style='display:none'>
+<div class='c mc' data-t='06 bc 7235'>
+<div class='cr'><span class='cn'>06 BC 7235</span><span class='b bo'>145 Lt</span></div>
+<div class='cs'>19.05.2026 | Fis:25041 | ABDULLAH ÇINAR</div></div>
+<div class='c mc ek' data-t='06 bc 7235' style='display:none'>
+<div class='c mc' data-t='34 00 25 17252'>
+<div class='cr'><span class='cn'>34 00 25 17252</span><span class='b bo'>461 Lt</span></div>
+<div class='cs'>19.05.2026 | Fis:27705 | UĞUR YÜCEL</div></div>
+<div class='c mc ek' data-t='34 00 25 17252' style='display:none'>
+<div class='c mc' data-t='19 adt 781'>
+<div class='cr'><span class='cn'>19 ADT 781</span><span class='b bo'>50 Lt</span></div>
+<div class='cs'>18.05.2026 | Fis:27846 | HAMZA BAL</div></div>
+<div class='c mc ek' data-t='19 adt 781' style='display:none'>
+<div class='c mc' data-t='06 fmz 699'>
+<div class='cr'><span class='cn'>06 FMZ 699</span><span class='b bo'>118 Lt</span></div>
+<div class='cs'>18.05.2026 | Fis:27845 | ÖZGÜR ERTAŞ</div></div>
+<div class='c mc ek' data-t='06 fmz 699' style='display:none'>
+<div class='c mc' data-t='06 fmu 817'>
+<div class='cr'><span class='cn'>06 FMU 817</span><span class='b bo'>140 Lt</span></div>
+<div class='cs'>18.05.2026 | Fis:27844 | KAMİL SAĞIR</div></div>
+<div class='c mc ek' data-t='06 fmu 817' style='display:none'>
+<div class='c mc' data-t='71 aea 314'>
+<div class='cr'><span class='cn'>71 AEA 314</span><span class='b bo'>70 Lt</span></div>
+<div class='cs'>18.05.2026 | Fis:27843 | EMRE DOĞAN</div></div>
+<div class='c mc ek' data-t='71 aea 314' style='display:none'>
+<div class='c mc' data-t='06 ftn 454'>
+<div class='cr'><span class='cn'>06 FTN 454</span><span class='b bo'>138 Lt</span></div>
+<div class='cs'>18.05.2026 | Fis:27842 | BURHAN KAAN ALTIN</div></div>
+<div class='c mc ek' data-t='06 ftn 454' style='display:none'>
+<div class='c mc' data-t='06 fkp 159'>
+<div class='cr'><span class='cn'>06 FKP 159</span><span class='b bo'>158 Lt</span></div>
+<div class='cs'>18.05.2026 | Fis:27841 | ARİF ÖZBEK</div></div>
+<div class='c mc ek' data-t='06 fkp 159' style='display:none'>
+<div class='c mc' data-t='06 ftn 281'>
+<div class='cr'><span class='cn'>06 FTN 281</span><span class='b bo'>166 Lt</span></div>
+<div class='cs'>18.05.2026 | Fis:27840 | MURAT GÜLŞEN</div></div>
+<div class='c mc ek' data-t='06 ftn 281' style='display:none'>
+<div class='c mc' data-t='06 ftn 355'>
+<div class='cr'><span class='cn'>06 FTN 355</span><span class='b bo'>151 Lt</span></div>
+<div class='cs'>18.05.2026 | Fis:27839 | ZİYA AYHAN</div></div>
+<div class='c mc ek' data-t='06 ftn 355' style='display:none'>
+<div class='c mc' data-t='06 fer 920'>
+<div class='cr'><span class='cn'>06 FER 920</span><span class='b bo'>126 Lt</span></div>
+<div class='cs'>18.05.2026 | Fis:27838 | MEHMET ARGALI</div></div>
+<div class='c mc ek' data-t='06 fer 920' style='display:none'>
+<div class='c mc' data-t='06 fmz 726'>
+<div class='cr'><span class='cn'>06 FMZ 726</span><span class='b bo'>106 Lt</span></div>
+<div class='cs'>18.05.2026 | Fis:27837 | KEMAL SEZER</div></div>
+<div class='c mc ek' data-t='06 fmz 726' style='display:none'>
+<div class='c mc' data-t='06 fmu 858'>
+<div class='cr'><span class='cn'>06 FMU 858</span><span class='b bo'>240 Lt</span></div>
+<div class='cs'>18.05.2026 | Fis:27836 | ALTAN GÜLMEZ</div></div>
+<div class='c mc ek' data-t='06 fmu 858' style='display:none'>
+<div class='c mc' data-t='06 fkp 429'>
+<div class='cr'><span class='cn'>06 FKP 429</span><span class='b bo'>99 Lt</span></div>
+<div class='cs'>18.05.2026 | Fis:27835 | MUSTAFA ATAY</div></div>
+<div class='c mc ek' data-t='06 fkp 429' style='display:none'>
+<div class='c mc' data-t='06 ftn 579'>
+<div class='cr'><span class='cn'>06 FTN 579</span><span class='b bo'>82 Lt</span></div>
+<div class='cs'>18.05.2026 | Fis:27834 | SATILMIŞ IŞIK</div></div>
+<div class='c mc ek' data-t='06 ftn 579' style='display:none'>
+<div class='c mc' data-t='06 fbm 211'>
+<div class='cr'><span class='cn'>06 FBM 211</span><span class='b bo'>223 Lt</span></div>
+<div class='cs'>18.05.2026 | Fis:27833 | AHMET DOĞAN</div></div>
+<div class='c mc ek' data-t='06 fbm 211' style='display:none'>
+<div class='c mc' data-t='34 00 25 6043'>
+<div class='cr'><span class='cn'>34 00 25 6043</span><span class='b bo'>184 Lt</span></div>
+<div class='cs'>18.05.2026 | Fis:27832 | SERCAN DOĞAN</div></div>
+<div class='c mc ek' data-t='34 00 25 6043' style='display:none'>
+<div class='c mc' data-t='34 00 11 80 65'>
+<div class='cr'><span class='cn'>34 00 11 80 65</span><span class='b bo'>460 Lt</span></div>
+<div class='cs'>18.05.2026 | Fis:27831 | ESE GÜNGÖR</div></div>
+<div class='c mc ek' data-t='34 00 11 80 65' style='display:none'>
+<div class='c mc' data-t='06 00 26 1243'>
+<div class='cr'><span class='cn'>06 00 26 1243</span><span class='b bo'>310 Lt</span></div>
+<div class='cs'>18.05.2026 | Fis:27830 | MUSTAFA ÜNLÜ</div></div>
+<div class='c mc ek' data-t='06 00 26 1243' style='display:none'>
+<div class='c mc' data-t='06 00 25 6199'>
+<div class='cr'><span class='cn'>06 00 25 6199</span><span class='b bo'>543 Lt</span></div>
+<div class='cs'>18.05.2026 | Fis:27829 | HÜSNÜ AHMET GÜNEŞ</div></div>
+<div class='c mc ek' data-t='06 00 25 6199' style='display:none'>
+<div class='c mc' data-t='34 00 25 17252'>
+<div class='cr'><span class='cn'>34 00 25 17252</span><span class='b bo'>391 Lt</span></div>
+<div class='cs'>18.05.2026 | Fis:27828 | HÜSNÜ AHMET GÜNEŞ</div></div>
+<div class='c mc ek' data-t='34 00 25 17252' style='display:none'>
+<div class='c mc' data-t='34 00 19 10311'>
+<div class='cr'><span class='cn'>34 00 19 10311</span><span class='b bo'>380 Lt</span></div>
+<div class='cs'>18.05.2026 | Fis:27827 | HÜSNÜ AHMET GÜNEŞ</div></div>
+<div class='c mc ek' data-t='34 00 19 10311' style='display:none'>
+<div class='c mc' data-t='34 00 23 13626'>
+<div class='cr'><span class='cn'>34 00 23 13626</span><span class='b bo'>627 Lt</span></div>
+<div class='cs'>18.05.2026 | Fis:27826 | HÜSNÜ AHMET GÜNEŞ</div></div>
+<div class='c mc ek' data-t='34 00 23 13626' style='display:none'>
+<div class='c mc' data-t='06 00 23 1810'>
+<div class='cr'><span class='cn'>06 00 23 1810</span><span class='b bo'>480 Lt</span></div>
+<div class='cs'>18.05.2026 | Fis:27825 | HÜSNÜ AHMET GÜNEŞ</div></div>
+<div class='c mc ek' data-t='06 00 23 1810' style='display:none'>
+<div class='c mc' data-t='6 00 11 0887'>
+<div class='cr'><span class='cn'>6 00 11 0887</span><span class='b bo'>150 Lt</span></div>
+<div class='cs'>18.05.2026 | Fis:27824 | NİYAZİ GÜNDOĞDU</div></div>
+<div class='c mc ek' data-t='6 00 11 0887' style='display:none'>
+<div class='c mc' data-t='06 fkf 383'>
+<div class='cr'><span class='cn'>06 FKF 383</span><span class='b bo'>40 Lt</span></div>
+<div class='cs'>18.05.2026 | Fis:27823 | NECATİ ALTAN</div></div>
+<div class='c mc ek' data-t='06 fkf 383' style='display:none'>
+<div class='c mc' data-t='06 bf 5241'>
+<div class='cr'><span class='cn'>06 BF 5241</span><span class='b bo'>29 Lt</span></div>
+<div class='cs'>18.05.2026 | Fis:25039 | M.EMİN BEKTAŞ</div></div>
+<div class='c mc ek' data-t='06 bf 5241' style='display:none'>
+<div class='c mc' data-t='06 fsf 855'>
+<div class='cr'><span class='cn'>06 FSF 855</span><span class='b bo'>160 Lt</span></div>
+<div class='cs'>18.05.2026 | Fis:25038 | M. EMİN BEKTAŞ</div></div>
+<div class='c mc ek' data-t='06 fsf 855' style='display:none'>
+<div class='c mc' data-t='06 eeu 386'>
+<div class='cr'><span class='cn'>06 EEU 386</span><span class='b bo'>158 Lt</span></div>
+<div class='cs'>18.05.2026 | Fis:25037 | FİKRİ TUNÇ</div></div>
+<div class='c mc ek' data-t='06 eeu 386' style='display:none'>
+<div class='c mc' data-t='06 ehe 609'>
+<div class='cr'><span class='cn'>06 EHE 609</span><span class='b bo'>223 Lt</span></div>
+<div class='cs'>18.05.2026 | Fis:25036 | HASAN ÇELİK</div></div>
+<div class='c mc ek' data-t='06 ehe 609' style='display:none'>
+<div class='c mc' data-t='06 bc 9266'>
+<div class='cr'><span class='cn'>06 BC 9266</span><span class='b bo'>273 Lt</span></div>
+<div class='cs'>18.05.2026 | Fis:25035 | ABDULLAH ÇINAR</div></div>
+<div class='c mc ek' data-t='06 bc 9266' style='display:none'>
+<div class='c mc' data-t='06 fb 1135'>
+<div class='cr'><span class='cn'>06 FB 1135</span><span class='b bo'>230 Lt</span></div>
+<div class='cs'>18.05.2026 | Fis:25034 | U.TEKİN TUNÇ</div></div>
+<div class='c mc ek' data-t='06 fb 1135' style='display:none'>
+<div class='c mc' data-t='06 fc 7627'>
+<div class='cr'><span class='cn'>06 FC 7627</span><span class='b bo'>183 Lt</span></div>
+<div class='cs'>18.05.2026 | Fis:25033 | BÜNYAMİN ÇINAR</div></div>
+<div class='c mc ek' data-t='06 fc 7627' style='display:none'>
+<div class='c mc' data-t='06 bc 2431'>
+<div class='cr'><span class='cn'>06 BC 2431</span><span class='b bo'>199 Lt</span></div>
+<div class='cs'>18.05.2026 | Fis:25032 | FİKRİ TUNÇ</div></div>
+<div class='c mc ek' data-t='06 bc 2431' style='display:none'>
+<div class='c mc' data-t='06 fsu 564'>
+<div class='cr'><span class='cn'>06 FSU 564</span><span class='b bo'>240 Lt</span></div>
+<div class='cs'>18.05.2026 | Fis:25031 | MURAT ÇELİK</div></div>
+<div class='c mc ek' data-t='06 fsu 564' style='display:none'>
+<div class='c mc' data-t='06 00 23 5009'>
+<div class='cr'><span class='cn'>06 00 23 5009</span><span class='b bo'>342 Lt</span></div>
+<div class='cs'>18.05.2026 | Fis:25030 | FURKAN ÇINAR</div></div>
+<div class='c mc ek' data-t='06 00 23 5009' style='display:none'>
+<div class='c mc' data-t='34 00 22 7578'>
+<div class='cr'><span class='cn'>34 00 22 7578</span><span class='b bo'>438 Lt</span></div>
+<div class='cs'>18.05.2026 | Fis:25029 | FERHAT YAĞIZ</div></div>
+<div class='c mc ek' data-t='34 00 22 7578' style='display:none'>
+<div class='c mc' data-t='06 ftk 969'>
+<div class='cr'><span class='cn'>06 FTK 969</span><span class='b bo'>38 Lt</span></div>
+<div class='cs'>18.05.2026 | Fis:25028 | MESUT AKKOÇ</div></div>
+<div class='c mc ek' data-t='06 ftk 969' style='display:none'>
+<div class='c mc' data-t='06 00 26 0231'>
+<div class='cr'><span class='cn'>06 00 26 0231</span><span class='b bo'>483 Lt</span></div>
+<div class='cs'>18.05.2026 | Fis:25027 | EROL AKÇELİK</div></div>
+<div class='c mc ek' data-t='06 00 26 0231' style='display:none'>
+<div class='c mc' data-t='06 00 16 5515'>
+<div class='cr'><span class='cn'>06 00 16 5515</span><span class='b bo'>200 Lt</span></div>
+<div class='cs'>16.05.2026 | Fis:27822 | GÖKHAN AYHAN</div></div>
+<div class='c mc ek' data-t='06 00 16 5515' style='display:none'>
+<div class='c mc' data-t='06 fsb 508'>
+<div class='cr'><span class='cn'>06 FSB 508</span><span class='b bo'>80 Lt</span></div>
+<div class='cs'>16.05.2026 | Fis:27821 | HÜSNÜ AHMET GÜNEŞ</div></div>
+<div class='c mc ek' data-t='06 fsb 508' style='display:none'>
+<div class='c mc' data-t='34 00 11 80 65'>
+<div class='cr'><span class='cn'>34 00 11 80 65</span><span class='b bo'>395 Lt</span></div>
+<div class='cs'>16.05.2026 | Fis:27820 | ESE GÜNGÖR</div></div>
+<div class='c mc ek' data-t='34 00 11 80 65' style='display:none'>
+<div class='c mc' data-t='34 00 25 6043'>
+<div class='cr'><span class='cn'>34 00 25 6043</span><span class='b bo'>246 Lt</span></div>
+<div class='cs'>16.05.2026 | Fis:27819 | SERCAN DOĞAN</div></div>
+<div class='c mc ek' data-t='34 00 25 6043' style='display:none'>
+<div class='c mc' data-t='06 ftn 431'>
+<div class='cr'><span class='cn'>06 FTN 431</span><span class='b bo'>78 Lt</span></div>
+<div class='cs'>16.05.2026 | Fis:27818 | YUSUF DOĞAN</div></div>
+<div class='c mc ek' data-t='06 ftn 431' style='display:none'>
+<div class='c mc' data-t='06 fmu 817'>
+<div class='cr'><span class='cn'>06 FMU 817</span><span class='b bo'>142 Lt</span></div>
+<div class='cs'>16.05.2026 | Fis:27817 | ALTAN GÜLMEZ</div></div>
+<div class='c mc ek' data-t='06 fmu 817' style='display:none'>
+<div class='c mc' data-t='06 fmz 699'>
+<div class='cr'><span class='cn'>06 FMZ 699</span><span class='b bo'>143 Lt</span></div>
+<div class='cs'>16.05.2026 | Fis:27816 | ÖZGÜR ERTAŞ</div></div>
+<div class='c mc ek' data-t='06 fmz 699' style='display:none'>
+<div class='c mc' data-t='06 ftn 579'>
+<div class='cr'><span class='cn'>06 FTN 579</span><span class='b bo'>203 Lt</span></div>
+<div class='cs'>16.05.2026 | Fis:27815 | SATILMIŞ IŞIK</div></div>
+<div class='c mc ek' data-t='06 ftn 579' style='display:none'>
+<div class='c mc' data-t='34 00 23 13626'>
+<div class='cr'><span class='cn'>34 00 23 13626</span><span class='b bo'>310 Lt</span></div>
+<div class='cs'>16.05.2026 | Fis:27814 | HASAN YABA</div></div>
+<div class='c mc ek' data-t='34 00 23 13626' style='display:none'>
+<div class='c mc' data-t='06 00 23 1810'>
+<div class='cr'><span class='cn'>06 00 23 1810</span><span class='b bo'>339 Lt</span></div>
+<div class='cs'>16.05.2026 | Fis:27813 | CEYHUN ÇEKİRGE</div></div>
+<div class='c mc ek' data-t='06 00 23 1810' style='display:none'>
+<div class='c mc' data-t='06 00 25 6199'>
+<div class='cr'><span class='cn'>06 00 25 6199</span><span class='b bo'>417 Lt</span></div>
+<div class='cs'>16.05.2026 | Fis:27812 | ENİS TOPUZ</div></div>
+<div class='c mc ek' data-t='06 00 25 6199' style='display:none'>
+<div class='c mc' data-t='06 ac 165'>
+<div class='cr'><span class='cn'>06 AC 165</span><span class='b bo'>70 Lt</span></div>
+<div class='cs'>16.05.2026 | Fis:27811 | ALİ BÜYÜKÇATALBAŞ</div></div>
+<div class='c mc ek' data-t='06 ac 165' style='display:none'>
+<div class='c mc' data-t='06 fkp 429'>
+<div class='cr'><span class='cn'>06 FKP 429</span><span class='b bo'>43 Lt</span></div>
+<div class='cs'>16.05.2026 | Fis:27810 | MUSTAFA ATAY</div></div>
+<div class='c mc ek' data-t='06 fkp 429' style='display:none'>
+<div class='c mc' data-t='06 ftn 454'>
+<div class='cr'><span class='cn'>06 FTN 454</span><span class='b bo'>211 Lt</span></div>
+<div class='cs'>16.05.2026 | Fis:27809 | BURHAN KAAN ALTIN</div></div>
+<div class='c mc ek' data-t='06 ftn 454' style='display:none'>
+<div class='c mc' data-t='34 00 16 23298'>
+<div class='cr'><span class='cn'>34 00 16 23298</span><span class='b bo'>220 Lt</span></div>
+<div class='cs'>16.05.2026 | Fis:27808 | TANER KULAKSIZ</div></div>
+<div class='c mc ek' data-t='34 00 16 23298' style='display:none'>
+<div class='c mc' data-t='06 ftk 969'>
+<div class='cr'><span class='cn'>06 FTK 969</span><span class='b bo'>51 Lt</span></div>
+<div class='cs'>16.05.2026 | Fis:27807 | SAMET ARSLAN</div></div>
+<div class='c mc ek' data-t='06 ftk 969' style='display:none'>
+<div class='c mc' data-t='34 00 25 17252'>
+<div class='cr'><span class='cn'>34 00 25 17252</span><span class='b bo'>310 Lt</span></div>
+<div class='cs'>16.05.2026 | Fis:27806 | UĞUR YÜCEL</div></div>
+<div class='c mc ek' data-t='34 00 25 17252' style='display:none'>
+<div class='c mc' data-t='06 fpb 142'>
+<div class='cr'><span class='cn'>06 FPB 142</span><span class='b bo'>26 Lt</span></div>
+<div class='cs'>16.05.2026 | Fis:25026 | M.EMİN BEKTAŞ</div></div>
+<div class='c mc ek' data-t='06 fpb 142' style='display:none'>
+<div class='c mc' data-t='06 bf 5241'>
+<div class='cr'><span class='cn'>06 BF 5241</span><span class='b bo'>23 Lt</span></div>
+<div class='cs'>16.05.2026 | Fis:25025 | M.EMİN BEKTAŞ</div></div>
+<div class='c mc ek' data-t='06 bf 5241' style='display:none'>
+<div class='c mc' data-t='06 00 26 1243'>
+<div class='cr'><span class='cn'>06 00 26 1243</span><span class='b bo'>181 Lt</span></div>
+<div class='cs'>14.05.2026 | Fis:27805 | MUSTAFA ÜNLÜ</div></div>
+<div class='c mc ek' data-t='06 00 26 1243' style='display:none'>
+<div class='c mc' data-t='06 evz 563'>
+<div class='cr'><span class='cn'>06 EVZ 563</span><span class='b bo'>39 Lt</span></div>
+<div class='cs'>14.05.2026 | Fis:27804 | HAMZA BAL</div></div>
+<div class='c mc ek' data-t='06 evz 563' style='display:none'>
+<div class='c mc' data-t='06 fbm 180'>
+<div class='cr'><span class='cn'>06 FBM 180</span><span class='b bo'>204 Lt</span></div>
+<div class='cs'>14.05.2026 | Fis:27803 | HÜSNÜ AHMET GÜNEŞ</div></div>
+<div class='c mc ek' data-t='06 fbm 180' style='display:none'>
+<div class='c mc' data-t='06 fmz 726'>
+<div class='cr'><span class='cn'>06 FMZ 726</span><span class='b bo'>14 Lt</span></div>
+<div class='cs'>14.05.2026 | Fis:27802 | HÜSNÜ AHMET GÜNEŞ</div></div>
+<div class='c mc ek' data-t='06 fmz 726' style='display:none'>
+<div class='c mc' data-t='06 ftn 195'>
+<div class='cr'><span class='cn'>06 FTN 195</span><span class='b bo'>62 Lt</span></div>
+<div class='cs'>14.05.2026 | Fis:27801 | HÜSNÜ AHMET GÜNEŞ</div></div>
+<div class='c mc ek' data-t='06 ftn 195' style='display:none'>
+<div class='c mc' data-t='34 00 25 6043'>
+<div class='cr'><span class='cn'>34 00 25 6043</span><span class='b bo'>318 Lt</span></div>
+<div class='cs'>14.05.2026 | Fis:27700 | SERCAN DOĞAN</div></div>
+<div class='c mc ek' data-t='34 00 25 6043' style='display:none'>
+<div class='c mc' data-t='06 ftn 253'>
+<div class='cr'><span class='cn'>06 FTN 253</span><span class='b bo'>75 Lt</span></div>
+<div class='cs'>14.05.2026 | Fis:27699 | HÜSNÜ AHMET GÜNEŞ</div></div>
+<div class='c mc ek' data-t='06 ftn 253' style='display:none'>
+<div class='c mc' data-t='06 fkp 232'>
+<div class='cr'><span class='cn'>06 FKP 232</span><span class='b bo'>215 Lt</span></div>
+<div class='cs'>14.05.2026 | Fis:27698 | HÜSNÜ AHMET GÜNEŞ</div></div>
+<div class='c mc ek' data-t='06 fkp 232' style='display:none'>
+<div class='c mc' data-t='06 ftn 431'>
+<div class='cr'><span class='cn'>06 FTN 431</span><span class='b bo'>181 Lt</span></div>
+<div class='cs'>14.05.2026 | Fis:27697 | YUSUF DOĞAN</div></div>
+<div class='c mc ek' data-t='06 ftn 431' style='display:none'>
+<div class='c mc' data-t='06 ftn 324'>
+<div class='cr'><span class='cn'>06 FTN 324</span><span class='b bo'>218 Lt</span></div>
+<div class='cs'>14.05.2026 | Fis:27696 | TARIK BOLAT</div></div>
+<div class='c mc ek' data-t='06 ftn 324' style='display:none'>
+<div class='c mc' data-t='06 fkp 159'>
+<div class='cr'><span class='cn'>06 FKP 159</span><span class='b bo'>165 Lt</span></div>
+<div class='cs'>14.05.2026 | Fis:27695 | ARİF ÖZBEK</div></div>
+<div class='c mc ek' data-t='06 fkp 159' style='display:none'>
+<div class='c mc' data-t='06 ftn 355'>
+<div class='cr'><span class='cn'>06 FTN 355</span><span class='b bo'>157 Lt</span></div>
+<div class='cs'>14.05.2026 | Fis:27694 | ZİYA AYHAN</div></div>
+<div class='c mc ek' data-t='06 ftn 355' style='display:none'>
+<div class='c mc' data-t='06 ftn 281'>
+<div class='cr'><span class='cn'>06 FTN 281</span><span class='b bo'>174 Lt</span></div>
+<div class='cs'>14.05.2026 | Fis:27693 | MURAT GÜLŞEN</div></div>
+<div class='c mc ek' data-t='06 ftn 281' style='display:none'>
+<div class='c mc' data-t='34 00 23 13626'>
+<div class='cr'><span class='cn'>34 00 23 13626</span><span class='b bo'>405 Lt</span></div>
+<div class='cs'>14.05.2026 | Fis:27692 | HÜSNÜ AHMET GÜNEŞ</div></div>
+<div class='c mc ek' data-t='34 00 23 13626' style='display:none'>
+<div class='c mc' data-t='06 fkp 429'>
+<div class='cr'><span class='cn'>06 FKP 429</span><span class='b bo'>162 Lt</span></div>
+<div class='cs'>14.05.2026 | Fis:27691 | HÜSNÜ AHMET GÜNEŞ</div></div>
+<div class='c mc ek' data-t='06 fkp 429' style='display:none'>
+<div class='c mc' data-t='06 fmv 048'>
+<div class='cr'><span class='cn'>06 FMV 048</span><span class='b bo'>55 Lt</span></div>
+<div class='cs'>14.05.2026 | Fis:27690 | HÜSNÜ AHMET GÜNEŞ</div></div>
+<div class='c mc ek' data-t='06 fmv 048' style='display:none'>
+<div class='c mc' data-t='06 fck 120'>
+<div class='cr'><span class='cn'>06 FCK 120</span><span class='b bo'>155 Lt</span></div>
+<div class='cs'>14.05.2026 | Fis:27689 | HÜSNÜ AHMET GÜNEŞ</div></div>
+<div class='c mc ek' data-t='06 fck 120' style='display:none'>
+<div class='c mc' data-t='06 fbm 106'>
+<div class='cr'><span class='cn'>06 FBM 106</span><span class='b bo'>119 Lt</span></div>
+<div class='cs'>14.05.2026 | Fis:27688 | HÜSNÜ AHMET GÜNEŞ</div></div>
+<div class='c mc ek' data-t='06 fbm 106' style='display:none'>
+<div class='c mc' data-t='06 00 25 6199'>
+<div class='cr'><span class='cn'>06 00 25 6199</span><span class='b bo'>638 Lt</span></div>
+<div class='cs'>14.05.2026 | Fis:27687 | ENİS TOPUZ</div></div>
+<div class='c mc ek' data-t='06 00 25 6199' style='display:none'>
+<div class='c mc' data-t='34 00 25 17252'>
+<div class='cr'><span class='cn'>34 00 25 17252</span><span class='b bo'>380 Lt</span></div>
+<div class='cs'>14.05.2026 | Fis:27686 | UĞUR YÜCEL</div></div>
+<div class='c mc ek' data-t='34 00 25 17252' style='display:none'>
+<div class='c mc' data-t='06 fkf 383'>
+<div class='cr'><span class='cn'>06 FKF 383</span><span class='b bo'>52 Lt</span></div>
+<div class='cs'>14.05.2026 | Fis:27685 | NECATİ ALTAN</div></div>
+<div class='c mc ek' data-t='06 fkf 383' style='display:none'>
+<div class='c mc' data-t='06 00 23 5009'>
+<div class='cr'><span class='cn'>06 00 23 5009</span><span class='b bo'>290 Lt</span></div>
+<div class='cs'>14.05.2026 | Fis:25024 | FURKAN ÇINAR</div></div>
+<div class='c mc ek' data-t='06 00 23 5009' style='display:none'>
+<div class='c mc' data-t='34 00 22 7578'>
+<div class='cr'><span class='cn'>34 00 22 7578</span><span class='b bo'>383 Lt</span></div>
+<div class='cs'>14.05.2026 | Fis:25023 | FERHAT YAĞIZ</div></div>
+<div class='c mc ek' data-t='34 00 22 7578' style='display:none'>
+<div class='c mc' data-t='06 fer 920'>
+<div class='cr'><span class='cn'>06 FER 920</span><span class='b bo'>214 Lt</span></div>
+<div class='cs'>13.05.2026 | Fis:27684 | HÜSNÜ AHMET GÜNEŞ</div></div>
+<div class='c mc ek' data-t='06 fer 920' style='display:none'>
+<div class='c mc' data-t='06 ftn 253'>
+<div class='cr'><span class='cn'>06 FTN 253</span><span class='b bo'>153 Lt</span></div>
+<div class='cs'>13.05.2026 | Fis:27683 | ALTAN GÜLMEZ</div></div>
+<div class='c mc ek' data-t='06 ftn 253' style='display:none'>
+<div class='c mc' data-t='06 ftn 487'>
+<div class='cr'><span class='cn'>06 FTN 487</span><span class='b bo'>143 Lt</span></div>
+<div class='cs'>13.05.2026 | Fis:27682 | MÜSLÜM ALTINTAŞ</div></div>
+<div class='c mc ek' data-t='06 ftn 487' style='display:none'>
+<div class='c mc' data-t='06 00 26 1243'>
+<div class='cr'><span class='cn'>06 00 26 1243</span><span class='b bo'>238 Lt</span></div>
+<div class='cs'>13.05.2026 | Fis:27681 | MUSTAFA ÜNLÜ</div></div>
+<div class='c mc ek' data-t='06 00 26 1243' style='display:none'>
+<div class='c mc' data-t='6 00 11 0887'>
+<div class='cr'><span class='cn'>6 00 11 0887</span><span class='b bo'>120 Lt</span></div>
+<div class='cs'>13.05.2026 | Fis:27680 | NİYAZİ GÜNDOĞDU</div></div>
+<div class='c mc ek' data-t='6 00 11 0887' style='display:none'>
+<div class='c mc' data-t='34 00 11 80 65'>
+<div class='cr'><span class='cn'>34 00 11 80 65</span><span class='b bo'>361 Lt</span></div>
+<div class='cs'>13.05.2026 | Fis:27679 | ESE GÜNGÖR</div></div>
+<div class='c mc ek' data-t='34 00 11 80 65' style='display:none'>
+<div class='c mc' data-t='06 00 16 5515'>
+<div class='cr'><span class='cn'>06 00 16 5515</span><span class='b bo'>352 Lt</span></div>
+<div class='cs'>13.05.2026 | Fis:27678 | HASAN YABA</div></div>
+<div class='c mc ek' data-t='06 00 16 5515' style='display:none'>
+<div class='c mc' data-t='06 00 23 1810'>
+<div class='cr'><span class='cn'>06 00 23 1810</span><span class='b bo'>328 Lt</span></div>
+<div class='cs'>13.05.2026 | Fis:27677 | CEYHUN ÇEKİRGE</div></div>
+<div class='c mc ek' data-t='06 00 23 1810' style='display:none'>
+<div class='c mc' data-t='06 fmz 726'>
+<div class='cr'><span class='cn'>06 FMZ 726</span><span class='b bo'>140 Lt</span></div>
+<div class='cs'>13.05.2026 | Fis:27676 | HÜSNÜ AHMET GÜNEŞ</div></div>
+<div class='c mc ek' data-t='06 fmz 726' style='display:none'>
+<div class='c mc' data-t='06 fmv 048'>
+<div class='cr'><span class='cn'>06 FMV 048</span><span class='b bo'>80 Lt</span></div>
+<div class='cs'>13.05.2026 | Fis:27675 | HÜSNÜ AHMET GÜNEŞ</div></div>
+<div class='c mc ek' data-t='06 fmv 048' style='display:none'>
+<div class='c mc' data-t='34 00 19 10311'>
+<div class='cr'><span class='cn'>34 00 19 10311</span><span class='b bo'>623 Lt</span></div>
+<div class='cs'>13.05.2026 | Fis:27674 | ENİS TOPUZ</div></div>
+<div class='c mc ek' data-t='34 00 19 10311' style='display:none'>
+<div class='c mc' data-t='06 ftn 195'>
+<div class='cr'><span class='cn'>06 FTN 195</span><span class='b bo'>110 Lt</span></div>
+<div class='cs'>13.05.2026 | Fis:27673 | HÜSNÜ AHMET GÜNEŞ</div></div>
+<div class='c mc ek' data-t='06 ftn 195' style='display:none'>
+<div class='c mc' data-t='06 fmu 817'>
+<div class='cr'><span class='cn'>06 FMU 817</span><span class='b bo'>139 Lt</span></div>
+<div class='cs'>13.05.2026 | Fis:27672 | HÜSNÜ AHMET GÜNEŞ</div></div>
+<div class='c mc ek' data-t='06 fmu 817' style='display:none'>
+<div class='c mc' data-t='34 00 25 6043'>
+<div class='cr'><span class='cn'>34 00 25 6043</span><span class='b bo'>289 Lt</span></div>
+<div class='cs'>13.05.2026 | Fis:27671 | SERCAN DOĞAN</div></div>
+<div class='c mc ek' data-t='34 00 25 6043' style='display:none'>
+<div class='c mc' data-t='34 00 23 13626'>
+<div class='cr'><span class='cn'>34 00 23 13626</span><span class='b bo'>681 Lt</span></div>
+<div class='cs'>13.05.2026 | Fis:27670 | GÖKHAN AYHAN</div></div>
+<div class='c mc ek' data-t='34 00 23 13626' style='display:none'>
+<div class='c mc' data-t='34 00 25 17252'>
+<div class='cr'><span class='cn'>34 00 25 17252</span><span class='b bo'>346 Lt</span></div>
+<div class='cs'>13.05.2026 | Fis:27669 | UĞUR YÜCEL</div></div>
+<div class='c mc ek' data-t='34 00 25 17252' style='display:none'>
+<div class='c mc' data-t='34 00 23 13626'>
+<div class='cr'><span class='cn'>34 00 23 13626</span><span class='b bo'>35 Lt</span></div>
+<div class='cs'>12.05.2026 | Fis:27668 | GÖKHAN AYHAN</div></div>
+<div class='c mc ek' data-t='34 00 23 13626' style='display:none'>
+<div class='c mc' data-t='06 fmz 699'>
+<div class='cr'><span class='cn'>06 FMZ 699</span><span class='b bo'>171 Lt</span></div>
+<div class='cs'>12.05.2026 | Fis:27667 | HALİL UCAKAN</div></div>
+<div class='c mc ek' data-t='06 fmz 699' style='display:none'>
+<div class='c mc' data-t='34 00 16 23298'>
+<div class='cr'><span class='cn'>34 00 16 23298</span><span class='b bo'>245 Lt</span></div>
+<div class='cs'>12.05.2026 | Fis:27666 | TANER KULAKSIZ</div></div>
+<div class='c mc ek' data-t='34 00 16 23298' style='display:none'>
+<div class='c mc' data-t='34 00 11 80 65'>
+<div class='cr'><span class='cn'>34 00 11 80 65</span><span class='b bo'>293 Lt</span></div>
+<div class='cs'>12.05.2026 | Fis:27665 | ESE GÜNGÖR</div></div>
+<div class='c mc ek' data-t='34 00 11 80 65' style='display:none'>
+<div class='c mc' data-t='06 00 25 6199'>
+<div class='cr'><span class='cn'>06 00 25 6199</span><span class='b bo'>567 Lt</span></div>
+<div class='cs'>12.05.2026 | Fis:27664 | YUSUF YORULMAZ</div></div>
+<div class='c mc ek' data-t='06 00 25 6199' style='display:none'>
+<div class='c mc' data-t='06 ftn 579'>
+<div class='cr'><span class='cn'>06 FTN 579</span><span class='b bo'>205 Lt</span></div>
+<div class='cs'>12.05.2026 | Fis:27663 | SATILMIŞ IŞIK</div></div>
+<div class='c mc ek' data-t='06 ftn 579' style='display:none'>
+<div class='c mc' data-t='06 00 26 0231'>
+<div class='cr'><span class='cn'>06 00 26 0231</span><span class='b bo'>249 Lt</span></div>
+<div class='cs'>12.05.2026 | Fis:27662 | EROL AKÇELİK</div></div>
+<div class='c mc ek' data-t='06 00 26 0231' style='display:none'>
+<div class='c mc' data-t='06 00 23 1810'>
+<div class='cr'><span class='cn'>06 00 23 1810</span><span class='b bo'>382 Lt</span></div>
+<div class='cs'>12.05.2026 | Fis:27661 | CEYHUN ÇEKİRGE</div></div>
+<div class='c mc ek' data-t='06 00 23 1810' style='display:none'>
+<div class='c mc' data-t='06 00 16 5515'>
+<div class='cr'><span class='cn'>06 00 16 5515</span><span class='b bo'>430 Lt</span></div>
+<div class='cs'>12.05.2026 | Fis:27660 | BATUHAN BAKIRCI</div></div>
+<div class='c mc ek' data-t='06 00 16 5515' style='display:none'>
+<div class='c mc' data-t='6 00 11 0887'>
+<div class='cr'><span class='cn'>6 00 11 0887</span><span class='b bo'>98 Lt</span></div>
+<div class='cs'>12.05.2026 | Fis:27659 | NİYAZİ GÜNDOĞDU</div></div>
+<div class='c mc ek' data-t='6 00 11 0887' style='display:none'>
+<div class='c mc' data-t='34 00 25 17252'>
+<div class='cr'><span class='cn'>34 00 25 17252</span><span class='b bo'>437 Lt</span></div>
+<div class='cs'>12.05.2026 | Fis:27658 | UĞUR YÜCEL</div></div>
+<div class='c mc ek' data-t='34 00 25 17252' style='display:none'>
+<div class='c mc' data-t='06 fc 7627'>
+<div class='cr'><span class='cn'>06 FC 7627</span><span class='b bo'>129 Lt</span></div>
+<div class='cs'>12.05.2026 | Fis:25022 | ABDULLAH ÇINAR</div></div>
+<div class='c mc ek' data-t='06 fc 7627' style='display:none'>
+<div class='c mc' data-t='06 ehe 609'>
+<div class='cr'><span class='cn'>06 EHE 609</span><span class='b bo'>134 Lt</span></div>
+<div class='cs'>12.05.2026 | Fis:25021 | HASAN ÇELİK</div></div>
+<div class='c mc ek' data-t='06 ehe 609' style='display:none'>
+<div class='c mc' data-t='06 bc 2431'>
+<div class='cr'><span class='cn'>06 BC 2431</span><span class='b bo'>148 Lt</span></div>
+<div class='cs'>12.05.2026 | Fis:25020 | U.TEKİN TUNÇ</div></div>
+<div class='c mc ek' data-t='06 bc 2431' style='display:none'>
+<div class='c mc' data-t='06 eeu 386'>
+<div class='cr'><span class='cn'>06 EEU 386</span><span class='b bo'>146 Lt</span></div>
+<div class='cs'>12.05.2026 | Fis:25019 | FİKRİ TUNÇ</div></div>
+<div class='c mc ek' data-t='06 eeu 386' style='display:none'>
+<div class='c mc' data-t='06 fsf 855'>
+<div class='cr'><span class='cn'>06 FSF 855</span><span class='b bo'>134 Lt</span></div>
+<div class='cs'>12.05.2026 | Fis:25018 | KADİR BEKTAŞ</div></div>
+<div class='c mc ek' data-t='06 fsf 855' style='display:none'>
+<div class='c mc' data-t='06 fpb 142'>
+<div class='cr'><span class='cn'>06 FPB 142</span><span class='b bo'>48 Lt</span></div>
+<div class='cs'>12.05.2026 | Fis:25016 | KADİR BEKTAŞ</div></div>
+<div class='c mc ek' data-t='06 fpb 142' style='display:none'>
+<div class='c mc' data-t='34 00 22 7578'>
+<div class='cr'><span class='cn'>34 00 22 7578</span><span class='b bo'>399 Lt</span></div>
+<div class='cs'>12.05.2026 | Fis:25015 | ABDULLAH ÇINAR</div></div>
+<div class='c mc ek' data-t='34 00 22 7578' style='display:none'>
+<div class='c mc' data-t='06 bf 5241'>
+<div class='cr'><span class='cn'>06 BF 5241</span><span class='b bo'>43 Lt</span></div>
+<div class='cs'>12.05.2026 | Fis:25014 | FURKAN ÇINAR</div></div>
+<div class='c mc ek' data-t='06 bf 5241' style='display:none'>
+<div class='c mc' data-t='06 00 23 5009'>
+<div class='cr'><span class='cn'>06 00 23 5009</span><span class='b bo'>303 Lt</span></div>
+<div class='cs'>12.05.2026 | Fis:25013 | FURKAN ÇINAR</div></div>
+<div class='c mc ek' data-t='06 00 23 5009' style='display:none'>
+<div class='c mc' data-t='06 fsu 564'>
+<div class='cr'><span class='cn'>06 FSU 564</span><span class='b bo'>166 Lt</span></div>
+<div class='cs'>12.05.2026 | Fis:25017 | MURAT ÇELİK</div></div>
+<div class='c mc ek' data-t='06 fsu 564' style='display:none'>
+<div class='c mc' data-t='06 00 26 1243'>
+<div class='cr'><span class='cn'>06 00 26 1243</span><span class='b bo'>207 Lt</span></div>
+<div class='cs'>11.05.2026 | Fis:27657 | MUSTAFA ÜNLÜ</div></div>
+<div class='c mc ek' data-t='06 00 26 1243' style='display:none'>
+<div class='c mc' data-t='34 00 11 80 65'>
+<div class='cr'><span class='cn'>34 00 11 80 65</span><span class='b bo'>472 Lt</span></div>
+<div class='cs'>11.05.2026 | Fis:27656 | MESUT ÖGEL</div></div>
+<div class='c mc ek' data-t='34 00 11 80 65' style='display:none'>
+<div class='c mc' data-t='06 fbm 211'>
+<div class='cr'><span class='cn'>06 FBM 211</span><span class='b bo'>166 Lt</span></div>
+<div class='cs'>11.05.2026 | Fis:27655 | AHMET DOĞAN</div></div>
+<div class='c mc ek' data-t='06 fbm 211' style='display:none'>
+<div class='c mc' data-t='06 fck 120'>
+<div class='cr'><span class='cn'>06 FCK 120</span><span class='b bo'>137 Lt</span></div>
+<div class='cs'>11.05.2026 | Fis:27654 | ENES BOZTEPE</div></div>
+<div class='c mc ek' data-t='06 fck 120' style='display:none'>
+<div class='c mc' data-t='06 fbm 106'>
+<div class='cr'><span class='cn'>06 FBM 106</span><span class='b bo'>150 Lt</span></div>
+<div class='cs'>11.05.2026 | Fis:27653 | ALTAN GÜLMEZ</div></div>
+<div class='c mc ek' data-t='06 fbm 106' style='display:none'>
+<div class='c mc' data-t='06 ftn 431'>
+<div class='cr'><span class='cn'>06 FTN 431</span><span class='b bo'>135 Lt</span></div>
+<div class='cs'>11.05.2026 | Fis:27652 | YUSUF DOĞAN</div></div>
+<div class='c mc ek' data-t='06 ftn 431' style='display:none'>
+<div class='c mc' data-t='06 fmv 048'>
+<div class='cr'><span class='cn'>06 FMV 048</span><span class='b bo'>182 Lt</span></div>
+<div class='cs'>11.05.2026 | Fis:27651 | İSMAİL UYGURTAŞ</div></div>
+<div class='c mc ek' data-t='06 fmv 048' style='display:none'>
+<div class='c mc' data-t='06 fmu 858'>
+<div class='cr'><span class='cn'>06 FMU 858</span><span class='b bo'>159 Lt</span></div>
+<div class='cs'>11.05.2026 | Fis:25250 | BAYRAM TERLER</div></div>
+<div class='c mc ek' data-t='06 fmu 858' style='display:none'>
+<div class='c mc' data-t='06 ftn 487'>
+<div class='cr'><span class='cn'>06 FTN 487</span><span class='b bo'>107 Lt</span></div>
+<div class='cs'>11.05.2026 | Fis:25249 | MÜSLÜM ALTINTAŞ</div></div>
+<div class='c mc ek' data-t='06 ftn 487' style='display:none'>
+<div class='c mc' data-t='06 ftn 454'>
+<div class='cr'><span class='cn'>06 FTN 454</span><span class='b bo'>116 Lt</span></div>
+<div class='cs'>11.05.2026 | Fis:25248 | BURHAN KAAN ALTIN</div></div>
+<div class='c mc ek' data-t='06 ftn 454' style='display:none'>
+<div class='c mc' data-t='06 ftn 355'>
+<div class='cr'><span class='cn'>06 FTN 355</span><span class='b bo'>190 Lt</span></div>
+<div class='cs'>11.05.2026 | Fis:25247 | ZİYA AYHAN</div></div>
+<div class='c mc ek' data-t='06 ftn 355' style='display:none'>
+<div class='c mc' data-t='19 adt 781'>
+<div class='cr'><span class='cn'>19 ADT 781</span><span class='b bo'>53 Lt</span></div>
+<div class='cs'>11.05.2026 | Fis:25246 | HAMZA BAL</div></div>
+<div class='c mc ek' data-t='19 adt 781' style='display:none'>
+<div class='c mc' data-t='06 ftn 324'>
+<div class='cr'><span class='cn'>06 FTN 324</span><span class='b bo'>195 Lt</span></div>
+<div class='cs'>11.05.2026 | Fis:25245 | TARIK BOLAT</div></div>
+<div class='c mc ek' data-t='06 ftn 324' style='display:none'>
+<div class='c mc' data-t='06 ftn 195'>
+<div class='cr'><span class='cn'>06 FTN 195</span><span class='b bo'>197 Lt</span></div>
+<div class='cs'>11.05.2026 | Fis:25244 | ÖZKAN GÜNER</div></div>
+<div class='c mc ek' data-t='06 ftn 195' style='display:none'>
+<div class='c mc' data-t='06 fmz 726'>
+<div class='cr'><span class='cn'>06 FMZ 726</span><span class='b bo'>146 Lt</span></div>
+<div class='cs'>11.05.2026 | Fis:25243 | KEMAL SEZER</div></div>
+<div class='c mc ek' data-t='06 fmz 726' style='display:none'>
+<div class='c mc' data-t='34 00 25 6043'>
+<div class='cr'><span class='cn'>34 00 25 6043</span><span class='b bo'>252 Lt</span></div>
+<div class='cs'>11.05.2026 | Fis:25242 | SERCAN DOĞAN</div></div>
+<div class='c mc ek' data-t='34 00 25 6043' style='display:none'>
+<div class='c mc' data-t='06 ftn 281'>
+<div class='cr'><span class='cn'>06 FTN 281</span><span class='b bo'>181 Lt</span></div>
+<div class='cs'>11.05.2026 | Fis:25241 | MURAT GÜLŞEN</div></div>
+<div class='c mc ek' data-t='06 ftn 281' style='display:none'>
+<div class='c mc' data-t='06 ftn 253'>
+<div class='cr'><span class='cn'>06 FTN 253</span><span class='b bo'>208 Lt</span></div>
+<div class='cs'>11.05.2026 | Fis:25240 | HASAN GÜNEY</div></div>
+<div class='c mc ek' data-t='06 ftn 253' style='display:none'>
+<div class='c mc' data-t='06 fkf 383'>
+<div class='cr'><span class='cn'>06 FKF 383</span><span class='b bo'>51 Lt</span></div>
+<div class='cs'>11.05.2026 | Fis:25239 | NECATİ ALTAN</div></div>
+<div class='c mc ek' data-t='06 fkf 383' style='display:none'>
+<div class='c mc' data-t='34 00 23 13626'>
+<div class='cr'><span class='cn'>34 00 23 13626</span><span class='b bo'>568 Lt</span></div>
+<div class='cs'>11.05.2026 | Fis:25238 | GÖKHAN AYHAN</div></div>
+<div class='c mc ek' data-t='34 00 23 13626' style='display:none'>
+<div class='c mc' data-t='06 00 25 6199'>
+<div class='cr'><span class='cn'>06 00 25 6199</span><span class='b bo'>740 Lt</span></div>
+<div class='cs'>11.05.2026 | Fis:25237 | ENİS TOPUZ</div></div>
+<div class='c mc ek' data-t='06 00 25 6199' style='display:none'>
+<div class='c mc' data-t='06 fmu 817'>
+<div class='cr'><span class='cn'>06 FMU 817</span><span class='b bo'>207 Lt</span></div>
+<div class='cs'>09.05.2026 | Fis:25236 | KAMİL SAĞIR</div></div>
+<div class='c mc ek' data-t='06 fmu 817' style='display:none'>
+<div class='c mc' data-t='06 fbm 180'>
+<div class='cr'><span class='cn'>06 FBM 180</span><span class='b bo'>238 Lt</span></div>
+<div class='cs'>09.05.2026 | Fis:25235 | ÖZGÜR ERTAŞ</div></div>
+<div class='c mc ek' data-t='06 fbm 180' style='display:none'>
+<div class='c mc' data-t='34 00 23 13626'>
+<div class='cr'><span class='cn'>34 00 23 13626</span><span class='b bo'>78 Lt</span></div>
+<div class='cs'>09.05.2026 | Fis:25234 | HASAN YABA</div></div>
+<div class='c mc ek' data-t='34 00 23 13626' style='display:none'>
+<div class='c mc' data-t='06 00 23 1810'>
+<div class='cr'><span class='cn'>06 00 23 1810</span><span class='b bo'>522 Lt</span></div>
+<div class='cs'>09.05.2026 | Fis:25233 | CEYHUN ÇEKİRGE</div></div>
+<div class='c mc ek' data-t='06 00 23 1810' style='display:none'>
+<div class='c mc' data-t='06 00 16 5515'>
+<div class='cr'><span class='cn'>06 00 16 5515</span><span class='b bo'>499 Lt</span></div>
+<div class='cs'>09.05.2026 | Fis:25232 | YUSUF YORULMAZ</div></div>
+<div class='c mc ek' data-t='06 00 16 5515' style='display:none'>
+<div class='c mc' data-t='34 00 25 17252'>
+<div class='cr'><span class='cn'>34 00 25 17252</span><span class='b bo'>548 Lt</span></div>
+<div class='cs'>09.05.2026 | Fis:25231 | ARİF ÇAĞLAYAN</div></div>
+<div class='c mc ek' data-t='34 00 25 17252' style='display:none'>
+<div class='c mc' data-t='34 00 16 23298'>
+<div class='cr'><span class='cn'>34 00 16 23298</span><span class='b bo'>343 Lt</span></div>
+<div class='cs'>09.05.2026 | Fis:25230 | TANER KULAKSIZ</div></div>
+<div class='c mc ek' data-t='34 00 16 23298' style='display:none'>
+<div class='c mc' data-t='34 00 11 80 65'>
+<div class='cr'><span class='cn'>34 00 11 80 65</span><span class='b bo'>334 Lt</span></div>
+<div class='cs'>09.05.2026 | Fis:25229 | ESE GÜNGÖR</div></div>
+<div class='c mc ek' data-t='34 00 11 80 65' style='display:none'>
+<div class='c mc' data-t='6 00 11 0887'>
+<div class='cr'><span class='cn'>6 00 11 0887</span><span class='b bo'>183 Lt</span></div>
+<div class='cs'>09.05.2026 | Fis:25228 | NİYAZİ GÜNDOĞDU</div></div>
+<div class='c mc ek' data-t='6 00 11 0887' style='display:none'>
+<div class='c mc' data-t='06 00 26 1243'>
+<div class='cr'><span class='cn'>06 00 26 1243</span><span class='b bo'>311 Lt</span></div>
+<div class='cs'>09.05.2026 | Fis:25227 | TAHİR DURAN</div></div>
+<div class='c mc ek' data-t='06 00 26 1243' style='display:none'>
+<div class='c mc' data-t='06 00 26 0231'>
+<div class='cr'><span class='cn'>06 00 26 0231</span><span class='b bo'>327 Lt</span></div>
+<div class='cs'>09.05.2026 | Fis:25012 | EROL AKÇELİK</div></div>
+<div class='c mc ek' data-t='06 00 26 0231' style='display:none'>
+<div class='c mc' data-t='06 bf 5241'>
+<div class='cr'><span class='cn'>06 BF 5241</span><span class='b bo'>42 Lt</span></div>
+<div class='cs'>09.05.2026 | Fis:25011 | M.EMİN BEKTAŞ</div></div>
+<div class='c mc ek' data-t='06 bf 5241' style='display:none'>
+<div class='c mc' data-t='06 fpb 142'>
+<div class='cr'><span class='cn'>06 FPB 142</span><span class='b bo'>51 Lt</span></div>
+<div class='cs'>09.05.2026 | Fis:25010 | M.EMİN BEKTAŞ</div></div>
+<div class='c mc ek' data-t='06 fpb 142' style='display:none'>
+<div class='c mc' data-t='06 fsf 855'>
+<div class='cr'><span class='cn'>06 FSF 855</span><span class='b bo'>95 Lt</span></div>
+<div class='cs'>09.05.2026 | Fis:25009 | KADİR BEKTAŞ</div></div>
+<div class='c mc ek' data-t='06 fsf 855' style='display:none'>
+<div class='c mc' data-t='06 ehe 609'>
+<div class='cr'><span class='cn'>06 EHE 609</span><span class='b bo'>171 Lt</span></div>
+<div class='cs'>09.05.2026 | Fis:25008 | HASAN ÇELİK</div></div>
+<div class='c mc ek' data-t='06 ehe 609' style='display:none'>
+<div class='c mc' data-t='06 fsu 564'>
+<div class='cr'><span class='cn'>06 FSU 564</span><span class='b bo'>218 Lt</span></div>
+<div class='cs'>09.05.2026 | Fis:25006 | MURAT ÇELİK</div></div>
+<div class='c mc ek' data-t='06 fsu 564' style='display:none'>
+<div class='c mc' data-t='06 fc 7627'>
+<div class='cr'><span class='cn'>06 FC 7627</span><span class='b bo'>160 Lt</span></div>
+<div class='cs'>09.05.2026 | Fis:25005 | ABDULLAH ÇINAR</div></div>
+<div class='c mc ek' data-t='06 fc 7627' style='display:none'>
+<div class='c mc' data-t='06 bc 2431'>
+<div class='cr'><span class='cn'>06 BC 2431</span><span class='b bo'>177 Lt</span></div>
+<div class='cs'>09.05.2026 | Fis:25004 | U.TEKİN TUNÇ</div></div>
+<div class='c mc ek' data-t='06 bc 2431' style='display:none'>
+<div class='c mc' data-t='06 eeu 386'>
+<div class='cr'><span class='cn'>06 EEU 386</span><span class='b bo'>194 Lt</span></div>
+<div class='cs'>09.05.2026 | Fis:25003 | FİKRİ TUNÇ</div></div>
+<div class='c mc ek' data-t='06 eeu 386' style='display:none'>
+<div class='c mc' data-t='06 00 23 5009'>
+<div class='cr'><span class='cn'>06 00 23 5009</span><span class='b bo'>173 Lt</span></div>
+<div class='cs'>09.05.2026 | Fis:25002 | FURKAN ÇINAR</div></div>
+<div class='c mc ek' data-t='06 00 23 5009' style='display:none'>
+<div class='c mc' data-t='34 00 22 7578'>
+<div class='cr'><span class='cn'>34 00 22 7578</span><span class='b bo'>389 Lt</span></div>
+<div class='cs'>09.05.2026 | Fis:25001 | FERHAT YAĞIZ</div></div>
+<div class='c mc ek' data-t='34 00 22 7578' style='display:none'>
+<div class='c mc' data-t='06 fmz 699'>
+<div class='cr'><span class='cn'>06 FMZ 699</span><span class='b bo'>143 Lt</span></div>
+<div class='cs'>08.05.2026 | Fis:25226 | HALİL UCAKAN</div></div>
+<div class='c mc ek' data-t='06 fmz 699' style='display:none'>
+<div class='c mc' data-t='06 ftn 487'>
+<div class='cr'><span class='cn'>06 FTN 487</span><span class='b bo'>137 Lt</span></div>
+<div class='cs'>08.05.2026 | Fis:25225 | MÜSLÜM ALTINTAŞ</div></div>
+<div class='c mc ek' data-t='06 ftn 487' style='display:none'>
+<div class='c mc' data-t='06 fbm 106'>
+<div class='cr'><span class='cn'>06 FBM 106</span><span class='b bo'>212 Lt</span></div>
+<div class='cs'>08.05.2026 | Fis:25223 | ALTAN GÜLMEZ</div></div>
+<div class='c mc ek' data-t='06 fbm 106' style='display:none'>
+<div class='c mc' data-t='06 ftn 431'>
+<div class='cr'><span class='cn'>06 FTN 431</span><span class='b bo'>142 Lt</span></div>
+<div class='cs'>08.05.2026 | Fis:25222 | YUSUF DOĞAN</div></div>
+<div class='c mc ek' data-t='06 ftn 431' style='display:none'>
+<div class='c mc' data-t='34 00 25 6043'>
+<div class='cr'><span class='cn'>34 00 25 6043</span><span class='b bo'>244 Lt</span></div>
+<div class='cs'>08.05.2026 | Fis:25221 | ERTUĞRUL ŞİMŞEK</div></div>
+<div class='c mc ek' data-t='34 00 25 6043' style='display:none'>
+<div class='c mc' data-t='06 fck 120'>
+<div class='cr'><span class='cn'>06 FCK 120</span><span class='b bo'>205 Lt</span></div>
+<div class='cs'>08.05.2026 | Fis:25220 | ENES BOZTEPE</div></div>
+<div class='c mc ek' data-t='06 fck 120' style='display:none'>
+<div class='c mc' data-t='06 fer 920'>
+<div class='cr'><span class='cn'>06 FER 920</span><span class='b bo'>217 Lt</span></div>
+<div class='cs'>08.05.2026 | Fis:25219 | MEHMET ARGALI</div></div>
+<div class='c mc ek' data-t='06 fer 920' style='display:none'>
+<div class='c mc' data-t='34 00 11 80 65'>
+<div class='cr'><span class='cn'>34 00 11 80 65</span><span class='b bo'>388 Lt</span></div>
+<div class='cs'>08.05.2026 | Fis:25218 | ESE GÜNGÖR</div></div>
+<div class='c mc ek' data-t='34 00 11 80 65' style='display:none'>
+<div class='c mc' data-t='34 00 23 13626'>
+<div class='cr'><span class='cn'>34 00 23 13626</span><span class='b bo'>681 Lt</span></div>
+<div class='cs'>08.05.2026 | Fis:25217 | GÖKHAN AYHAN</div></div>
+<div class='c mc ek' data-t='34 00 23 13626' style='display:none'>
+<div class='c mc' data-t='06 fmu 858'>
+<div class='cr'><span class='cn'>06 FMU 858</span><span class='b bo'>203 Lt</span></div>
+<div class='cs'>07.05.2026 | Fis:25216 | BAYRAM TERLER</div></div>
+<div class='c mc ek' data-t='06 fmu 858' style='display:none'>
+<div class='c mc' data-t='06 fbm 211'>
+<div class='cr'><span class='cn'>06 FBM 211</span><span class='b bo'>130 Lt</span></div>
+<div class='cs'>07.05.2026 | Fis:25215 | AHMET DOĞAN</div></div>
+<div class='c mc ek' data-t='06 fbm 211' style='display:none'>
+<div class='c mc' data-t='06 ftn 579'>
+<div class='cr'><span class='cn'>06 FTN 579</span><span class='b bo'>202 Lt</span></div>
+<div class='cs'>07.05.2026 | Fis:25214 | SATILMIŞ IŞIK</div></div>
+<div class='c mc ek' data-t='06 ftn 579' style='display:none'>
+<div class='c mc' data-t='06 ftn 454'>
+<div class='cr'><span class='cn'>06 FTN 454</span><span class='b bo'>192 Lt</span></div>
+<div class='cs'>07.05.2026 | Fis:25213 | BURHAN KAAN ALTIN</div></div>
+<div class='c mc ek' data-t='06 ftn 454' style='display:none'>
+<div class='c mc' data-t='06 fmz 726'>
+<div class='cr'><span class='cn'>06 FMZ 726</span><span class='b bo'>168 Lt</span></div>
+<div class='cs'>07.05.2026 | Fis:25212 | KEMAL SEZER</div></div>
+<div class='c mc ek' data-t='06 fmz 726' style='display:none'>
+<div class='c mc' data-t='06 00 25 6199'>
+<div class='cr'><span class='cn'>06 00 25 6199</span><span class='b bo'>580 Lt</span></div>
+<div class='cs'>07.05.2026 | Fis:25211 | ENİS TOPUZ</div></div>
+<div class='c mc ek' data-t='06 00 25 6199' style='display:none'>
+<div class='c mc' data-t='06 00 23 1810'>
+<div class='cr'><span class='cn'>06 00 23 1810</span><span class='b bo'>400 Lt</span></div>
+<div class='cs'>07.05.2026 | Fis:25210 | HASAN YABA</div></div>
+<div class='c mc ek' data-t='06 00 23 1810' style='display:none'>
+<div class='c mc' data-t='06 00 16 5515'>
+<div class='cr'><span class='cn'>06 00 16 5515</span><span class='b bo'>244 Lt</span></div>
+<div class='cs'>07.05.2026 | Fis:25209 | UĞUR YÜCEL</div></div>
+<div class='c mc ek' data-t='06 00 16 5515' style='display:none'>
+<div class='c mc' data-t='34 00 25 17252'>
+<div class='cr'><span class='cn'>34 00 25 17252</span><span class='b bo'>396 Lt</span></div>
+<div class='cs'>07.05.2026 | Fis:25208 | UĞUR YÜCEL</div></div>
+<div class='c mc ek' data-t='34 00 25 17252' style='display:none'>
+<div class='c mc' data-t='06 fmv 048'>
+<div class='cr'><span class='cn'>06 FMV 048</span><span class='b bo'>152 Lt</span></div>
+<div class='cs'>06.05.2026 | Fis:25207 | İSMAİL UYGURTAŞ</div></div>
+<div class='c mc ek' data-t='06 fmv 048' style='display:none'>
+<div class='c mc' data-t='34 00 11 80 65'>
+<div class='cr'><span class='cn'>34 00 11 80 65</span><span class='b bo'>477 Lt</span></div>
+<div class='cs'>06.05.2026 | Fis:25206 | ESE GÜNGÖR</div></div>
+<div class='c mc ek' data-t='34 00 11 80 65' style='display:none'>
+<div class='c mc' data-t='06 00 26 1243'>
+<div class='cr'><span class='cn'>06 00 26 1243</span><span class='b bo'>270 Lt</span></div>
+<div class='cs'>06.05.2026 | Fis:25205 | TAHİR DURAN</div></div>
+<div class='c mc ek' data-t='06 00 26 1243' style='display:none'>
+<div class='c mc' data-t='06 fkf 383'>
+<div class='cr'><span class='cn'>06 FKF 383</span><span class='b bo'>44 Lt</span></div>
+<div class='cs'>06.05.2026 | Fis:25204 | NECATİ ALTAN</div></div>
+<div class='c mc ek' data-t='06 fkf 383' style='display:none'>
+<div class='c mc' data-t='06 evz 563'>
+<div class='cr'><span class='cn'>06 EVZ 563</span><span class='b bo'>48 Lt</span></div>
+<div class='cs'>06.05.2026 | Fis:25203 | HAMZA BAL</div></div>
+<div class='c mc ek' data-t='06 evz 563' style='display:none'>
+<div class='c mc' data-t='06 ftn 195'>
+<div class='cr'><span class='cn'>06 FTN 195</span><span class='b bo'>178 Lt</span></div>
+<div class='cs'>06.05.2026 | Fis:25202 | ÖZKAN GÜNER</div></div>
+<div class='c mc ek' data-t='06 ftn 195' style='display:none'>
+<div class='c mc' data-t='6 00 11 0887'>
+<div class='cr'><span class='cn'>6 00 11 0887</span><span class='b bo'>81 Lt</span></div>
+<div class='cs'>06.05.2026 | Fis:25201 | NİYAZİ GÜNDOĞDU</div></div>
+<div class='c mc ek' data-t='6 00 11 0887' style='display:none'>
+<div class='c mc' data-t='06 ftn 431'>
+<div class='cr'><span class='cn'>06 FTN 431</span><span class='b bo'>128 Lt</span></div>
+<div class='cs'>05.05.2026 | Fis:25400 | YUSUF DOĞAN</div></div>
+<div class='c mc ek' data-t='06 ftn 431' style='display:none'>
+<div class='c mc' data-t='34 00 23 13626'>
+<div class='cr'><span class='cn'>34 00 23 13626</span><span class='b bo'>734 Lt</span></div>
+<div class='cs'>05.05.2026 | Fis:25399 | GÖKHAN AYHAN</div></div>
+<div class='c mc ek' data-t='34 00 23 13626' style='display:none'>
+<div class='c mc' data-t='jeneratör'>
+<div class='cr'><span class='cn'>JENERATÖR</span><span class='b bo'>218 Lt</span></div>
+<div class='cs'>05.05.2026 | Fis:25398 | MEHMET GÜLER</div></div>
+<div class='c mc ek' data-t='jeneratör' style='display:none'>
+<div class='c mc' data-t='06 fbm 106'>
+<div class='cr'><span class='cn'>06 FBM 106</span><span class='b bo'>51 Lt</span></div>
+<div class='cs'>05.05.2026 | Fis:25397 | ALTAN GÜLMEZ</div></div>
+<div class='c mc ek' data-t='06 fbm 106' style='display:none'>
+<div class='c mc' data-t='06 ftn 487'>
+<div class='cr'><span class='cn'>06 FTN 487</span><span class='b bo'>53 Lt</span></div>
+<div class='cs'>05.05.2026 | Fis:25396 | MÜSLÜM ALTINTAŞ</div></div>
+<div class='c mc ek' data-t='06 ftn 487' style='display:none'>
+<div class='c mc' data-t='06 ftn 324'>
+<div class='cr'><span class='cn'>06 FTN 324</span><span class='b bo'>132 Lt</span></div>
+<div class='cs'>05.05.2026 | Fis:25395 | TARIK BOLAT</div></div>
+<div class='c mc ek' data-t='06 ftn 324' style='display:none'>
+<div class='c mc' data-t='06 ftn 281'>
+<div class='cr'><span class='cn'>06 FTN 281</span><span class='b bo'>152 Lt</span></div>
+<div class='cs'>05.05.2026 | Fis:25394 | MURAT GÜLŞEN</div></div>
+<div class='c mc ek' data-t='06 ftn 281' style='display:none'>
+<div class='c mc' data-t='06 ftn 355'>
+<div class='cr'><span class='cn'>06 FTN 355</span><span class='b bo'>28 Lt</span></div>
+<div class='cs'>05.05.2026 | Fis:25393 | ZİYA AYHAN</div></div>
+<div class='c mc ek' data-t='06 ftn 355' style='display:none'>
+<div class='c mc' data-t='06 ftn 253'>
+<div class='cr'><span class='cn'>06 FTN 253</span><span class='b bo'>73 Lt</span></div>
+<div class='cs'>05.05.2026 | Fis:25392 | HASAN GÜNEY</div></div>
+<div class='c mc ek' data-t='06 ftn 253' style='display:none'>
+<div class='c mc' data-t='06 00 16 5515'>
+<div class='cr'><span class='cn'>06 00 16 5515</span><span class='b bo'>290 Lt</span></div>
+<div class='cs'>05.05.2026 | Fis:25391 | BATUHAN BAKIRCI</div></div>
+<div class='c mc ek' data-t='06 00 16 5515' style='display:none'>
+<div class='c mc' data-t='34 00 16 23298'>
+<div class='cr'><span class='cn'>34 00 16 23298</span><span class='b bo'>269 Lt</span></div>
+<div class='cs'>05.05.2026 | Fis:25390 | TANER KULAKSIZ</div></div>
+<div class='c mc ek' data-t='34 00 16 23298' style='display:none'>
+<div class='c mc' data-t='34 00 11 80 65'>
+<div class='cr'><span class='cn'>34 00 11 80 65</span><span class='b bo'>251 Lt</span></div>
+<div class='cs'>05.05.2026 | Fis:25389 | MESUT ÖGEL</div></div>
+<div class='c mc ek' data-t='34 00 11 80 65' style='display:none'>
+<div class='c mc' data-t='71 aea 314'>
+<div class='cr'><span class='cn'>71 AEA 314</span><span class='b bo'>57 Lt</span></div>
+<div class='cs'>02.05.2026 | Fis:25388 | EMRE DOĞAN</div></div>
+<div class='c mc ek' data-t='71 aea 314' style='display:none'>
+<div class='c mc' data-t='06 fmz 699'>
+<div class='cr'><span class='cn'>06 FMZ 699</span><span class='b bo'>142 Lt</span></div>
+<div class='cs'>02.05.2026 | Fis:25387 | HALİL UCAKAN</div></div>
+<div class='c mc ek' data-t='06 fmz 699' style='display:none'>
+<div class='c mc' data-t='06 ftn 355'>
+<div class='cr'><span class='cn'>06 FTN 355</span><span class='b bo'>155 Lt</span></div>
+<div class='cs'>02.05.2026 | Fis:25385 | ZİYA AYHAN</div></div>
+<div class='c mc ek' data-t='06 ftn 355' style='display:none'>
+<div class='c mc' data-t='34 00 25 6043'>
+<div class='cr'><span class='cn'>34 00 25 6043</span><span class='b bo'>271 Lt</span></div>
+<div class='cs'>02.05.2026 | Fis:25384 | ERTUĞRUL ŞİMŞEK</div></div>
+<div class='c mc ek' data-t='34 00 25 6043' style='display:none'>
+<div class='c mc' data-t='06 00 25 6199'>
+<div class='cr'><span class='cn'>06 00 25 6199</span><span class='b bo'>570 Lt</span></div>
+<div class='cs'>02.05.2026 | Fis:25383 | YUSUF YORULMAZ</div></div>
+<div class='c mc ek' data-t='06 00 25 6199' style='display:none'>
+<div class='c mc' data-t='06 00 23 1810'>
+<div class='cr'><span class='cn'>06 00 23 1810</span><span class='b bo'>415 Lt</span></div>
+<div class='cs'>02.05.2026 | Fis:25382 | HASAN YABA</div></div>
+<div class='c mc ek' data-t='06 00 23 1810' style='display:none'>
+<div class='c mc' data-t='34 00 25 17252'>
+<div class='cr'><span class='cn'>34 00 25 17252</span><span class='b bo'>550 Lt</span></div>
+<div class='cs'>02.05.2026 | Fis:25381 | UĞUR YÜCEL</div></div>
+<div class='c mc ek' data-t='34 00 25 17252' style='display:none'>
+<div class='c mc' data-t='34 00 11 80 65'>
+<div class='cr'><span class='cn'>34 00 11 80 65</span><span class='b bo'>427 Lt</span></div>
+<div class='cs'>30.04.2026 | Fis:25380 | MESUT ÖGEL</div></div>
+<div class='c mc ek' data-t='34 00 11 80 65' style='display:none'>
+<div class='c mc' data-t='06 ftn 487'>
+<div class='cr'><span class='cn'>06 FTN 487</span><span class='b bo'>137 Lt</span></div>
+<div class='cs'>30.04.2026 | Fis:25379 | Müslüm ALTINTAŞ</div></div>
+<div class='c mc ek' data-t='06 ftn 487' style='display:none'>
+<div class='c mc' data-t='06 ftn 253'>
+<div class='cr'><span class='cn'>06 FTN 253</span><span class='b bo'>183 Lt</span></div>
+<div class='cs'>30.04.2026 | Fis:25378 | Hasan GÜNEY</div></div>
+<div class='c mc ek' data-t='06 ftn 253' style='display:none'>
+<div class='c mc' data-t='06 00 26 1243'>
+<div class='cr'><span class='cn'>06 00 26 1243</span><span class='b bo'>319 Lt</span></div>
+<div class='cs'>30.04.2026 | Fis:25377 | Tahir DURAN</div></div>
+<div class='c mc ek' data-t='06 00 26 1243' style='display:none'>
+<div class='c mc' data-t='06 fck 120'>
+<div class='cr'><span class='cn'>06 FCK 120</span><span class='b bo'>220 Lt</span></div>
+<div class='cs'>30.04.2026 | Fis:25376 | Enes BOZTEPE</div></div>
+<div class='c mc ek' data-t='06 fck 120' style='display:none'>
+<div class='c mc' data-t='19 adt 781'>
+<div class='cr'><span class='cn'>19 ADT 781</span><span class='b bo'>55 Lt</span></div>
+<div class='cs'>30.04.2026 | Fis:25375 | Hamza BAL</div></div>
+<div class='c mc ek' data-t='19 adt 781' style='display:none'>
+<div class='c mc' data-t='06 fbm 211'>
+<div class='cr'><span class='cn'>06 FBM 211</span><span class='b bo'>199 Lt</span></div>
+<div class='cs'>30.04.2026 | Fis:25374 | Ahmet DOĞAN</div></div>
+<div class='c mc ek' data-t='06 fbm 211' style='display:none'>
+<div class='c mc' data-t='06 fmu 817'>
+<div class='cr'><span class='cn'>06 FMU 817</span><span class='b bo'>165 Lt</span></div>
+<div class='cs'>30.04.2026 | Fis:25373 | Kamil SAĞIR</div></div>
+<div class='c mc ek' data-t='06 fmu 817' style='display:none'>
+<div class='c mc' data-t='887'>
+<div class='cr'><span class='cn'>887</span><span class='b bo'>180 Lt</span></div>
+<div class='cs'>30.04.2026 | Fis:25372 | Niyazi GÜNDOĞDU</div></div>
+<div class='c mc ek' data-t='887' style='display:none'>
+<div class='c mc' data-t='06 fsb 508'>
+<div class='cr'><span class='cn'>06 FSB 508</span><span class='b bo'>91 Lt</span></div>
+<div class='cs'>30.04.2026 | Fis:25371 | Ahmet GGÜNEŞ</div></div>
+<div class='c mc ek' data-t='06 fsb 508' style='display:none'>
+<div class='c mc' data-t='06 fbm 180'>
+<div class='cr'><span class='cn'>06 FBM 180</span><span class='b bo'>244 Lt</span></div>
+<div class='cs'>30.04.2026 | Fis:25370 | Ali Osman ERD</div></div>
+<div class='c mc ek' data-t='06 fbm 180' style='display:none'>
+<div class='c mc' data-t='06 fmz 726'>
+<div class='cr'><span class='cn'>06 FMZ 726</span><span class='b bo'>140 Lt</span></div>
+<div class='cs'>30.04.2026 | Fis:25369 | Kemal SEZER</div></div>
+<div class='c mc ek' data-t='06 fmz 726' style='display:none'>
+<div class='c mc' data-t='06 00 16 5515'>
+<div class='cr'><span class='cn'>06 00 16 5515</span><span class='b bo'>539 Lt</span></div>
+<div class='cs'>30.04.2026 | Fis:25368 | Batuhan BAKIRCI</div></div>
+<div class='c mc ek' data-t='06 00 16 5515' style='display:none'>
+<div class='c mc' data-t='06 fmv 048'>
+<div class='cr'><span class='cn'>06 FMV 048</span><span class='b bo'>196 Lt</span></div>
+<div class='cs'>30.04.2026 | Fis:25367 | Gökhan GÖMLEKSİZ</div></div>
+<div class='c mc ek' data-t='06 fmv 048' style='display:none'>
+<div class='c mc' data-t='06 fer 920'>
+<div class='cr'><span class='cn'>06 FER 920</span><span class='b bo'>214 Lt</span></div>
+<div class='cs'>29.04.2026 | Fis:25366 | Mehmet ARGALI</div></div>
+<div class='c mc ek' data-t='06 fer 920' style='display:none'>
+<div class='c mc' data-t='06 ftn 431'>
+<div class='cr'><span class='cn'>06 FTN 431</span><span class='b bo'>128 Lt</span></div>
+<div class='cs'>29.04.2026 | Fis:25365 | Yusuf DOĞAN</div></div>
+<div class='c mc ek' data-t='06 ftn 431' style='display:none'>
+<div class='c mc' data-t='06 ftn 454'>
+<div class='cr'><span class='cn'>06 FTN 454</span><span class='b bo'>213 Lt</span></div>
+<div class='cs'>29.04.2026 | Fis:25364 | İsmail UYGURTAŞ</div></div>
+<div class='c mc ek' data-t='06 ftn 454' style='display:none'>
+<div class='c mc' data-t='06 ftn 579'>
+<div class='cr'><span class='cn'>06 FTN 579</span><span class='b bo'>193 Lt</span></div>
+<div class='cs'>29.04.2026 | Fis:25363 | Satılmış IŞIK</div></div>
+<div class='c mc ek' data-t='06 ftn 579' style='display:none'>
+<div class='c mc' data-t='34 00 23 13626'>
+<div class='cr'><span class='cn'>34 00 23 13626</span><span class='b bo'>698 Lt</span></div>
+<div class='cs'>29.04.2026 | Fis:25362 | Gökhan AYHAN</div></div>
+<div class='c mc ek' data-t='34 00 23 13626' style='display:none'>
+<div class='c mc' data-t='06 ftn 324'>
+<div class='cr'><span class='cn'>06 FTN 324</span><span class='b bo'>182 Lt</span></div>
+<div class='cs'>29.04.2026 | Fis:25361 | Tarık BOLAT</div></div>
+<div class='c mc ek' data-t='06 ftn 324' style='display:none'>
+<div class='c mc' data-t='06 fbm 106'>
+<div class='cr'><span class='cn'>06 FBM 106</span><span class='b bo'>222 Lt</span></div>
+<div class='cs'>29.04.2026 | Fis:25360 | Altan GÜLMEZ</div></div>
+<div class='c mc ek' data-t='06 fbm 106' style='display:none'>
+<div class='c mc' data-t='06 fmu 858'>
+<div class='cr'><span class='cn'>06 FMU 858</span><span class='b bo'>196 Lt</span></div>
+<div class='cs'>29.04.2026 | Fis:25359 | Bayram TERLER</div></div>
+<div class='c mc ek' data-t='06 fmu 858' style='display:none'>
+<div class='c mc' data-t='34 00 25 6043'>
+<div class='cr'><span class='cn'>34 00 25 6043</span><span class='b bo'>205 Lt</span></div>
+<div class='cs'>29.04.2026 | Fis:25358 | Ertuğrul ŞİMŞEK</div></div>
+<div class='c mc ek' data-t='34 00 25 6043' style='display:none'>
+<div class='c mc' data-t='06 00 23 1810'>
+<div class='cr'><span class='cn'>06 00 23 1810</span><span class='b bo'>355 Lt</span></div>
+<div class='cs'>29.04.2026 | Fis:25357 | Hasan YABA</div></div>
+<div class='c mc ek' data-t='06 00 23 1810' style='display:none'>
+<div class='c mc' data-t='06 00 25 6199'>
+<div class='cr'><span class='cn'>06 00 25 6199</span><span class='b bo'>760 Lt</span></div>
+<div class='cs'>29.04.2026 | Fis:25356 | Enis TOPUZ</div></div>
+<div class='c mc ek' data-t='06 00 25 6199' style='display:none'>
+<div class='c mc' data-t='34 00 11 80 65'>
+<div class='cr'><span class='cn'>34 00 11 80 65</span><span class='b bo'>331 Lt</span></div>
+<div class='cs'>29.04.2026 | Fis:25355 | Mesut ÖGEL</div></div>
+<div class='c mc ek' data-t='34 00 11 80 65' style='display:none'>
+<div class='c mc' data-t='34 00 25 17252'>
+<div class='cr'><span class='cn'>34 00 25 17252</span><span class='b bo'>356 Lt</span></div>
+<div class='cs'>29.04.2026 | Fis:25354 | Uğur YÜCEL</div></div>
+<div class='c mc ek' data-t='34 00 25 17252' style='display:none'>
+<div class='c mc' data-t='06 ftn 281'>
+<div class='cr'><span class='cn'>06 FTN 281</span><span class='b bo'>167 Lt</span></div>
+<div class='cs'>28.04.2026 | Fis:25353 | Murat GÜLŞEN</div></div>
+<div class='c mc ek' data-t='06 ftn 281' style='display:none'>
+<div class='c mc' data-t='06 fkf 383'>
+<div class='cr'><span class='cn'>06 FKF 383</span><span class='b bo'>45 Lt</span></div>
+<div class='cs'>28.04.2026 | Fis:25352 | Necati ALTAN</div></div>
+<div class='c mc ek' data-t='06 fkf 383' style='display:none'>
+<div class='c mc' data-t='06 fmz 699'>
+<div class='cr'><span class='cn'>06 FMZ 699</span><span class='b bo'>176 Lt</span></div>
+<div class='cs'>28.04.2026 | Fis:25351 | Halil UÇAKAN</div></div>
+<div class='c mc ek' data-t='06 fmz 699' style='display:none'>
+<div class='c mc' data-t='06 ftn 195'>
+<div class='cr'><span class='cn'>06 FTN 195</span><span class='b bo'>184 Lt</span></div>
+<div class='cs'>28.04.2026 | Fis:22900 | Özkan GÜNER</div></div>
+<div class='c mc ek' data-t='06 ftn 195' style='display:none'>
+<div class='c mc' data-t='06 ftn 487'>
+<div class='cr'><span class='cn'>06 FTN 487</span><span class='b bo'>170 Lt</span></div>
+<div class='cs'>28.04.2026 | Fis:22899 | Müslüm ALTINTAŞ</div></div>
+<div class='c mc ek' data-t='06 ftn 487' style='display:none'>
+<div class='c mc' data-t='06 ftn 355'>
+<div class='cr'><span class='cn'>06 FTN 355</span><span class='b bo'>183 Lt</span></div>
+<div class='cs'>28.04.2026 | Fis:22898 | Ziya AYHAN</div></div>
+<div class='c mc ek' data-t='06 ftn 355' style='display:none'>
+<div class='c mc' data-t='34 00 11 80 65'>
+<div class='cr'><span class='cn'>34 00 11 80 65</span><span class='b bo'>313 Lt</span></div>
+<div class='cs'>28.04.2026 | Fis:22897 | Ese GÜNGÖR</div></div>
+<div class='c mc ek' data-t='34 00 11 80 65' style='display:none'>
+<div class='c mc' data-t='06 ftk 969'>
+<div class='cr'><span class='cn'>06 FTK 969</span><span class='b bo'>58 Lt</span></div>
+<div class='cs'>28.04.2026 | Fis:22896 | Murat GÜLŞEN</div></div>
+<div class='c mc ek' data-t='06 ftk 969' style='display:none'>
+<div class='c mc' data-t='06 fmu 817'>
+<div class='cr'><span class='cn'>06 FMU 817</span><span class='b bo'>45 Lt</span></div>
+<div class='cs'>27.04.2026 | Fis:22895 | Kamil SAĞIR</div></div>
+<div class='c mc ek' data-t='06 fmu 817' style='display:none'>
+<div class='c mc' data-t='06 ftn 431'>
+<div class='cr'><span class='cn'>06 FTN 431</span><span class='b bo'>114 Lt</span></div>
+<div class='cs'>27.04.2026 | Fis:22894 | Yusuf DOĞAN</div></div>
+<div class='c mc ek' data-t='06 ftn 431' style='display:none'>
+<div class='c mc' data-t='06 00 26 1243'>
+<div class='cr'><span class='cn'>06 00 26 1243</span><span class='b bo'>271 Lt</span></div>
+<div class='cs'>27.04.2026 | Fis:22893 | Tahir DURAN</div></div>
+<div class='c mc ek' data-t='06 00 26 1243' style='display:none'>
+<div class='c mc' data-t='34 00 25 6043'>
+<div class='cr'><span class='cn'>34 00 25 6043</span><span class='b bo'>250 Lt</span></div>
+<div class='cs'>27.04.2026 | Fis:22892 | Ertuğrul ŞİMŞEK</div></div>
+<div class='c mc ek' data-t='34 00 25 6043' style='display:none'>
+<div class='c mc' data-t='34 00 25 17252'>
+<div class='cr'><span class='cn'>34 00 25 17252</span><span class='b bo'>317 Lt</span></div>
+<div class='cs'>27.04.2026 | Fis:22891 | Hasan YABA</div></div>
+<div class='c mc ek' data-t='34 00 25 17252' style='display:none'>
+<div class='c mc' data-t='06 00 23 1810'>
+<div class='cr'><span class='cn'>06 00 23 1810</span><span class='b bo'>360 Lt</span></div>
+<div class='cs'>27.04.2026 | Fis:22890 | Ceyhun ÇEKİRGE</div></div>
+<div class='c mc ek' data-t='06 00 23 1810' style='display:none'>
+<div class='c mc' data-t='06 00 16 5515'>
+<div class='cr'><span class='cn'>06 00 16 5515</span><span class='b bo'>530 Lt</span></div>
+<div class='cs'>27.04.2026 | Fis:22889 | Batuhan BAKIRCI</div></div>
+<div class='c mc ek' data-t='06 00 16 5515' style='display:none'>
+<div class='c mc' data-t='06 ac 165'>
+<div class='cr'><span class='cn'>06 AC 165</span><span class='b bo'>70 Lt</span></div>
+<div class='cs'>27.04.2026 | Fis:22888 | Mehmet G ?</div></div>
+<div class='c mc ek' data-t='06 ac 165' style='display:none'>
+<div class='c mc' data-t='34 00 23 13626'>
+<div class='cr'><span class='cn'>34 00 23 13626</span><span class='b bo'>720 Lt</span></div>
+<div class='cs'>25.04.2026 | Fis:22887 | Yusuf YORULMAZ</div></div>
+<div class='c mc ek' data-t='34 00 23 13626' style='display:none'>
+<div class='c mc' data-t='06 fmz 726'>
+<div class='cr'><span class='cn'>06 FMZ 726</span><span class='b bo'>151 Lt</span></div>
+<div class='cs'>25.04.2026 | Fis:22886 | Kemal SEZER</div></div>
+<div class='c mc ek' data-t='06 fmz 726' style='display:none'>
+<div class='c mc' data-t='06 ftn 253'>
+<div class='cr'><span class='cn'>06 FTN 253</span><span class='b bo'>176 Lt</span></div>
+<div class='cs'>25.04.2026 | Fis:22885 | Hasan GÜNEY</div></div>
+<div class='c mc ek' data-t='06 ftn 253' style='display:none'>
+<div class='c mc' data-t='06 fmv 048'>
+<div class='cr'><span class='cn'>06 FMV 048</span><span class='b bo'>194 Lt</span></div>
+<div class='cs'>25.04.2026 | Fis:22884 | Gökhan GÖMLEKSİZ</div></div>
+<div class='c mc ek' data-t='06 fmv 048' style='display:none'>
+<div class='c mc' data-t='06 fbm 211'>
+<div class='cr'><span class='cn'>06 FBM 211</span><span class='b bo'>190 Lt</span></div>
+<div class='cs'>25.04.2026 | Fis:22883 | Ahmet DOĞAN</div></div>
+<div class='c mc ek' data-t='06 fbm 211' style='display:none'>
+<div class='c mc' data-t='06 00 25 6199'>
+<div class='cr'><span class='cn'>06 00 25 6199</span><span class='b bo'>685 Lt</span></div>
+<div class='cs'>25.04.2026 | Fis:22882 | Enis TOPUZ</div></div>
+<div class='c mc ek' data-t='06 00 25 6199' style='display:none'>
+<div class='c mc' data-t='06 00 23 1810'>
+<div class='cr'><span class='cn'>06 00 23 1810</span><span class='b bo'>284 Lt</span></div>
+<div class='cs'>25.04.2026 | Fis:22881 | Ceyhun ÇEKİRGE</div></div>
+<div class='c mc ek' data-t='06 00 23 1810' style='display:none'>
+<div class='c mc' data-t='34 00 25 17252'>
+<div class='cr'><span class='cn'>34 00 25 17252</span><span class='b bo'>306 Lt</span></div>
+<div class='cs'>25.04.2026 | Fis:22880 | Uğur YÜCEL</div></div>
+<div class='c mc ek' data-t='34 00 25 17252' style='display:none'>
+<div class='c mc' data-t='06 fck 120'>
+<div class='cr'><span class='cn'>06 FCK 120</span><span class='b bo'>216 Lt</span></div>
+<div class='cs'>25.04.2026 | Fis:22879 | Enes BOZTEPE</div></div>
+<div class='c mc ek' data-t='06 fck 120' style='display:none'>
+<div class='c mc' data-t='34 00 11 80 65'>
+<div class='cr'><span class='cn'>34 00 11 80 65</span><span class='b bo'>440 Lt</span></div>
+<div class='cs'>24.04.2026 | Fis:22878 | Mesut ÖGEL</div></div>
+<div class='c mc ek' data-t='34 00 11 80 65' style='display:none'>
+<div class='c mc' data-t='06 fer 920'>
+<div class='cr'><span class='cn'>06 FER 920</span><span class='b bo'>180 Lt</span></div>
+<div class='cs'>24.04.2026 | Fis:22877 | Mehmet ARGALI</div></div>
+<div class='c mc ek' data-t='06 fer 920' style='display:none'>
+<div class='c mc' data-t='06 fkf 383'>
+<div class='cr'><span class='cn'>06 FKF 383</span><span class='b bo'>44 Lt</span></div>
+<div class='cs'>24.04.2026 | Fis:22876 | Necati ALTAN</div></div>
+<div class='c mc ek' data-t='06 fkf 383' style='display:none'>
+<div class='c mc' data-t='06 ftn 195'>
+<div class='cr'><span class='cn'>06 FTN 195</span><span class='b bo'>179 Lt</span></div>
+<div class='cs'>22.04.2026 | Fis:22875 | Özkan GÜNER</div></div>
+<div class='c mc ek' data-t='06 ftn 195' style='display:none'>
+<div class='c mc' data-t='06 ftn 431'>
+<div class='cr'><span class='cn'>06 FTN 431</span><span class='b bo'>150 Lt</span></div>
+<div class='cs'>22.04.2026 | Fis:22874 | Yusuf DOĞAN</div></div>
+<div class='c mc ek' data-t='06 ftn 431' style='display:none'>
+<div class='c mc' data-t='06 fmu 817'>
+<div class='cr'><span class='cn'>06 FMU 817</span><span class='b bo'>163 Lt</span></div>
+<div class='cs'>22.04.2026 | Fis:22873 | Kamil SAĞIR</div></div>
+<div class='c mc ek' data-t='06 fmu 817' style='display:none'>
+<div class='c mc' data-t='06 ftn 324'>
+<div class='cr'><span class='cn'>06 FTN 324</span><span class='b bo'>147 Lt</span></div>
+<div class='cs'>22.04.2026 | Fis:22872 | Tarık BOLAT</div></div>
+<div class='c mc ek' data-t='06 ftn 324' style='display:none'>
+<div class='c mc' data-t='06 fmu 858'>
+<div class='cr'><span class='cn'>06 FMU 858</span><span class='b bo'>192 Lt</span></div>
+<div class='cs'>22.04.2026 | Fis:22871 | Bayram TERLER</div></div>
+<div class='c mc ek' data-t='06 fmu 858' style='display:none'>
+<div class='c mc' data-t='06 fbm 106'>
+<div class='cr'><span class='cn'>06 FBM 106</span><span class='b bo'>206 Lt</span></div>
+<div class='cs'>22.04.2026 | Fis:22870 | Altan GÜLMEZ</div></div>
+<div class='c mc ek' data-t='06 fbm 106' style='display:none'>
+<div class='c mc' data-t='06 ftn 579'>
+<div class='cr'><span class='cn'>06 FTN 579</span><span class='b bo'>194 Lt</span></div>
+<div class='cs'>22.04.2026 | Fis:22869 | Satılmış IŞIK</div></div>
+<div class='c mc ek' data-t='06 ftn 579' style='display:none'>
+<div class='c mc' data-t='06 ftn 454'>
+<div class='cr'><span class='cn'>06 FTN 454</span><span class='b bo'>216 Lt</span></div>
+<div class='cs'>22.04.2026 | Fis:22868 | Burhan ALTIN</div></div>
+<div class='c mc ek' data-t='06 ftn 454' style='display:none'>
+<div class='c mc' data-t='34 00 16 23298'>
+<div class='cr'><span class='cn'>34 00 16 23298</span><span class='b bo'>370 Lt</span></div>
+<div class='cs'>22.04.2026 | Fis:22867 | Taner KULAKSIZ</div></div>
+<div class='c mc ek' data-t='34 00 16 23298' style='display:none'>
+<div class='c mc' data-t='34 00 25 6043'>
+<div class='cr'><span class='cn'>34 00 25 6043</span><span class='b bo'>162 Lt</span></div>
+<div class='cs'>22.04.2026 | Fis:22866 | Ertuğrul ŞİMŞEK</div></div>
+<div class='c mc ek' data-t='34 00 25 6043' style='display:none'>
+<div class='c mc' data-t='06 00 26 1243'>
+<div class='cr'><span class='cn'>06 00 26 1243</span><span class='b bo'>258 Lt</span></div>
+<div class='cs'>22.04.2026 | Fis:22865 | Tahir DURAN</div></div>
+<div class='c mc ek' data-t='06 00 26 1243' style='display:none'>
+<div class='c mc' data-t='19 adt 781'>
+<div class='cr'><span class='cn'>19 ADT 781</span><span class='b bo'>55 Lt</span></div>
+<div class='cs'>21.04.2026 | Fis:22864 | Hamza BAL</div></div>
+<div class='c mc ek' data-t='19 adt 781' style='display:none'>
+<div class='c mc' data-t='06 ftn 355'>
+<div class='cr'><span class='cn'>06 FTN 355</span><span class='b bo'>177 Lt</span></div>
+<div class='cs'>21.04.2026 | Fis:22863 | Ziya AYHAN</div></div>
+<div class='c mc ek' data-t='06 ftn 355' style='display:none'>
+<div class='c mc' data-t='06 fmz 699'>
+<div class='cr'><span class='cn'>06 FMZ 699</span><span class='b bo'>144 Lt</span></div>
+<div class='cs'>21.04.2026 | Fis:22862 | Halil UÇAKAN</div></div>
+<div class='c mc ek' data-t='06 fmz 699' style='display:none'>
+<div class='c mc' data-t='06 ftn 487'>
+<div class='cr'><span class='cn'>06 FTN 487</span><span class='b bo'>184 Lt</span></div>
+<div class='cs'>21.04.2026 | Fis:22861 | Müslüm ALTINTAŞ</div></div>
+<div class='c mc ek' data-t='06 ftn 487' style='display:none'>
+<div class='c mc' data-t='34 00 25 17252'>
+<div class='cr'><span class='cn'>34 00 25 17252</span><span class='b bo'>490 Lt</span></div>
+<div class='cs'>21.04.2026 | Fis:22860 | Uğur YÜCEL</div></div>
+<div class='c mc ek' data-t='34 00 25 17252' style='display:none'>
+<div class='c mc' data-t='34 00 23 13626'>
+<div class='cr'><span class='cn'>34 00 23 13626</span><span class='b bo'>671 Lt</span></div>
+<div class='cs'>21.04.2026 | Fis:22859 | G. AYHAN</div></div>
+<div class='c mc ek' data-t='34 00 23 13626' style='display:none'>
+<div class='c mc' data-t='06 00 23 1810'>
+<div class='cr'><span class='cn'>06 00 23 1810</span><span class='b bo'>569 Lt</span></div>
+<div class='cs'>21.04.2026 | Fis:22858 | Hasan YABA</div></div>
+<div class='c mc ek' data-t='06 00 23 1810' style='display:none'>
+<div class='c mc' data-t='34 00 11 80 65'>
+<div class='cr'><span class='cn'>34 00 11 80 65</span><span class='b bo'>401 Lt</span></div>
+<div class='cs'>20.04.2026 | Fis:25350 | Mesut ÖGEL</div></div>
+<div class='c mc ek' data-t='34 00 11 80 65' style='display:none'>
+<div class='c mc' data-t='34 00 25 17252'>
+<div class='cr'><span class='cn'>34 00 25 17252</span><span class='b bo'>296 Lt</span></div>
+<div class='cs'>20.04.2026 | Fis:25349 | Uğur YÜCEL</div></div>
+<div class='c mc ek' data-t='34 00 25 17252' style='display:none'>
+<div class='c mc' data-t='34 00 11 80 65'>
+<div class='cr'><span class='cn'>34 00 11 80 65</span><span class='b bo'>206 Lt</span></div>
+<div class='cs'>20.04.2026 | Fis:22857 | Mesut ÖGEL</div></div>
+<div class='c mc ek' data-t='34 00 11 80 65' style='display:none'>
+<div class='c mc' data-t='34 00 25 6043'>
+<div class='cr'><span class='cn'>34 00 25 6043</span><span class='b bo'>227 Lt</span></div>
+<div class='cs'>20.04.2026 | Fis:22856 | Ertuğrul ŞİMŞEK</div></div>
+<div class='c mc ek' data-t='34 00 25 6043' style='display:none'>
+<div class='c mc' data-t='06 00 25 6199'>
+<div class='cr'><span class='cn'>06 00 25 6199</span><span class='b bo'>546 Lt</span></div>
+<div class='cs'>20.04.2026 | Fis:22855 | Enis TOPUZ</div></div>
+<div class='c mc ek' data-t='06 00 25 6199' style='display:none'>
+<div class='c mc' data-t='06 fmz 726'>
+<div class='cr'><span class='cn'>06 FMZ 726</span><span class='b bo'>147 Lt</span></div>
+<div class='cs'>20.04.2026 | Fis:22854 | Kemal SEZER</div></div>
+<div class='c mc ek' data-t='06 fmz 726' style='display:none'>
+<div class='c mc' data-t='06 ftn 431'>
+<div class='cr'><span class='cn'>06 FTN 431</span><span class='b bo'>142 Lt</span></div>
+<div class='cs'>20.04.2026 | Fis:22853 | Yusuf DOĞAN</div></div>
+<div class='c mc ek' data-t='06 ftn 431' style='display:none'>
+<div class='c mc' data-t='06 fky 383'>
+<div class='cr'><span class='cn'>06 FKY 383</span><span class='b bo'>56 Lt</span></div>
+<div class='cs'>20.04.2026 | Fis:22852 | Murat GÜLŞEN</div></div>
+<div class='c mc ek' data-t='06 fky 383' style='display:none'>
+<div class='c mc' data-t='06 fck 120'>
+<div class='cr'><span class='cn'>06 FCK 120</span><span class='b bo'>221 Lt</span></div>
+<div class='cs'>20.04.2026 | Fis:22851 | Enes BOZTEPE</div></div>
+<div class='c mc ek' data-t='06 fck 120' style='display:none'>
+<div class='c mc' data-t='06 fmv 048'>
+<div class='cr'><span class='cn'>06 FMV 048</span><span class='b bo'>221 Lt</span></div>
+<div class='cs'>17.04.2026 | Fis:25348 | Gökhan GÖMLEKSİZ</div></div>
+<div class='c mc ek' data-t='06 fmv 048' style='display:none'>
+<div class='c mc' data-t='06 ftn 324'>
+<div class='cr'><span class='cn'>06 FTN 324</span><span class='b bo'>168 Lt</span></div>
+<div class='cs'>17.04.2026 | Fis:25347 | Tarık BOLAT</div></div>
+<div class='c mc ek' data-t='06 ftn 324' style='display:none'>
+<div class='c mc' data-t='06 fbm 211'>
+<div class='cr'><span class='cn'>06 FBM 211</span><span class='b bo'>190 Lt</span></div>
+<div class='cs'>17.04.2026 | Fis:25346 | Ahmet DOĞAN</div></div>
+<div class='c mc ek' data-t='06 fbm 211' style='display:none'>
+<div class='c mc' data-t='06 00 26 1243'>
+<div class='cr'><span class='cn'>06 00 26 1243</span><span class='b bo'>340 Lt</span></div>
+<div class='cs'>17.04.2026 | Fis:25345 | Emre DOĞAN</div></div>
+<div class='c mc ek' data-t='06 00 26 1243' style='display:none'>
+<div class='c mc' data-t='06 ftn 195'>
+<div class='cr'><span class='cn'>06 FTN 195</span><span class='b bo'>182 Lt</span></div>
+<div class='cs'>17.04.2026 | Fis:25344 | Özkan GÜNEN</div></div>
+<div class='c mc ek' data-t='06 ftn 195' style='display:none'>
+<div class='c mc' data-t='34 00 25 6043'>
+<div class='cr'><span class='cn'>34 00 25 6043</span><span class='b bo'>283 Lt</span></div>
+<div class='cs'>17.04.2026 | Fis:25343 | Ertuğrul ŞİMŞEK</div></div>
+<div class='c mc ek' data-t='34 00 25 6043' style='display:none'>
+<div class='c mc' data-t='06 fbm 106'>
+<div class='cr'><span class='cn'>06 FBM 106</span><span class='b bo'>200 Lt</span></div>
+<div class='cs'>17.04.2026 | Fis:25342 | Altan GÜLMEZ</div></div>
+<div class='c mc ek' data-t='06 fbm 106' style='display:none'>
+<div class='c mc' data-t='06 fmu 817'>
+<div class='cr'><span class='cn'>06 FMU 817</span><span class='b bo'>148 Lt</span></div>
+<div class='cs'>17.04.2026 | Fis:25341 | Kamil SAĞIR</div></div>
+<div class='c mc ek' data-t='06 fmu 817' style='display:none'>
+<div class='c mc' data-t='06 fmu 858'>
+<div class='cr'><span class='cn'>06 FMU 858</span><span class='b bo'>189 Lt</span></div>
+<div class='cs'>17.04.2026 | Fis:25340 | Bayram TERLER</div></div>
+<div class='c mc ek' data-t='06 fmu 858' style='display:none'>
+<div class='c mc' data-t='06 ftn 579'>
+<div class='cr'><span class='cn'>06 FTN 579</span><span class='b bo'>189 Lt</span></div>
+<div class='cs'>17.04.2026 | Fis:25339 | Satılmış IŞIK</div></div>
+<div class='c mc ek' data-t='06 ftn 579' style='display:none'>
+<div class='c mc' data-t='06 00 23 1810'>
+<div class='cr'><span class='cn'>06 00 23 1810</span><span class='b bo'>398 Lt</span></div>
+<div class='cs'>17.04.2026 | Fis:25338 | Ceyhun ÇEKİRGE</div></div>
+<div class='c mc ek' data-t='06 00 23 1810' style='display:none'>
+<div class='c mc' data-t='34 00 25 17252'>
+<div class='cr'><span class='cn'>34 00 25 17252</span><span class='b bo'>429 Lt</span></div>
+<div class='cs'>17.04.2026 | Fis:25337 | Batuhan BAKIRLI</div></div>
+<div class='c mc ek' data-t='34 00 25 17252' style='display:none'>
+<div class='c mc' data-t='06 00 16 5515'>
+<div class='cr'><span class='cn'>06 00 16 5515</span><span class='b bo'>611 Lt</span></div>
+<div class='cs'>16.04.2026 | Fis:25336 | Enis TOPUZ</div></div>
+<div class='c mc ek' data-t='06 00 16 5515' style='display:none'>
+<div class='c mc' data-t='06 00 25 6199'>
+<div class='cr'><span class='cn'>06 00 25 6199</span><span class='b bo'>724 Lt</span></div>
+<div class='cs'>16.04.2026 | Fis:25335 | Yusuf YORULMAZ</div></div>
+<div class='c mc ek' data-t='06 00 25 6199' style='display:none'>
+<div class='c mc' data-t='06 ftn 454'>
+<div class='cr'><span class='cn'>06 FTN 454</span><span class='b bo'>188 Lt</span></div>
+<div class='cs'>16.04.2026 | Fis:25334 | Burhan ALTIN</div></div>
+<div class='c mc ek' data-t='06 ftn 454' style='display:none'>
+<div class='c mc' data-t='06 00 26 1243'>
+<div class='cr'><span class='cn'>06 00 26 1243</span><span class='b bo'>74 Lt</span></div>
+<div class='cs'>15.04.2026 | Fis:25333 | Tahir DURAN</div></div>
+<div class='c mc ek' data-t='06 00 26 1243' style='display:none'>
+<div class='c mc' data-t='06 ftn 431'>
+<div class='cr'><span class='cn'>06 FTN 431</span><span class='b bo'>174 Lt</span></div>
+<div class='cs'>15.04.2026 | Fis:25332 | Yusuf DOĞAN</div></div>
+<div class='c mc ek' data-t='06 ftn 431' style='display:none'>
+<div class='c mc' data-t='06 fkf 383'>
+<div class='cr'><span class='cn'>06 FKF 383</span><span class='b bo'>48 Lt</span></div>
+<div class='cs'>15.04.2026 | Fis:25331 | Murat GÜLŞEN</div></div>
+<div class='c mc ek' data-t='06 fkf 383' style='display:none'>
+<div class='c mc' data-t='34 00 11 80 65'>
+<div class='cr'><span class='cn'>34 00 11 80 65</span><span class='b bo'>308 Lt</span></div>
+<div class='cs'>15.04.2026 | Fis:25330 | Ese GÜNGÖR</div></div>
+<div class='c mc ek' data-t='34 00 11 80 65' style='display:none'>
+<div class='c mc' data-t='34 00 25 6043'>
+<div class='cr'><span class='cn'>34 00 25 6043</span><span class='b bo'>240 Lt</span></div>
+<div class='cs'>15.04.2026 | Fis:25329 | Ertuğrul ŞİMŞEK</div></div>
+<div class='c mc ek' data-t='34 00 25 6043' style='display:none'>
+<div class='c mc' data-t='06 00 23 1810'>
+<div class='cr'><span class='cn'>06 00 23 1810</span><span class='b bo'>551 Lt</span></div>
+<div class='cs'>15.04.2026 | Fis:25328 | Ceyhun ÇEKİRGE</div></div>
+<div class='c mc ek' data-t='06 00 23 1810' style='display:none'>
+<div class='c mc' data-t='34 00 25 17252'>
+<div class='cr'><span class='cn'>34 00 25 17252</span><span class='b bo'>432 Lt</span></div>
+<div class='cs'>15.04.2026 | Fis:25327 | Uğur YÜCEL</div></div>
+<div class='c mc ek' data-t='34 00 25 17252' style='display:none'>
+<div class='c mc' data-t='06 ftn 487'>
+<div class='cr'><span class='cn'>06 FTN 487</span><span class='b bo'>173 Lt</span></div>
+<div class='cs'>14.04.2026 | Fis:25326 | Müslüm ALTINTAŞ</div></div>
+<div class='c mc ek' data-t='06 ftn 487' style='display:none'>
+<div class='c mc' data-t='06 ftn 324'>
+<div class='cr'><span class='cn'>06 FTN 324</span><span class='b bo'>163 Lt</span></div>
+<div class='cs'>14.04.2026 | Fis:25325 | Tarık BOLAT</div></div>
+<div class='c mc ek' data-t='06 ftn 324' style='display:none'>
+<div class='c mc' data-t='06 00 26 1243'>
+<div class='cr'><span class='cn'>06 00 26 1243</span><span class='b bo'>218 Lt</span></div>
+<div class='cs'>14.04.2026 | Fis:25324 | Emre DOĞAN</div></div>
+<div class='c mc ek' data-t='06 00 26 1243' style='display:none'>
+<div class='c mc' data-t='06 ftn 195'>
+<div class='cr'><span class='cn'>06 FTN 195</span><span class='b bo'>168 Lt</span></div>
+<div class='cs'>14.04.2026 | Fis:25323 | Özkan GÜNEN</div></div>
+<div class='c mc ek' data-t='06 ftn 195' style='display:none'>
+<div class='c mc' data-t='06 fmu 817'>
+<div class='cr'><span class='cn'>06 FMU 817</span><span class='b bo'>150 Lt</span></div>
+<div class='cs'>14.04.2026 | Fis:25322 | Kamil SAĞIR</div></div>
+<div class='c mc ek' data-t='06 fmu 817' style='display:none'>
+<div class='c mc' data-t='34 00 25 6043'>
+<div class='cr'><span class='cn'>34 00 25 6043</span><span class='b bo'>234 Lt</span></div>
+<div class='cs'>14.04.2026 | Fis:25321 | Tahir DURAN</div></div>
+<div class='c mc ek' data-t='34 00 25 6043' style='display:none'>
+<div class='c mc' data-t='34 00 23 13626'>
+<div class='cr'><span class='cn'>34 00 23 13626</span><span class='b bo'>676 Lt</span></div>
+<div class='cs'>14.04.2026 | Fis:25320 | Hasan YABA</div></div>
+<div class='c mc ek' data-t='34 00 23 13626' style='display:none'>
+<div class='c mc' data-t='06 fmm 048'>
+<div class='cr'><span class='cn'>06 FMM 048</span><span class='b bo'>187 Lt</span></div>
+<div class='cs'>14.04.2026 | Fis:25319 | Gökhan GÖMLEKSİZ</div></div>
+<div class='c mc ek' data-t='06 fmm 048' style='display:none'>
+<div class='c mc' data-t='06 fbm 106'>
+<div class='cr'><span class='cn'>06 FBM 106</span><span class='b bo'>160 Lt</span></div>
+<div class='cs'>14.04.2026 | Fis:25318 | Altan GÜLMEZ</div></div>
+<div class='c mc ek' data-t='06 fbm 106' style='display:none'>
+<div class='c mc' data-t='06 fbm 211'>
+<div class='cr'><span class='cn'>06 FBM 211</span><span class='b bo'>132 Lt</span></div>
+<div class='cs'>14.04.2026 | Fis:25317 | Ahmet DOĞAN</div></div>
+<div class='c mc ek' data-t='06 fbm 211' style='display:none'>
+<div class='c mc' data-t='06 fmu 858'>
+<div class='cr'><span class='cn'>06 FMU 858</span><span class='b bo'>160 Lt</span></div>
+<div class='cs'>14.04.2026 | Fis:25316 | Bayram TERLER</div></div>
+<div class='c mc ek' data-t='06 fmu 858' style='display:none'>
+<div class='c mc' data-t='34 00 25 17252'>
+<div class='cr'><span class='cn'>34 00 25 17252</span><span class='b bo'>440 Lt</span></div>
+<div class='cs'>14.04.2026 | Fis:25315 | Uğur YÜCEL</div></div>
+<div class='c mc ek' data-t='34 00 25 17252' style='display:none'>
+<div class='c mc' data-t='06 ftn 579'>
+<div class='cr'><span class='cn'>06 FTN 579</span><span class='b bo'>153 Lt</span></div>
+<div class='cs'>13.04.2026 | Fis:25307 | Satılmış IŞIK</div></div>
+<div class='c mc ek' data-t='06 ftn 579' style='display:none'>
+<div class='c mc' data-t='34 00 16 23298'>
+<div class='cr'><span class='cn'>34 00 16 23298</span><span class='b bo'>390 Lt</span></div>
+<div class='cs'>11.04.2026 | Fis:25314 | Taner KULAKSIZ</div></div>
+<div class='c mc ek' data-t='34 00 16 23298' style='display:none'>
+<div class='c mc' data-t='19 adt 781'>
+<div class='cr'><span class='cn'>19 ADT 781</span><span class='b bo'>69 Lt</span></div>
+<div class='cs'>11.04.2026 | Fis:25313 | Hamza BAL</div></div>
+<div class='c mc ek' data-t='19 adt 781' style='display:none'>
+<div class='c mc' data-t='34 00 16 23298'>
+<div class='cr'><span class='cn'>34 00 16 23298</span><span class='b bo'>32 Lt</span></div>
+<div class='cs'>09.04.2026 | Fis:25312 | Taner KULAKSIZ</div></div>
+<div class='c mc ek' data-t='34 00 16 23298' style='display:none'>
+<div class='c mc' data-t='06 00 26 1243'>
+<div class='cr'><span class='cn'>06 00 26 1243</span><span class='b bo'>265 Lt</span></div>
+<div class='cs'>09.04.2026 | Fis:25311 | Emre DOĞAN</div></div>
+<div class='c mc ek' data-t='06 00 26 1243' style='display:none'>
+<div class='c mc' data-t='06 00 25 6199'>
+<div class='cr'><span class='cn'>06 00 25 6199</span><span class='b bo'>512 Lt</span></div>
+<div class='cs'>09.04.2026 | Fis:25310 | Enis TOPUZ</div></div>
+<div class='c mc ek' data-t='06 00 25 6199' style='display:none'>
+<div class='c mc' data-t='34 00 11 80 65'>
+<div class='cr'><span class='cn'>34 00 11 80 65</span><span class='b bo'>388 Lt</span></div>
+<div class='cs'>09.04.2026 | Fis:25309 | Ese GÜNGÖR</div></div>
+<div class='c mc ek' data-t='34 00 11 80 65' style='display:none'>
+<div class='c mc' data-t='06 fkf 383'>
+<div class='cr'><span class='cn'>06 FKF 383</span><span class='b bo'>51 Lt</span></div>
+<div class='cs'>09.04.2026 | Fis:25308 | Murat GÜLŞEN</div></div>
+<div class='c mc ek' data-t='06 fkf 383' style='display:none'>
+<div class='c mc' data-t='34 00 25 17252'>
+<div class='cr'><span class='cn'>34 00 25 17252</span><span class='b bo'>454 Lt</span></div>
+<div class='cs'>09.04.2026 | Fis:25306 | Uğur YÜCEL</div></div>
+<div class='c mc ek' data-t='34 00 25 17252' style='display:none'>
+<div class='c mc' data-t='06 ftn 431'>
+<div class='cr'><span class='cn'>06 FTN 431</span><span class='b bo'>73 Lt</span></div>
+<div class='cs'>08.04.2026 | Fis:25305 | Yusuf DOĞAN</div></div>
+<div class='c mc ek' data-t='06 ftn 431' style='display:none'>
+<div class='c mc' data-t='06 fkf 383'>
+<div class='cr'><span class='cn'>06 FKF 383</span><span class='b bo'>46 Lt</span></div>
+<div class='cs'>06.04.2026 | Fis:25304 | Murat GÜLŞEN</div></div>
+<div class='c mc ek' data-t='06 fkf 383' style='display:none'>
+<div class='c mc' data-t='06 ftn 454'>
+<div class='cr'><span class='cn'>06 FTN 454</span><span class='b bo'>68 Lt</span></div>
+<div class='cs'>05.04.2026 | Fis:25303 | Murat GÜLŞEN</div></div>
+<div class='c mc ek' data-t='06 ftn 454' style='display:none'>
+<div class='c mc' data-t='06 ftn 431'>
+<div class='cr'><span class='cn'>06 FTN 431</span><span class='b bo'>95 Lt</span></div>
+<div class='cs'>05.04.2026 | Fis:25302 | Yusuf DOĞAN</div></div>
+<div class='c mc ek' data-t='06 ftn 431' style='display:none'>
+<div class='c mc' data-t='06 ftn 195'>
+<div class='cr'><span class='cn'>06 FTN 195</span><span class='b bo'>128 Lt</span></div>
+<div class='cs'>05.04.2026 | Fis:25301 | Özkan GÜNEN</div></div>
+<div class='c mc ek' data-t='06 ftn 195' style='display:none'>
+<div class='c mc' data-t='34 00 11 80 65'>
+<div class='cr'><span class='cn'>34 00 11 80 65</span><span class='b bo'>420 Lt</span></div>
+<div class='cs'>03.04.2026 | Fis:25267 | Mesut ÖGEL</div></div>
+<div class='c mc ek' data-t='34 00 11 80 65' style='display:none'>
+<div class='c mc' data-t='34 00 23 13626'>
+<div class='cr'><span class='cn'>34 00 23 13626</span><span class='b bo'>747 Lt</span></div>
+<div class='cs'>03.04.2026 | Fis:25266 | Hasan YABA</div></div>
+<div class='c mc ek' data-t='34 00 23 13626' style='display:none'>
+<div class='c mc' data-t='34 00 25 17252'>
+<div class='cr'><span class='cn'>34 00 25 17252</span><span class='b bo'>241 Lt</span></div>
+<div class='cs'>01.04.2026 | Fis:25265 | Uğur YÜCEL</div></div>
+<div class='c mc ek' data-t='34 00 25 17252' style='display:none'>
+<div class='c mc' data-t='06 00 23 1810'>
+<div class='cr'><span class='cn'>06 00 23 1810</span><span class='b bo'>196 Lt</span></div>
+<div class='cs'>01.04.2026 | Fis:25264 | Emre DOĞAN</div></div>
+<div class='c mc ek' data-t='06 00 23 1810' style='display:none'>
+<div class='c mc' data-t='06 00 26 1243'>
+<div class='cr'><span class='cn'>06 00 26 1243</span><span class='b bo'>105 Lt</span></div>
+<div class='cs'>01.04.2026 | Fis:25263 | Tahir DURAN</div></div>
+<div class='c mc ek' data-t='06 00 26 1243' style='display:none'>
+<div class='c mc' data-t='06 ftn 454'>
+<div class='cr'><span class='cn'>06 FTN 454</span><span class='b bo'>34 Lt</span></div>
+<div class='cs'>01.04.2026 | Fis:25262 | Murat GÜLŞEN</div></div>
+<div class='c mc ek' data-t='06 ftn 454' style='display:none'>
+<div class='c mc' data-t='19 adt 781'>
+<div class='cr'><span class='cn'>19 ADT 781</span><span class='b bo'>52 Lt</span></div>
+<div class='cs'>01.04.2026 | Fis:25261 | Hamza BAL</div></div>
+<div class='c mc ek' data-t='19 adt 781' style='display:none'>
+<div class='c mc' data-t='06 00 26 1243'>
+<div class='cr'><span class='cn'>06 00 26 1243</span><span class='b bo'>70 Lt</span></div>
+<div class='cs'>31.03.2026 | Fis:25260 | Tahir DURAN</div></div>
+<div class='c mc ek' data-t='06 00 26 1243' style='display:none'>
+<div class='c mc' data-t='34 00 25 17252'>
+<div class='cr'><span class='cn'>34 00 25 17252</span><span class='b bo'>155 Lt</span></div>
+<div class='cs'>31.03.2026 | Fis:25259 | Uğur YÜCEL</div></div>
+<div class='c mc ek' data-t='34 00 25 17252' style='display:none'>
+<div class='c mc' data-t='06 ac 165'>
+<div class='cr'><span class='cn'>06 AC 165</span><span class='b bo'>60 Lt</span></div>
+<div class='cs'>31.03.2026 | Fis:25258 | </div></div>
+<div class='c mc ek' data-t='06 ac 165' style='display:none'>
+<div class='c mc' data-t='06 ftn 355'>
+<div class='cr'><span class='cn'>06 FTN 355</span><span class='b bo'>144 Lt</span></div>
+<div class='cs'>31.03.2026 | Fis:25257 | Yusuf DOĞAN</div></div>
+<div class='c mc ek' data-t='06 ftn 355' style='display:none'>
+<div class='c mc' data-t='06 ftn 253'>
+<div class='cr'><span class='cn'>06 FTN 253</span><span class='b bo'>130 Lt</span></div>
+<div class='cs'>31.03.2026 | Fis:25256 | Özkan GÜNEN</div></div>
+<div class='c mc ek' data-t='06 ftn 253' style='display:none'>
+<div class='c mc' data-t='06 00 23 1810'>
+<div class='cr'><span class='cn'>06 00 23 1810</span><span class='b bo'>558 Lt</span></div>
+<div class='cs'>31.03.2026 | Fis:25255 | Emre DOĞAN</div></div>
+<div class='c mc ek' data-t='06 00 23 1810' style='display:none'>
+<div class='c mc' data-t='34 00 25 17252'>
+<div class='cr'><span class='cn'>34 00 25 17252</span><span class='b bo'>563 Lt</span></div>
+<div class='cs'>31.03.2026 | Fis:25254 | Uğur YÜCEL</div></div>
+<div class='c mc ek' data-t='34 00 25 17252' style='display:none'>
+<div class='c mc' data-t='06 00 25 6199'>
+<div class='cr'><span class='cn'>06 00 25 6199</span><span class='b bo'>715 Lt</span></div>
+<div class='cs'>31.03.2026 | Fis:25253 | Emre DOĞAN</div></div>
+<div class='c mc ek' data-t='06 00 25 6199' style='display:none'>
+<div class='c mc' data-t='06 00 26 1243'>
+<div class='cr'><span class='cn'>06 00 26 1243</span><span class='b bo'>315 Lt</span></div>
+<div class='cs'>31.03.2026 | Fis:25252 | Tahir DURAN</div></div>
+<div class='c mc ek' data-t='06 00 26 1243' style='display:none'>
+<div class='c mc' data-t='01 zs 333'>
+<div class='cr'><span class='cn'>01 ZS 333</span><span class='b bo'>40 Lt</span></div>
+<div class='cs'>31.03.2026 | Fis:25251 | Hamza BAL</div></div>
+<div class='c mc ek' data-t='01 zs 333' style='display:none'>
+<div class='c mc' data-t='06 fer 920'>
+<div class='cr'><span class='cn'>06 FER 920</span><span class='b bo'>173 Lt</span></div>
+<div class='cs'>30.03.2026 | Fis:25291 | </div></div>
+<div class='c mc ek' data-t='06 fer 920' style='display:none'>
+<div class='c mc' data-t='06 dr 5557'>
+<div class='cr'><span class='cn'>06 DR 5557</span><span class='b bo'>43 Lt</span></div>
+<div class='cs'>30.03.2026 | Fis:25290 | </div></div>
+<div class='c mc ek' data-t='06 dr 5557' style='display:none'>
+<div class='c mc' data-t='06 fkf 383'>
+<div class='cr'><span class='cn'>06 FKF 383</span><span class='b bo'>62 Lt</span></div>
+<div class='cs'>25.03.2026 | Fis:25289 | </div></div>
+<div class='c mc ek' data-t='06 fkf 383' style='display:none'>
+<div class='c mc' data-t='06 fbm 106'>
+<div class='cr'><span class='cn'>06 FBM 106</span><span class='b bo'>193 Lt</span></div>
+<div class='cs'>25.03.2026 | Fis:25288 | </div></div>
+<div class='c mc ek' data-t='06 fbm 106' style='display:none'>
+<div class='c mc' data-t='06 fbm 211'>
+<div class='cr'><span class='cn'>06 FBM 211</span><span class='b bo'>199 Lt</span></div>
+<div class='cs'>25.03.2026 | Fis:25287 | </div></div>
+<div class='c mc ek' data-t='06 fbm 211' style='display:none'>
+<div class='c mc' data-t='06 dr 5557'>
+<div class='cr'><span class='cn'>06 DR 5557</span><span class='b bo'>52 Lt</span></div>
+<div class='cs'>24.03.2026 | Fis:25286 | </div></div>
+<div class='c mc ek' data-t='06 dr 5557' style='display:none'>
+<div class='c mc' data-t='19 adt 781'>
+<div class='cr'><span class='cn'>19 ADT 781</span><span class='b bo'>38 Lt</span></div>
+<div class='cs'>23.03.2026 | Fis:25285 | </div></div>
+<div class='c mc ek' data-t='19 adt 781' style='display:none'>
+<div class='c mc' data-t='06 fmz 699'>
+<div class='cr'><span class='cn'>06 FMZ 699</span><span class='b bo'>230 Lt</span></div>
+<div class='cs'>23.03.2026 | Fis:25284 | </div></div>
+<div class='c mc ek' data-t='06 fmz 699' style='display:none'>
+<div class='c mc' data-t='06 dr 5557'>
+<div class='cr'><span class='cn'>06 DR 5557</span><span class='b bo'>27 Lt</span></div>
+<div class='cs'>18.03.2026 | Fis:25283 | </div></div>
+<div class='c mc ek' data-t='06 dr 5557' style='display:none'>
+<div class='c mc' data-t='34 00 23 13626'>
+<div class='cr'><span class='cn'>34 00 23 13626</span><span class='b bo'>78 Lt</span></div>
+<div class='cs'>18.03.2026 | Fis:25282 | </div></div>
+<div class='c mc ek' data-t='34 00 23 13626' style='display:none'>
+<div class='c mc' data-t='06 fsb 508'>
+<div class='cr'><span class='cn'>06 FSB 508</span><span class='b bo'>82 Lt</span></div>
+<div class='cs'>18.03.2026 | Fis:25281 | </div></div>
+<div class='c mc ek' data-t='06 fsb 508' style='display:none'>
+<div class='c mc' data-t='06 ftk 969'>
+<div class='cr'><span class='cn'>06 FTK 969</span><span class='b bo'>80 Lt</span></div>
+<div class='cs'>18.03.2026 | Fis:25280 | </div></div>
+<div class='c mc ek' data-t='06 ftk 969' style='display:none'>
+<div class='c mc' data-t='06 fmv 048'>
+<div class='cr'><span class='cn'>06 FMV 048</span><span class='b bo'>151 Lt</span></div>
+<div class='cs'>18.03.2026 | Fis:25279 | </div></div>
+<div class='c mc ek' data-t='06 fmv 048' style='display:none'>
+<div class='c mc' data-t='06 fmz 726'>
+<div class='cr'><span class='cn'>06 FMZ 726</span><span class='b bo'>177 Lt</span></div>
+<div class='cs'>18.03.2026 | Fis:25278 | </div></div>
+<div class='c mc ek' data-t='06 fmz 726' style='display:none'>
+<div class='c mc' data-t='06 fmu 817'>
+<div class='cr'><span class='cn'>06 FMU 817</span><span class='b bo'>182 Lt</span></div>
+<div class='cs'>18.03.2026 | Fis:25277 | Yusuf DOĞAN</div></div>
+<div class='c mc ek' data-t='06 fmu 817' style='display:none'>
+<div class='c mc' data-t='06 ftn 195'>
+<div class='cr'><span class='cn'>06 FTN 195</span><span class='b bo'>203 Lt</span></div>
+<div class='cs'>18.03.2026 | Fis:25276 | Yusuf DOĞAN</div></div>
+<div class='c mc ek' data-t='06 ftn 195' style='display:none'>
+<div class='c mc' data-t='06 fmu 858'>
+<div class='cr'><span class='cn'>06 FMU 858</span><span class='b bo'>230 Lt</span></div>
+<div class='cs'>18.03.2026 | Fis:25275 | Yusuf DOĞAN</div></div>
+<div class='c mc ek' data-t='06 fmu 858' style='display:none'>
+<div class='c mc' data-t='06 ftn 579'>
+<div class='cr'><span class='cn'>06 FTN 579</span><span class='b bo'>200 Lt</span></div>
+<div class='cs'>18.03.2026 | Fis:25274 | Yusuf DOĞAN</div></div>
+<div class='c mc ek' data-t='06 ftn 579' style='display:none'>
+<div class='c mc' data-t='06 ftn 324'>
+<div class='cr'><span class='cn'>06 FTN 324</span><span class='b bo'>162 Lt</span></div>
+<div class='cs'>18.03.2026 | Fis:25273 | Özkan GÜNEN</div></div>
+<div class='c mc ek' data-t='06 ftn 324' style='display:none'>
+<div class='c mc' data-t='06 ftn 454'>
+<div class='cr'><span class='cn'>06 FTN 454</span><span class='b bo'>185 Lt</span></div>
+<div class='cs'>18.03.2026 | Fis:25272 | Özkan GÜNEN</div></div>
+<div class='c mc ek' data-t='06 ftn 454' style='display:none'>
+<div class='c mc' data-t='06 ftn 431'>
+<div class='cr'><span class='cn'>06 FTN 431</span><span class='b bo'>159 Lt</span></div>
+<div class='cs'>18.03.2026 | Fis:25271 | Özkan GÜNEN</div></div>
+<div class='c mc ek' data-t='06 ftn 431' style='display:none'>
+<div class='c mc' data-t='44 an 762'>
+<div class='cr'><span class='cn'>44 AN 762</span><span class='b bo'>124 Lt</span></div>
+<div class='cs'>18.03.2026 | Fis:25270 | Özkan GÜNEN</div></div>
+<div class='c mc ek' data-t='44 an 762' style='display:none'>
+<div class='c mc' data-t='06 ftn 487'>
+<div class='cr'><span class='cn'>06 FTN 487</span><span class='b bo'>210 Lt</span></div>
+<div class='cs'>18.03.2026 | Fis:25269 | Özkan GÜNEN</div></div>
+<div class='c mc ek' data-t='06 ftn 487' style='display:none'>
+<div class='c mc' data-t='06 ftn 281'>
+<div class='cr'><span class='cn'>06 FTN 281</span><span class='b bo'>230 Lt</span></div>
+<div class='cs'>18.03.2026 | Fis:25268 | Tahir DURAN</div></div>
+<div class='c mc ek' data-t='06 ftn 281' style='display:none'>
 </div>
 <div class='pg' id='p-sefer'>
 <div class='c' style='text-align:center;border-left:3px solid #1565c0'><div class='cs' style='font-weight:700;color:#1565c0'>MAYIS AYI TOPLAM SEFER</div><div class='sv vb' style='font-size:28px'>10768</div></div>
