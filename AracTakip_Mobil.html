@@ -30,7 +30,7 @@
 .warn{background:#fff3e0;border-left:3px solid #e65100;border-radius:0 10px 10px 0;padding:8px 12px;margin-bottom:6px}
 .tel{display:inline-block;background:#2e7d32;color:#fff;padding:3px 10px;border-radius:15px;font-size:10px;text-decoration:none;margin-top:4px;font-weight:600}
 </style></head><body>
-<div class='hd'><h1>ARAC TAKIP SISTEMI</h1><p>TUPRAS Kirikkale Santiye | 30.05.2026 15:47</p></div>
+<div class='hd'><h1>ARAC TAKIP SISTEMI</h1><p>TUPRAS Kirikkale Santiye | 30.05.2026 15:49</p></div>
 <div class='dt'>30.05.2026 Cumartesi</div>
 <div class='tb'><div class='t a' onclick='sp("home")'>ANASAYFA</div><div class='t' onclick='sp("arac")'>ARACLAR</div>
 <div class='t' onclick='sp("personel")'>PERSONEL</div><div class='t' onclick='sp("mazot")'>MAZOT</div>
@@ -2635,5 +2635,6 @@ function fmz(q){q=q.toLowerCase();document.querySelectorAll('.mc').forEach(c=>{c
 function fpr(q){q=q.toLowerCase();document.querySelectorAll('.pc').forEach(c=>{c.style.display=c.dataset.t.includes(q)?'':'none'})}
 function fprF(f){document.querySelectorAll('.pc').forEach(c=>{if(f==='all')c.style.display='';else c.style.display=c.dataset.t.includes(f)?'':'none'})}
 function firs(q){q=q.toLowerCase();document.querySelectorAll('.ic').forEach(c=>{c.style.display=c.dataset.t.includes(q)?'':'none'})}
+function tumKayit(c){document.querySelectorAll('.ek').forEach(e=>{e.style.display=c?'':'none'})}
 function goster(id){var d=document.getElementById('d-'+id);if(d)d.style.display=d.style.display==='none'?'block':'none'}
 </script></body></html>
